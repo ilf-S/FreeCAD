@@ -70,7 +70,7 @@ BuildRequires:  boost-python3-devel
 BuildRequires:  eigen3-devel
 
 # Qt6 dependencies
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 40
 BuildRequires: qt6-qtwebengine-devel
 BuildRequires: qt6-qtsvg-devel
 BuildRequires: qt6-qttools-devel
@@ -92,7 +92,7 @@ BuildRequires:  xerces-c
 BuildRequires:  xerces-c-devel
 BuildRequires:  libspnav-devel
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 40
 BuildRequires:  python3-shiboken6-devel
 BuildRequires:  python3-pyside6-devel
 BuildRequires:  pyside6-tools
@@ -144,7 +144,7 @@ Requires:       fmt
 
 Requires:	yaml
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 40
 Requires:       python3-pyside6
 %else
 Requires:       python3-pyside2
@@ -154,7 +154,7 @@ Requires:       python3-pivy
 Requires:       python3-matplotlib
 Requires:       python3-collada
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 40
 Requires:       qt6-assistant
 %else
 Requires:	qt5-assistant
