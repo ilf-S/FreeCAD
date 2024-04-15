@@ -7,8 +7,7 @@
 
 # Maintainers:  keep this list of plugins up to date
 # List plugins in %%{_libdir}/%{name}/lib, less '.so' and 'Gui.so', here
-%global plugins Fem FreeCAD PathApp Import Inspection Mesh MeshPart Part Points ReverseEngineering Robot Sketcher Start Web PartDesignGui _PartDesign Path PathGui Spreadsheet SpreadsheetGui area DraftUtils DraftUtils libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers Measure TechDraw TechDrawGui libarea-native Surface SurfaceGui AssemblyGui flatmesh QtUnitGui PathSimulator MatGui Material
-
+%global plugins Fem FreeCAD PathApp Import Inspection Mesh MeshPart Part Points ReverseEngineering Robot Sketcher Start Web PartDesignGui _PartDesign Path PathGui Spreadsheet SpreadsheetGui area DraftUtils DraftUtils libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers Measure TechDraw TechDrawGui libarea-native Surface SurfaceGui AssemblyGui flatmesh QtUnitGui PathSimulator MatGui Material AssemblyApp libOndselSolver
 
 # Some configuration options for other environments
 # rpmbuild --with=bundled_zipios:  use bundled version of zipios++
@@ -41,10 +40,10 @@ Group:          Applications/Engineering
 License:        LGPLv2+
 URL:            https://www.freecad.org/
 Source0:        https://github.com/%{github_name}/FreeCAD/archive/%{branch}.tar.gz
-
+Source1:	https://github.com/Ondsel-Development/OndselSolver/archive/fe99ad259391b8fd9390f919926aa3c8b6cde787.tar.gz
 
 # Utilities
-BuildRequires:  cmake gcc-c++ gettext
+BuildRequires:  cmake gcc-c++ gettext dos2unix
 BuildRequires:  doxygen swig graphviz
 BuildRequires:  gcc-gfortran
 BuildRequires:  desktop-file-utils
@@ -65,6 +64,8 @@ BuildRequires:  python3-pivy
 BuildRequires:  boost-devel
 BuildRequires:  boost-python3-devel
 BuildRequires:  eigen3-devel
+BuildRequires:	qt5-qtxmlpatterns-devel
+
 # Qt5 dependencies
 BuildRequires:  qt5-qtwebengine-devel
 #BuildRequires:  qt5-qtwebkit-devel
@@ -166,6 +167,7 @@ Data files for FreeCAD
 
 %prep
 %autosetup -p1 -n FreeCAD-%{branch}
+gzip -dc /builddir/build/SOURCES/fe99ad259391b8fd9390f919926aa3c8b6cde787.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
 # Remove bundled pycxx if we're not using it
 %if ! %{bundled_pycxx}
 rm -rf src/CXX
@@ -176,6 +178,9 @@ rm -rf src/zipios++
 #sed -i "s/zipios-config.h/zipios-config.hpp/g" \
 #    src/Base/Reader.cpp src/Base/Writer.h
 %endif
+
+# Fix encodings
+dos2unix -k src/Mod/Test/unittestgui.py
 
 # Removed bundled libraries
 
@@ -281,6 +286,8 @@ rm -f %{buildroot}%{_docdir}/freecad/ThirdPartyLibraries.html
 
 # Remove header from external library that's erroneously installed
 rm -f %{buildroot}%{_libdir}/%{name}/include/E57Format/E57Export.h
+rm -dfr %{buildroot}%{_includedir}/OndselSolver
+rm -f %{buildroot}%{_libdir}/%{name}/share/pkgconfig/OndselSolver.pc
 
 # Bug maintainers to keep %%{plugins} macro up to date.
 #
@@ -349,6 +356,8 @@ fi
 %{_datadir}/mime/packages/*
 %{_datadir}/thumbnailers/*
 
+%{python3_sitelib}/%{name}/
+
 %files data
 %{_datadir}/%{name}/
 %{_docdir}/%{name}/LICENSE.html
@@ -356,4 +365,10 @@ fi
 
 %changelog
 
+* Tue Apr 16 2024 Iliyan ilf Stoyanov <ilf.stoyanov@redacted>
+- had to clean up the file a bit so I can merge the FreeCAD repo
+- clean up old versions of Fedora < 35
 
+* Sat Feb 17 2024 Iliyan ilf Stoyanov <ilf.stoyanov@redacted>
+- Added qt5-qtxmlpatterns-devel to the build requirements
+- Yet another attempt to build for F38 
