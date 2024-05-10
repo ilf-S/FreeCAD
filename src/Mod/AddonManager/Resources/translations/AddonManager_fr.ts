@@ -511,139 +511,137 @@ Voulez-vous que le gestionnaire des extensions les installe automatiquement ? Ch
     <message>
       <location filename="../../AddonManagerOptions.ui" line="20"/>
       <source>If this option is selected, when launching the Addon Manager,
-installed addons will be checked for available updates
-(this requires the GitPython package installed on your system)</source>
-      <translation>Si cette option est cochée, lors du lancement du gestionnaire des extensions,
-les mises à jour disponibles seront vérifiées pour les extensions installées.
-Cela nécessite l'installation du paquet GitPython sur votre système.</translation>
+installed addons will be checked for available updates</source>
+      <translation type="unfinished">If this option is selected, when launching the Addon Manager,
+installed addons will be checked for available updates</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="25"/>
+      <location filename="../../AddonManagerOptions.ui" line="24"/>
       <source>Automatically check for updates at start (requires git)</source>
       <translation>Vérifier automatiquement les mises à jour au démarrage (nécessite git)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="41"/>
+      <location filename="../../AddonManagerOptions.ui" line="40"/>
       <source>Download Macro metadata (approximately 10MB)</source>
       <translation>Télécharger les métadonnées des macros (environ 10 Mo)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="56"/>
+      <location filename="../../AddonManagerOptions.ui" line="55"/>
       <source>Cache update frequency</source>
       <translation>Fréquence de mise à jour du cache</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="76"/>
+      <location filename="../../AddonManagerOptions.ui" line="75"/>
       <source>Manual (no automatic updates)</source>
       <translation>Manuel (pas de mises à jour automatiques)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="81"/>
+      <location filename="../../AddonManagerOptions.ui" line="80"/>
       <source>Daily</source>
       <translation>Quotidien</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="86"/>
+      <location filename="../../AddonManagerOptions.ui" line="85"/>
       <source>Weekly</source>
       <translation>Hebdomadaire</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="96"/>
+      <location filename="../../AddonManagerOptions.ui" line="95"/>
       <source>Hide Addons without a license</source>
       <translation>Masquer les extensions sans licence</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="112"/>
+      <location filename="../../AddonManagerOptions.ui" line="111"/>
       <source>Hide Addons with non-FSF Free/Libre license</source>
       <translation>Masquer les extensions avec une licence non-FSF Free/Libre</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="128"/>
+      <location filename="../../AddonManagerOptions.ui" line="127"/>
       <source>Hide Addons with non-OSI-approved license</source>
       <translation>Masquer les extensions avec une licence non approuvée par l'OSI</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="144"/>
+      <location filename="../../AddonManagerOptions.ui" line="143"/>
       <source>Hide Addons marked Python 2 Only</source>
       <translation>Masquer les extensions marquées d'une version Python 2 uniquement</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="160"/>
+      <location filename="../../AddonManagerOptions.ui" line="159"/>
       <source>Hide Addons marked Obsolete</source>
       <translation>Masquer les extensions marquées comme obsolètes</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="176"/>
+      <location filename="../../AddonManagerOptions.ui" line="175"/>
       <source>Hide Addons that require a newer version of FreeCAD</source>
       <translation>Masquer les extensions qui nécessitent une version plus récente de FreeCAD</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="198"/>
+      <location filename="../../AddonManagerOptions.ui" line="197"/>
       <source>Custom repositories</source>
       <translation>Dépôts personnalisés</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="252"/>
+      <location filename="../../AddonManagerOptions.ui" line="251"/>
       <source>Proxy</source>
       <translation>Proxy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="258"/>
+      <location filename="../../AddonManagerOptions.ui" line="257"/>
       <source>No proxy</source>
       <translation>Pas de proxy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="274"/>
+      <location filename="../../AddonManagerOptions.ui" line="273"/>
       <source>User system proxy</source>
       <translation>Proxy du système de l'utilisateur</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="287"/>
+      <location filename="../../AddonManagerOptions.ui" line="286"/>
       <source>User-defined proxy:</source>
       <translation>Proxy défini par l'utilisateur :</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="324"/>
+      <location filename="../../AddonManagerOptions.ui" line="323"/>
       <source>Score source URL</source>
       <translation>URL des scores</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="343"/>
+      <location filename="../../AddonManagerOptions.ui" line="342"/>
       <source>The URL for the Addon Score data (see Addon Manager wiki page for formatting and hosting details).</source>
       <translation>L'URL des données de score de l'extension (voir la page du wiki du gestionnaire des extensions pour les détails de formatage et d'hébergement).</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="354"/>
+      <location filename="../../AddonManagerOptions.ui" line="353"/>
       <source>Path to git executable (optional):</source>
       <translation>Chemin vers l'exécutable de git (facultatif) :</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="373"/>
+      <location filename="../../AddonManagerOptions.ui" line="372"/>
       <source>The path to the git executable. Autodetected if needed and not specified.</source>
       <translation>Le chemin vers l'exécutable de git. Détecté automatiquement si nécessaire et non spécifié.</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="394"/>
+      <location filename="../../AddonManagerOptions.ui" line="393"/>
       <source>Advanced Options</source>
       <translation>Options avancées</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="400"/>
+      <location filename="../../AddonManagerOptions.ui" line="399"/>
       <source>Show option to change branches (requires git)</source>
       <translation>Afficher l'option pour changer de branche (nécessite git)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="413"/>
+      <location filename="../../AddonManagerOptions.ui" line="412"/>
       <source>Disable git (fall back to ZIP downloads only)</source>
       <translation>Désactiver git (revenir aux téléchargements ZIP uniquement)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="426"/>
+      <location filename="../../AddonManagerOptions.ui" line="425"/>
       <source>Activate Addon Manager options intended for developers of new Addons.</source>
       <translation>Activer les options du gestionnaire des extensions destinées aux développeurs des nouvelles extensions.</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="429"/>
+      <location filename="../../AddonManagerOptions.ui" line="428"/>
       <source>Addon developer mode</source>
       <translation>Activer le mode développeur des extensions</translation>
     </message>
@@ -1243,28 +1241,28 @@ D'autres paquets Python dont dépendent ces paquets peuvent également avoir ét
       <translation>Auteur</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="165"/>
+      <location filename="../../manage_python_dependencies.py" line="164"/>
       <source>New Python Version Detected</source>
       <translation>Nouvelle version de Python détectée</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="170"/>
+      <location filename="../../manage_python_dependencies.py" line="169"/>
       <source>This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</source>
       <translation>Cela semble être la première fois que cette version de Python est utilisée avec le gestionnaire des extensions. Voulez-vous installer les mêmes dépendances auto-installées pour cela ?</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="200"/>
+      <location filename="../../manage_python_dependencies.py" line="199"/>
       <source>Processing, please wait...</source>
       <translation>En cours de traitement, veuillez patienter...</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="248"/>
+      <location filename="../../manage_python_dependencies.py" line="247"/>
       <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="115"/>
       <source>Update</source>
       <translation>Mettre à jour</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="343"/>
+      <location filename="../../manage_python_dependencies.py" line="341"/>
       <source>Updating...</source>
       <translation>Mise à jour en cours...</translation>
     </message>
@@ -2400,17 +2398,17 @@ D'autres paquets Python dont dépendent ces paquets peuvent également avoir ét
       <translation>certaines extensions ont peut-être été mises à jour</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="83"/>
+      <location filename="../../addonmanager_readme_controller.py" line="82"/>
       <source>Loading info for {} from the FreeCAD Macro Recipes wiki...</source>
       <translation>Chargement des informations pour {} à partir de la page du wiki Liste des macros de FreeCAD...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="91"/>
+      <location filename="../../addonmanager_readme_controller.py" line="90"/>
       <source>Loading page for {} from {}...</source>
       <translation>Chargement de la page pour {} depuis {}...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="109"/>
+      <location filename="../../addonmanager_readme_controller.py" line="108"/>
       <source>Failed to download data from {} -- received response code {}.</source>
       <translation>Impossible de télécharger les données de {}. Le code de réponse reçu est {}.</translation>
     </message>

@@ -5,8 +5,8 @@
     <name>CmdPathArea</name>
     <message>
       <location filename="../../Command.cpp" line="46"/>
-      <source>Path</source>
-      <translation>Траектория</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="47"/>
@@ -23,8 +23,8 @@
     <name>CmdPathAreaWorkplane</name>
     <message>
       <location filename="../../Command.cpp" line="128"/>
-      <source>Path</source>
-      <translation>Траектория</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="129"/>
@@ -41,8 +41,8 @@
     <name>CmdPathCompound</name>
     <message>
       <location filename="../../Command.cpp" line="218"/>
-      <source>Path</source>
-      <translation>Траектория</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="219"/>
@@ -59,8 +59,8 @@
     <name>CmdPathShape</name>
     <message>
       <location filename="../../Command.cpp" line="270"/>
-      <source>Path</source>
-      <translation>Траектория</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="271"/>
@@ -285,7 +285,7 @@ For stock from the Base object's bounding box it means the extra material in all
     <message>
       <location filename="../panels/DlgJobTemplateExport.ui" line="168"/>
       <source>Extent</source>
-      <translation>Масштаб</translation>
+      <translation>Расширение</translation>
     </message>
     <message>
       <location filename="../panels/DlgJobTemplateExport.ui" line="194"/>
@@ -335,7 +335,7 @@ For stock from the Base object's bounding box it means the extra material in all
     <message>
       <location filename="../panels/DlgToolControllerEdit.ui" line="125"/>
       <source>Horiz Rapid</source>
-      <translation>Горизонтальная скорость</translation>
+      <translation>Горизонтальная скорость Rapid</translation>
     </message>
     <message>
       <location filename="../panels/DlgToolControllerEdit.ui" line="154"/>
@@ -385,7 +385,7 @@ For stock from the Base object's bounding box it means the extra material in all
     <message>
       <location filename="../panels/PropertyCreate.ui" line="27"/>
       <source>Name of property. Can only contain letters, numbers, and underscores. MixedCase names will display with spaces "Mixed Case"</source>
-      <translation>Название свойства. Может содержать только буквы, цифры и символы подчеркивания. Имена в "CмешанномВарианте" будут отображаться с пробелами «Смешанный Вариант»</translation>
+      <translation>Название недвижимости. Может содержать только буквы, цифры и символы подчеркивания. Имена в смешанном регистре будут отображаться с пробелами «Смешанный регистр»</translation>
     </message>
     <message>
       <location filename="../panels/PropertyCreate.ui" line="34"/>
@@ -604,7 +604,7 @@ For stock from the Base object's bounding box it means the extra material in all
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="141"/>
       <source>Extension of bounding box's MaxY</source>
-      <translation>Расширение MaxY ограничительной рамки</translation>
+      <translation>Расширение ограничивающих рамок MaxY</translation>
     </message>
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="148"/>
@@ -619,7 +619,7 @@ For stock from the Base object's bounding box it means the extra material in all
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="162"/>
       <source>Extension of bounding box's MaxZ</source>
-      <translation>Расширение ограничивающих рамок MaxX</translation>
+      <translation>Расширение ограничивающих рамок MaxZ</translation>
     </message>
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="182"/>
@@ -1189,7 +1189,7 @@ Reset deletes all current items from the list and fills the list with all circul
     <message>
       <location filename="../panels/PageOpDrillingEdit.ui" line="63"/>
       <source>Don't retract after every hole</source>
-      <translation>Не убирайте после каждой лунки</translation>
+      <translation>Не убирайте после каждого отверстия</translation>
     </message>
     <message>
       <location filename="../panels/PageOpDrillingEdit.ui" line="66"/>
@@ -1225,6 +1225,16 @@ Reset deletes all current items from the list and fills the list with all circul
       <location filename="../panels/PageOpDrillingEdit.ui" line="169"/>
       <source>Chip Break</source>
       <translation>Сброс стружки</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="176"/>
+      <source>Feed retract</source>
+      <translation>Втягивание подачи</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="179"/>
+      <source>G85: Retract from the hole at the given feedrate instead of rapid move</source>
+      <translation>G85: Отвод из отверстия с заданной скоростью подачи вместо быстрого перемещения</translation>
     </message>
     <message>
       <location filename="../panels/PageOpEngraveEdit.ui" line="63"/>
@@ -1990,7 +2000,7 @@ Default: OpToolDiameter</source>
       <source>Expression set as ClearanceHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
-      <translation>Выражение установлено как ClearanceHeight для новых операций.
+      <translation>Выражение установлено как высота зазора для новых операций.
 
 По умолчанию: «OpStockZMax+SetupSheet.ClearanceHeightOffset»</translation>
     </message>
@@ -1999,7 +2009,7 @@ Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
       <source>Expression set as SafeHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.SafeHeightOffset"</source>
-      <translation>Выражение установлено как SafeHeight для новых операций.
+      <translation>Выражение установлено как безопасная высота для новых операций.
 
 По умолчанию: «OpStockZMax+SetupSheet.SafeHeightOffset»</translation>
     </message>
@@ -2008,7 +2018,7 @@ Default: "OpStockZMax+SetupSheet.SafeHeightOffset"</source>
       <source>SafeHeightOffset can be for expressions to set the SafeHeight for new operations.
 
 Default: "5mm"</source>
-      <translation>SafeHeightOffset (смещение высоты безопасности) может использоваться в выражениях для установки SafeHeight для новых операций</translation>
+      <translation>Безопасное смещение высоты может использоваться в выражениях для установки безопасной высоты для новых операций</translation>
     </message>
     <message>
       <location filename="../panels/SetupGlobal.ui" line="205"/>
@@ -2270,7 +2280,9 @@ If the specified height is 0 the dressup will use half the height of the part. S
       <source>Radius of the fillet on the tag's top edge.
 
 If the radius is bigger than that which the tag shape itself supports, the resulting shape will be that of a dome.</source>
-      <translation>Радиус скругления верхнего края тега.</translation>
+      <translation>Радиус скругления верхнего края тега.
+
+Если радиус больше, чем тот, который поддерживает сама форма метки, результирующая форма будет куполообразной.</translation>
     </message>
     <message>
       <location filename="../preferences/PathDressupHoldingTags.ui" line="109"/>
@@ -2450,11 +2462,6 @@ See the file save policy below on how to deal with name conflicts.</source>
       <translation>Пост-процессор по умолчанию</translation>
     </message>
     <message>
-      <location filename="../preferences/PathJob.ui" line="315"/>
-      <source>DefaultPostProcessor</source>
-      <translation>Постпроцессор по умолчанию</translation>
-    </message>
-    <message>
       <location filename="../preferences/PathJob.ui" line="325"/>
       <source>Default Arguments</source>
       <translation>Аргументы по умолчанию</translation>
@@ -2498,11 +2505,6 @@ If left empty no template will be preselected.</source>
       <location filename="../preferences/PathJob.ui" line="312"/>
       <source>Select one of the post processors as the default.</source>
       <translation>Выберите один из пост-процессоров по умолчанию.</translation>
-    </message>
-    <message>
-      <location filename="../preferences/PathJob.ui" line="318"/>
-      <source>Mod/CAM</source>
-      <translation>Mod/CAM</translation>
     </message>
     <message>
       <location filename="../preferences/PathJob.ui" line="332"/>
@@ -2976,7 +2978,7 @@ Should multiple tools or tool shapes with the same name exist in different direc
     <message>
       <location filename="../panels/DogboneEdit.ui" line="114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Determines the incision length of the bone to be inserted into the profile.&lt;/p&gt;&lt;p&gt;&lt;span style=" font-weight:600; font-style:italic;"&gt;adaptive&lt;/span&gt; ... the length is adapted to cover the corner based on the angle of its edges, taking the current tool radius into account (default)&lt;/p&gt;&lt;p&gt;&lt;span style=" font-weight:600; font-style:italic;"&gt;fixed&lt;/span&gt; ... is the same as adaptive for straight angles. For T-bones it's the radius of the tool (R) and for dogbones it's R * (2/√2 - 1).&lt;/p&gt;&lt;p&gt;&lt;span style=" font-weight:600; font-style:italic;"&gt;custom&lt;/span&gt; ... let's you specify a custom (fixed) length below&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Определяет длину разреза кости, которая будет вставлена в профиль.&lt;/p&gt;&lt;p&gt;&lt;span style="font-weight :600; font-style:italic;"&gt;adaptive&lt;/span&gt; ... длина адаптируется для покрытия угла в зависимости от угла его кромок с учетом текущего радиуса инструмента (по умолчанию)&lt;/p&gt;&lt;p&gt;&lt;span style=" Font-weight:600; шрифт-стиль: курсив; "&gt; исправлено&lt;/span&gt; ... то же самое, что адаптивное для прямых углов. Для Т-образных костей это радиус инструмента (R), а для собачьих костей — R * (2/√2 - 1).&lt;/p&gt;&lt;p&gt;&lt;span style=" Font-weight:600; Font -style:italic;"&gt;custom&lt;/span&gt; ... давайте укажем произвольную (фиксированную) длину ниже&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Определяет длину разреза кости, которая будет вставлена в профиль.&lt;/p&gt;&lt;p&gt;&lt;span style="font-weight :600; стиль шрифта: курсив;"&gt;адаптивный&lt;/span&gt; ... длина адаптируется для покрытия угла в зависимости от угла его кромок с учетом текущего радиуса инструмента (по умолчанию)&lt;/p&gt;&lt;p&gt;&lt;span style=" Font-weight:600; шрифт-стиль: курсив; "&gt; исправлено&lt;/span&gt; ... то же самое, что адаптивное для прямых углов. Для Т-образных костей это радиус инструмента (R), а для собачьих костей — R * (2/√2 - 1).&lt;/p&gt;&lt;p&gt;&lt;span style=" Font-weight:600; Font -style:italic;"&gt;custom&lt;/span&gt; ... давайте укажем произвольную (фиксированную) длину ниже&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../panels/DogboneEdit.ui" line="121"/>
@@ -3001,7 +3003,7 @@ Should multiple tools or tool shapes with the same name exist in different direc
     <message>
       <location filename="../panels/DogboneEdit.ui" line="155"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of bone locations (with all bones at that location) that are part of this dressup. The list is determined by the corners in the profile and the selected &lt;span style=" font-weight:600;"&gt;Side&lt;/span&gt; for the bones. &lt;/p&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;un-check&lt;/span&gt; the bones you don't want to be dressed up.&lt;/p&gt;&lt;p&gt;If a bone is &lt;span style=" font-weight:600;"&gt;grayed out&lt;/span&gt; it means that it is already dressed up by a previous dressup. Or put another way, if you dress up this dogobone dressup again you will only be able to select the bones that are un-checked here.&lt;/p&gt;&lt;p&gt;If this list is empty it probably means you're trying to create bones on the wrong side of the profile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список мест расположения костей (со всеми костями в этом месте), которые являются частью этого наряда. Список определяется углами профиля и выбранной стороной &lt;span style="font-weight:600;"&gt;Side&lt;/span&gt; для костей. &lt;/p&gt;&lt;p&gt;Вы можете &lt;span style="font-weight:600;"&gt;снять флажок&lt;/span&gt; кости, которые вы не хотите украшать.&lt;/p&gt;&lt;p&gt;Если кость &lt;span style="font-weight:600;"&gt;выделена серым цветом&lt;/span&gt; это означает, что он уже одет по предыдущему наряду. Или, другими словами, если вы снова оденете этот наряд из собачьей кости, вы сможете выбрать только те кости, которые здесь не отмечены флажком.&lt;/p&gt;&lt;p&gt;Если этот список пуст, это, вероятно, означает, что вы пытаетесь чтобы создать кости на изнаночной стороне профиля.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список мест расположения костей (со всеми костями в этом месте), которые являются частью этого наряда. Список определяется углами профиля и выбранной стороной &lt;span style="font-weight:600;"&gt;Side&lt;/span&gt; для костей. &lt;/p&gt;&lt;p&gt;Вы можете &lt;span style="font-weight:600;"&gt;снять флажок&lt;/span&gt; кости, которые вы не хотите украшать.&lt;/p&gt;&lt;p&gt;Если кость &lt;span style="font-weight:600;"&gt;выделена серым цветом&lt;/span&gt; это означает, что он уже одет по предыдущему наряду. Или, другими словами, если вы снова оденете это платье из собачьей кости, вы сможете выбрать только те кости, которые здесь не отмечены флажком.&lt;/p&gt;&lt;p&gt;Если этот список пуст, это, вероятно, означает, что вы пытаетесь чтобы создать кости на изнаночной стороне профиля.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../panels/DogboneEdit.ui" line="165"/>
@@ -3071,7 +3073,7 @@ Should multiple tools or tool shapes with the same name exist in different direc
     <message>
       <location filename="../panels/HoldingTagsEdit.ui" line="54"/>
       <source>Height of holding tag. Note that resulting tag might be smaller if the tag's width and angle result in a triangular shape.</source>
-      <translation>Высота удерживающей метки. Обратите внимание, что результирующий тег может быть меньше, если ширина и угол тега имеют треугольную форму.</translation>
+      <translation>Высота удерживающего крепежа. Обратите внимание, что результирующий тег может быть меньше, если ширина и угол тега имеют треугольную форму.</translation>
     </message>
     <message>
       <location filename="../panels/HoldingTagsEdit.ui" line="61"/>
@@ -3086,7 +3088,7 @@ Should multiple tools or tool shapes with the same name exist in different direc
     <message>
       <location filename="../panels/HoldingTagsEdit.ui" line="97"/>
       <source>List of current tags. Edit coordinates by double click or Edit button. Tags are automatically disabled if they overlap with the previous tag, or don't lie on the base wire.</source>
-      <translation>Список текущих тегов. Отредактируйте координаты двойным щелчком мыши или кнопкой «Редактировать». Теги автоматически отключаются, если они перекрываются с предыдущими тегами или не лежат на базовом проводе.</translation>
+      <translation>Список текущих тегов(креплений). Отредактируйте координаты двойным щелчком мыши или кнопкой «Редактировать». Теги автоматически отключаются, если они перекрываются с предыдущими тегами или не лежат на базовом проводе.</translation>
     </message>
     <message>
       <location filename="../panels/HoldingTagsEdit.ui" line="116"/>
@@ -3585,7 +3587,7 @@ Ordering by operation will do each operation in all coordinate systems before mo
       <location filename="../panels/PathEdit.ui" line="254"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Work Coordinate Systems&lt;/span&gt; also called &lt;span style=" font-style:italic;"&gt;Work Offsets&lt;/span&gt;, &lt;span style=" font-style:italic;"&gt;Fixture Offsets&lt;/span&gt;, or &lt;span style=" font-style:italic;"&gt;Fixtures &lt;/span&gt;are useful for building efficient production jobs where the same part is done many times on the machine.
 FreeCAD has no knowledge of where a particular coordinate system exists within the machine coordinate system so adding additional coordinate systems to your job will have no visual change within your job. It will, however, change your gcode output. The exact way in which the output is affected is controlled by the 'order by' setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="font-style:italic;"&gt;Рабочие системы координат&lt;/span&gt; также называется &lt;span style="font-style:italic;"&gt;Рабочие смещения&lt;/span&gt;, &lt;span style="font-style:italic;"&gt;Fixture Offsets&lt;/span&gt; или &lt;span style="font-style:italic;"&gt;Приспособления &lt;/span&gt;полезны для создания эффективных производственных заданий, когда одна и та же деталь выполняется на станке много раз.
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="font-style:italic;"&gt;Рабочие системы координат&lt;/span&gt; также называется &lt;span style="font-style:italic;"&gt;Рабочие смещения&lt;/span&gt;, &lt;span style="font-style:italic;"&gt;Смещения крепежа&lt;/span&gt; или &lt;span style="font-style:italic;"&gt;Приспособления &lt;/span&gt;полезны для создания эффективных производственных заданий, когда одна и та же деталь выполняется на станке много раз.
 FreeCAD не знает, где находится определенная система координат в системе координат станка, поэтому добавление дополнительных систем координат в ваше задание не приведет к визуальным изменениям в вашем задании. Однако это изменит вывод вашего gcode. Точный способ воздействия на выходные данные определяется настройкой «порядок».&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -3770,7 +3772,7 @@ FreeCAD не знает, где находится определенная си
       <source>Expression set as ClearanceHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
-      <translation>Выражение установлено как ClearanceHeight для новых операций.
+      <translation>Выражение установлено как высота зазора для новых операций.
 
 По умолчанию: «OpStockZMax+SetupSheet.ClearanceHeightOffset»</translation>
     </message>
@@ -3779,7 +3781,7 @@ Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
       <source>Expression set as SafeHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.SafeHeightOffset"</source>
-      <translation>Выражение установлено как SafeHeight для новых операций.
+      <translation>Выражение установлено как безопасная высота для новых операций.
 
 По умолчанию: «OpStockZMax+SetupSheet.SafeHeightOffset»</translation>
     </message>
@@ -3788,7 +3790,7 @@ Default: "OpStockZMax+SetupSheet.SafeHeightOffset"</source>
       <source>SafeHeightOffset can be for expressions to set the SafeHeight for new operations.
 
 Default: "5mm"</source>
-      <translation>SafeHeightOffset (смещение высоты безопасности) может использоваться в выражениях для установки SafeHeight для новых операций</translation>
+      <translation>Безопасное смещение высоты может использоваться в выражениях для установки безопасной высоты для новых операций</translation>
     </message>
     <message>
       <location filename="../panels/PathEdit.ui" line="1247"/>
@@ -3861,7 +3863,17 @@ See the file save policy below on how to deal with name conflicts.</source>
 %t ... Метка контроллера инструмента
 
 %W ... Рабочая система координат
-%O ... Метка операции.</translation>
+%O ... Метка операции
+
+При разделении вывода всегда будет добавляться порядковый номер.
+
+если %S включен, вы можете указать, где встречается это число. Без него число будет добавлено в конец строки.
+
+%S ... Порядковый номер
+
+В следующем примере все файлы с тем же именем, что и документ, сохраняются в каталоге /home/freecad (пожалуйста, удалите кавычки):
+"/home/cnc/%d.g-код"
+См. политику сохранения файлов ниже, чтобы узнать, как справиться с конфликтами имен.</translation>
     </message>
     <message>
       <location filename="../panels/PathEdit.ui" line="397"/>
@@ -3877,10 +3889,7 @@ For example, if &lt;span style=" font-style:italic;"&gt;order by&lt;/span&gt; is
 
 
 If &lt;span style=" font-style:italic;"&gt;order by&lt;/span&gt; is set to &lt;span style=" font-style:italic;"&gt;operation&lt;/span&gt; and &lt;span style=" font-style:italic;"&gt;split output&lt;/span&gt; is true, each operation will be written to a separate file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если True, постобработка создаст несколько выходных файлов на основе &lt;span style="font-style:italic;"&gt;упорядочения по&lt;/ диапазон&gt; параметр.
-
-
-Например, если &lt;span style=" font-style:italic;"&gt;упорядочить по&lt;/span&gt; установлено значение «Инструмент», первый выходной файл будет содержать первую смену инструмента и все операции во всех системах координат, которые можно выполнить с этим инструментом до вызова следующей смены инструмента.
+      <translation>Например, если &lt;span style=" font-style:italic;"&gt;упорядочить по&lt;/span&gt; установлено значение «Инструмент», первый выходной файл будет содержать первую смену инструмента и все операции во всех системах координат, которые можно выполнить с этим инструментом до вызова следующей смены инструмента.
 
 
 Если &lt;span style="font-style:italic;"&gt;упорядочить по&lt;/span&gt; установлено значение &lt;span style="font-style:italic;"&gt;operation&lt;/span&gt; и &lt;span style="font-style:italic;"&gt;разделить вывод&lt;/span&gt; true, каждая операция будет записана в отдельный файл.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -4093,46 +4102,6 @@ Default: 3 mm</source>
   <context>
     <name>Path</name>
     <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
-      <source>The currently selected unit schema: 
-     '{}' for this document
- Does not use 'minutes' for velocity values. 
- 
-CNC machines require feed rate to be expressed in 
-unit/minute. To ensure correct G-code: 
-Select a minute-based schema in preferences.
-For example:
-    'Metric, Small Parts &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</source>
-      <translation>Текущая выбранная схема устройства:
-      '{}' для этого документа
-  Не использует минуты для значений скорости.
- 
-Станки с ЧПУ требуют, чтобы скорость подачи выражалась в
-единица/минута. Чтобы убедиться в правильности G-кода:
-Выберите поминутную схему в настройках.
-Например:
-     «Метрическая система, мелкие детали и ЧПУ»
-     «Обычай США»
-     «Имперская десятичная дробь»</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
-      <source>Warning</source>
-      <translation>Предупреждение</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
-      <source>Ok</source>
-      <translation>OK</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
-      <source>Don't Show This Anymore</source>
-      <translation>Не показывать это больше</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Base/Gui/IconViewProvider.py" line="97"/>
       <source>Edit</source>
       <translation>Редактировать</translation>
@@ -4199,11 +4168,6 @@ For example:
       <location filename="../../../PathScripts/PathUtilsGui.py" line="91"/>
       <source>Choose a Path Job</source>
       <translation>Выбрать задание Path (траектория обработки детали)</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
-      <source>Invalid Filename</source>
-      <translation>Недопустимое имя файла</translation>
     </message>
     <message>
       <location filename="../../../PathScripts/PathUtils.py" line="545"/>
@@ -4364,13 +4328,13 @@ For example:
       <location filename="../../../Path/Dressup/DogboneII.py" line="250"/>
       <location filename="../../../Path/Dressup/Gui/Dogbone.py" line="463"/>
       <source>Dressup length if incision is set to 'custom'</source>
-      <translation>Длина Dress-up, если разрез установлен на «пользовательский»</translation>
+      <translation>Длина перемычки, если для разреза установлено значение «Пользовательский»</translation>
     </message>
     <message>
       <location filename="../../../Path/Dressup/DogboneII.py" line="258"/>
       <location filename="../../../Path/Dressup/Gui/Dogbone.py" line="445"/>
       <source>Bones that aren't dressed up</source>
-      <translation>Кости, которые не одеты</translation>
+      <translation>Кости, которые не надеты</translation>
     </message>
     <message>
       <location filename="../../../Path/Dressup/Tags.py" line="946"/>
@@ -4972,55 +4936,61 @@ For example:
     </message>
     <message>
       <location filename="../../../Path/Op/Drilling.py" line="105"/>
-      <location filename="../../../Path/Op/Drilling.py" line="129"/>
+      <location filename="../../../Path/Op/Drilling.py" line="137"/>
       <source>Use chipbreaking</source>
       <translation>Используйте стружколом</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="117"/>
+      <location filename="../../../Path/Op/Drilling.py" line="114"/>
+      <location filename="../../../Path/Op/Drilling.py" line="194"/>
+      <source>Use G85 boring cycle with feed out</source>
+      <translation>Используйте цикл растачивания G85 с подачей</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Drilling.py" line="125"/>
       <source>Incremental Drill depth before retracting to clear chips</source>
       <translation>Инкрементальный шаг заглубления сверла для вывода стружки</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="123"/>
+      <location filename="../../../Path/Op/Drilling.py" line="131"/>
       <source>Enable pecking</source>
       <translation>Включить сворачивание</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="135"/>
+      <location filename="../../../Path/Op/Drilling.py" line="143"/>
       <source>The time to dwell between peck cycles</source>
       <translation>Время задержки между циклами сверления</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="141"/>
+      <location filename="../../../Path/Op/Drilling.py" line="149"/>
       <source>Enable dwell</source>
       <translation>Включить задержку (dwell)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="150"/>
+      <location filename="../../../Path/Op/Drilling.py" line="158"/>
       <source>Calculate the tip length and subtract from final depth</source>
       <translation>Рассчитайте длину кончика и вычтите из конечной глубины</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="158"/>
-      <location filename="../../../Path/Op/Drilling.py" line="222"/>
+      <location filename="../../../Path/Op/Drilling.py" line="166"/>
+      <location filename="../../../Path/Op/Drilling.py" line="236"/>
       <source>Controls tool retract height between holes in same op, Default=G98: safety height</source>
       <translation>Управляет высотой отвода инструмента между отверстиями в одной операции, по умолчанию = G98: безопасная высота</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="167"/>
+      <location filename="../../../Path/Op/Drilling.py" line="175"/>
       <source>The height where cutting feed rate starts and retract height for peck operation</source>
       <translation>Высота, с которой начинается скорость подачи при резании, и высота отвода для операции</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="173"/>
+      <location filename="../../../Path/Op/Drilling.py" line="181"/>
       <source>How far the drilling depth is extended</source>
       <translation>Насколько глубоко увеличивается глубина сверления (вероятно речь о длине от кончика сверла до достижения его номинального диаметра, т. е. зависит от угла сверла)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="180"/>
-      <location filename="../../../Path/Op/Drilling.py" line="212"/>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="134"/>
+      <location filename="../../../Path/Op/Drilling.py" line="188"/>
+      <location filename="../../../Path/Op/Drilling.py" line="226"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="148"/>
       <source>Apply G99 retraction: only retract to RetractHeight between holes in this operation</source>
       <translation>Применение отвода G99: отвод только на высоту отвода между отверстиями в этой операции</translation>
     </message>
@@ -5849,21 +5819,6 @@ For example:
   <context>
     <name>PathPocket</name>
     <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
-      <source>Normal</source>
-      <translation>Обычный (либо Нормаль)</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Op/Gui/PocketBase.py" line="82"/>
       <source>Pass Extension</source>
       <translation>Увеличение припуска</translation>
@@ -6306,14 +6261,6 @@ Aborting op creation</source>
       <location filename="../../../Path/Op/Gui/Array.py" line="334"/>
       <source>Arrays of toolpaths having different tool controllers are handled according to the tool controller of the first path.</source>
       <translation>Массивы траекторий инструмента, имеющие разные контроллеры инструмента, обрабатываются в соответствии с контроллером инструмента первого пути.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathToolBit</name>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
-      <source>Toolbit cannot be edited: Shapefile not found</source>
-      <translation>Инструмент не может быть отредактирован: Shapefile не найден</translation>
     </message>
   </context>
   <context>
@@ -6912,6 +6859,7 @@ Aborting op creation</source>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1621"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
       <source>Warning</source>
       <translation>Предупреждения</translation>
     </message>
@@ -6922,6 +6870,7 @@ Aborting op creation</source>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1623"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
       <source>Ok</source>
       <translation>Да</translation>
     </message>
@@ -6951,6 +6900,36 @@ Aborting op creation</source>
       <translation>Создает задание CAM</translation>
     </message>
     <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
+      <source>The currently selected unit schema: 
+     '{}' for this document
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct G-code: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</source>
+      <translation>Текущая выбранная схема устройства:
+      '{}' для этого документа
+  Не использует минуты для значений скорости.
+ 
+Станки с ЧПУ требуют, чтобы скорость подачи выражалась в
+единица/минута. Чтобы убедиться в правильности G-кода:
+Выберите поминутную схему в настройках.
+Например:
+     «Метрическая система, мелкие детали и ЧПУ»
+     «Обычай США»
+     «Императорская десятичная дробь»</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
+      <source>Don't Show This Anymore</source>
+      <translation>Больше не показывать</translation>
+    </message>
+    <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="88"/>
       <source>Solids</source>
       <translation>Массивы</translation>
@@ -6959,6 +6938,21 @@ Aborting op creation</source>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="90"/>
       <source>Jobs</source>
       <translation>Вакансии</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Model</source>
+      <translation>Модель</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Count</source>
+      <translation>Количество</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="272"/>
+      <source>&lt;none&gt;</source>
+      <translation>&lt;нет&gt;</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="358"/>
@@ -7530,16 +7524,6 @@ Aborting op creation</source>
       <translation>Базовая фигура %s уже в списке</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
-      <source>Profile</source>
-      <translation>Профиль</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation>Обработать всю модель, выбранные грани или выбранные края</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Tool/Gui/Controller.py" line="116"/>
       <source>Edit</source>
       <translation>Редактировать</translation>
@@ -7573,12 +7557,12 @@ Aborting op creation</source>
       <translation>2х Наконечник сверла</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="189"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="209"/>
       <source>Drilling</source>
       <translation>Сверление</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="193"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="213"/>
       <source>Creates a Drilling toolpath from the features of a base object</source>
       <translation>Создает траекторию сверления на основе элементов базового объекта</translation>
     </message>
@@ -7682,6 +7666,26 @@ Aborting op creation</source>
       <location filename="../../../Path/Op/PocketBase.py" line="73"/>
       <source>Grid</source>
       <translation>Сетка</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
+      <source>Normal</source>
+      <translation>Обычные</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="185"/>
+      <source>Extensions</source>
+      <translation>Расширения</translation>
     </message>
   </context>
   <context>
@@ -8304,12 +8308,12 @@ Aborting op creation</source>
   <context>
     <name>CAM_Gcode_pre</name>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="226"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="225"/>
       <source>No active document</source>
       <translation>Нет активного документа</translation>
     </message>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="229"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="228"/>
       <source>No job object</source>
       <translation>Нет рабочих объектов</translation>
     </message>
@@ -8417,23 +8421,33 @@ Aborting op creation</source>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="668"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="795"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="799"/>
       <source>Tooltable JSON (*.fctl)</source>
       <translation>Таблица инструментов JSON (*.json)</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="670"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="804"/>
       <source>Save toolbit library</source>
       <translation>Сохранить библиотеку инструментов</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="796"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="731"/>
+      <source>Tool</source>
+      <translation>Инструмент</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="732"/>
+      <source>Shape</source>
+      <translation>Фигура(ы)</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
       <source>LinuxCNC tooltable (*.tbl)</source>
       <translation>Таблица инструментов LinuxCNC (*.tbl)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="798"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="802"/>
       <source>Camotics tooltable (*.json)</source>
       <translation>Таблица инструментов для Camotic (*.json)</translation>
     </message>
@@ -8462,6 +8476,42 @@ Aborting op creation</source>
       <location filename="../../../Path/Tool/Gui/BitLibraryCmd.py" line="80"/>
       <source>Open an editor to manage ToolBit libraries</source>
       <translation>Открыть редактор для управления библиотеками инструментов</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Profile</name>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
+      <source>Profile</source>
+      <translation>Профиль</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation>Обработать всю модель, выбранные грани или выбранные края</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Toolbit</name>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
+      <source>Toolbit cannot be edited: Shapefile not found</source>
+      <translation>Инструмент не может быть отредактирован: Shapefile не найден</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="193"/>
+      <source>Tool</source>
+      <translation>Инструмент</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
+      <source>Invalid Filename</source>
+      <translation>Недопустимое имя файла</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="242"/>
+      <source>Select Tool Shape</source>
+      <translation>Выбрать форму инструмента</translation>
     </message>
   </context>
 </TS>

@@ -101,7 +101,7 @@ public:
      *  View Provider but it's always 1. It isn't updated when @ref References
      *  changes.
      */
-    App::PropertyInteger Scale;
+    App::PropertyFloatConstraint Scale;
 
     // Read-only (calculated values). These trigger changes in the ViewProvider
     App::PropertyVectorList Points;
@@ -123,48 +123,22 @@ public:
     App::DocumentObjectExecReturn* execute() override;
 
     /**
-     * @brief Calculates scale factor based on length of edge.
+     * @brief Calculates scale factor based on characteristic length of shape.
      *
      * @details
      *  Used to calculate the scale factor returned by @ref getPoints when the
-     *  scale factor is calculated for a face.
-     *
-     * @note
-     *  This method does a really crazy calculation that I didn't dare to try
-     *  to understand.
      */
-    int calcDrawScaleFactor(double lparam) const;
-
-    /**
-     * @brief Calculates scale factor based on size of face.
-     *
-     * @details
-     *  Used to calculate the scale factor returned by @ref getPoints when the
-     *  scale factor is calculated for a edge.
-     *
-     * @note
-     *  This method does a really crazy calculation that I didn't dare to try
-     *  to understand.
-     */
-    int calcDrawScaleFactor(double lvparam, double luparam) const;
-
-    /**
-     * @brief Returns default scale factor of 1.
-     *
-     * @details
-     *  This is just used to make code more understandable. Other versions
-     *  (overloads) of this function do useful calculations based on faces or
-     *  edges. Used by @ref getPoints if no useful shape information is
-     *  available.
-     *
-     * @return always the integer 1
-     */
-    int calcDrawScaleFactor() const;
+    double calcSizeFactor(double characLen) const;
 
     const char* getViewProviderName() const override
     {
         return "FemGui::ViewProviderFemConstraint";
     }
+
+    /**
+     * @brief Returns Scale * sizeFactor.
+     */
+    float getScaleFactor() const;
 
 protected:
     /**
@@ -182,6 +156,9 @@ protected:
     void onDocumentRestored() override;
     void onSettingDocument() override;
     void unsetupObject() override;
+    void handleChangedPropertyType(Base::XMLReader& reader,
+                                   const char* TypeName,
+                                   App::Property* prop) override;
 
     /**
      * @brief Returns data based on References relevant for rendering widgets.
@@ -219,7 +196,7 @@ protected:
      */
     bool getPoints(std::vector<Base::Vector3d>& points,
                    std::vector<Base::Vector3d>& normals,
-                   int* scale) const;
+                   double* scale) const;
 
     /**
      * @brief Extract properties of cylindrical face.
@@ -252,6 +229,11 @@ protected:
     const Base::Vector3d getDirection(const App::PropertyLinkSub& direction);
 
 private:
+    /**
+     * @brief Symbol size factor determined from the size of the shape.
+     */
+    double sizeFactor;
+
     void slotChangedObject(const App::DocumentObject& Obj, const App::Property& Prop);
     boost::signals2::connection connDocChangedObject;
 };

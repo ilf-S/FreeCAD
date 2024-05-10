@@ -513,139 +513,137 @@ Da li želite da Upravitelj dodacima ih instalira automatski? Odaberi &quot;Igno
     <message>
       <location filename="../../AddonManagerOptions.ui" line="20"/>
       <source>If this option is selected, when launching the Addon Manager,
-installed addons will be checked for available updates
-(this requires the GitPython package installed on your system)</source>
-      <translation>Ako je odabrana ta mogućnost, pri pokretanju Upravitelja dodataka,
-instalirani dodaci će se provjeriti na dostupna ažuriranja
-(za ovo je potreban paket GitPython instaliran na vašem sustavu)</translation>
+installed addons will be checked for available updates</source>
+      <translation type="unfinished">If this option is selected, when launching the Addon Manager,
+installed addons will be checked for available updates</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="25"/>
+      <location filename="../../AddonManagerOptions.ui" line="24"/>
       <source>Automatically check for updates at start (requires git)</source>
       <translation>Automatski provjerava ima li ažuriranja kod pokretanja (zahtjeva python-git)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="41"/>
+      <location filename="../../AddonManagerOptions.ui" line="40"/>
       <source>Download Macro metadata (approximately 10MB)</source>
       <translation>Preuzmi meta podatke makro naredbe (otprilike 10MB)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="56"/>
+      <location filename="../../AddonManagerOptions.ui" line="55"/>
       <source>Cache update frequency</source>
       <translation>Učestalost ažuriranja predmemorije</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="76"/>
+      <location filename="../../AddonManagerOptions.ui" line="75"/>
       <source>Manual (no automatic updates)</source>
       <translation>Ručno (nema automatskih ažuriranja)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="81"/>
+      <location filename="../../AddonManagerOptions.ui" line="80"/>
       <source>Daily</source>
       <translation>Dnevno</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="86"/>
+      <location filename="../../AddonManagerOptions.ui" line="85"/>
       <source>Weekly</source>
       <translation>Tjedno</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="96"/>
+      <location filename="../../AddonManagerOptions.ui" line="95"/>
       <source>Hide Addons without a license</source>
       <translation>Skriva dodatke bez licence</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="112"/>
+      <location filename="../../AddonManagerOptions.ui" line="111"/>
       <source>Hide Addons with non-FSF Free/Libre license</source>
       <translation>Skriva dodatke sa non-FSF Free/Libre licencom</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="128"/>
+      <location filename="../../AddonManagerOptions.ui" line="127"/>
       <source>Hide Addons with non-OSI-approved license</source>
       <translation>Skriva dodatke sa non-OSI-approved licencom</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="144"/>
+      <location filename="../../AddonManagerOptions.ui" line="143"/>
       <source>Hide Addons marked Python 2 Only</source>
       <translation>Skriva dodatak označen samo za Python 2</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="160"/>
+      <location filename="../../AddonManagerOptions.ui" line="159"/>
       <source>Hide Addons marked Obsolete</source>
       <translation>Skriva dodatake označene zastarjelim</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="176"/>
+      <location filename="../../AddonManagerOptions.ui" line="175"/>
       <source>Hide Addons that require a newer version of FreeCAD</source>
       <translation>Sakrij dodatke koji zahtjevaju noviju verziju FreeCAD-a</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="198"/>
+      <location filename="../../AddonManagerOptions.ui" line="197"/>
       <source>Custom repositories</source>
       <translation>Prilagođena spremišta</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="252"/>
+      <location filename="../../AddonManagerOptions.ui" line="251"/>
       <source>Proxy</source>
       <translation>Proxy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="258"/>
+      <location filename="../../AddonManagerOptions.ui" line="257"/>
       <source>No proxy</source>
       <translation>No proxy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="274"/>
+      <location filename="../../AddonManagerOptions.ui" line="273"/>
       <source>User system proxy</source>
       <translation>User system proxy</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="287"/>
+      <location filename="../../AddonManagerOptions.ui" line="286"/>
       <source>User-defined proxy:</source>
       <translation>Korisnički definiran proxy:</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="324"/>
+      <location filename="../../AddonManagerOptions.ui" line="323"/>
       <source>Score source URL</source>
       <translation>Bodovi izvornog URL-a</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="343"/>
+      <location filename="../../AddonManagerOptions.ui" line="342"/>
       <source>The URL for the Addon Score data (see Addon Manager wiki page for formatting and hosting details).</source>
       <translation>URL za podatke o ocjeni dodataka (vidi wiki stranicu Addon Managera za formatiranje i detalje o hostingu).</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="354"/>
+      <location filename="../../AddonManagerOptions.ui" line="353"/>
       <source>Path to git executable (optional):</source>
       <translation>Putanja ka izvršnoj git datoteci (neobavezno):</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="373"/>
+      <location filename="../../AddonManagerOptions.ui" line="372"/>
       <source>The path to the git executable. Autodetected if needed and not specified.</source>
       <translation>Putanja ka izvršnoj git datoteci.  Automatski detektirano ako je potrebno i nije specificirano.</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="394"/>
+      <location filename="../../AddonManagerOptions.ui" line="393"/>
       <source>Advanced Options</source>
       <translation>Napredne opcije</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="400"/>
+      <location filename="../../AddonManagerOptions.ui" line="399"/>
       <source>Show option to change branches (requires git)</source>
       <translation>Prikaži opciju za promjenu grana (zahtjeva git)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="413"/>
+      <location filename="../../AddonManagerOptions.ui" line="412"/>
       <source>Disable git (fall back to ZIP downloads only)</source>
       <translation>Onemogući git (povratak na ZIP preuzimanja)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="426"/>
+      <location filename="../../AddonManagerOptions.ui" line="425"/>
       <source>Activate Addon Manager options intended for developers of new Addons.</source>
       <translation>Aktivirajte Upravitelj dodataka opcije namijenjene programerima novih Dodataka.</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="429"/>
+      <location filename="../../AddonManagerOptions.ui" line="428"/>
       <source>Addon developer mode</source>
       <translation>Dodatak Developer mod</translation>
     </message>
@@ -1243,28 +1241,28 @@ instalirani dodaci će se provjeriti na dostupna ažuriranja
       <translation>Autor</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="165"/>
+      <location filename="../../manage_python_dependencies.py" line="164"/>
       <source>New Python Version Detected</source>
       <translation>Otkrivena nova verzija Pythona</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="170"/>
+      <location filename="../../manage_python_dependencies.py" line="169"/>
       <source>This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</source>
       <translation>Čini se da je ovo prvi put da je ova verzija Python-a korištena sa Upraviteljem dodataka. Da li želiš  da za njega instaliraš iste automatski instalirane zavisnosti?</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="200"/>
+      <location filename="../../manage_python_dependencies.py" line="199"/>
       <source>Processing, please wait...</source>
       <translation>U obradi, sačekaj...</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="248"/>
+      <location filename="../../manage_python_dependencies.py" line="247"/>
       <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="115"/>
       <source>Update</source>
       <translation>Ažuriraj</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="343"/>
+      <location filename="../../manage_python_dependencies.py" line="341"/>
       <source>Updating...</source>
       <translation>Ažuriranje...</translation>
     </message>
@@ -2402,17 +2400,17 @@ instalirani dodaci će se provjeriti na dostupna ažuriranja
       <translation>neki dodaci su možda ažurirani</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="83"/>
+      <location filename="../../addonmanager_readme_controller.py" line="82"/>
       <source>Loading info for {} from the FreeCAD Macro Recipes wiki...</source>
       <translation>Učitavanje informacija za {}  FreeCAD Macro Recipes wiki stranice...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="91"/>
+      <location filename="../../addonmanager_readme_controller.py" line="90"/>
       <source>Loading page for {} from {}...</source>
       <translation>Učitavanje stranice za {} iz {}...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="109"/>
+      <location filename="../../addonmanager_readme_controller.py" line="108"/>
       <source>Failed to download data from {} -- received response code {}.</source>
       <translation>Nije uspjelo preuzeti podatke iz {} -- primljen je povratni kod {}.</translation>
     </message>

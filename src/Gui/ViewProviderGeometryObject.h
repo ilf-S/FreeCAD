@@ -96,6 +96,7 @@ public:
 
     /// Get the python wrapper for that ViewProvider
     PyObject* getPyObject() override;
+    static App::Material getUserDefinedMaterial();
 
 protected:
     /// get called by the container whenever a property has been changed
@@ -104,10 +105,13 @@ protected:
 
     virtual unsigned long getBoundColor() const;
 
-    void setSoMaterial(const App::Material& source);
     void handleChangedPropertyName(Base::XMLReader& reader,
                                    const char* TypeName,
                                    const char* PropName) override;
+
+private:
+    void setSoMaterial(const App::Material& source);
+    bool isSelectionEnabled() const;
 
 protected:
     SoMaterial* pcShapeMaterial {nullptr};

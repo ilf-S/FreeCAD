@@ -41,6 +41,10 @@
 #include <utility>
 #endif
 
+#include <QFileInfo>
+#include <QLockFile>
+#include <QDir>
+
 #ifdef FC_OS_LINUX
 #include <unistd.h>
 #endif
@@ -1719,6 +1723,17 @@ void ParameterManager::SaveDocument() const
     }
 }
 
+namespace
+{
+void waitForFileAccess(const Base::FileInfo& file)
+{
+    QFileInfo fi(QDir::tempPath(), QString::fromStdString(file.fileName() + ".lock"));
+    QLockFile lock(fi.absoluteFilePath());
+    const int waitOneSecond = 1000;
+    lock.tryLock(waitOneSecond);
+}
+}  // namespace
+
 //**************************************************************************
 // Document handling
 
@@ -1736,9 +1751,9 @@ bool ParameterManager::LoadOrCreateDocument(const char* sFileName)
 
 int ParameterManager::LoadDocument(const char* sFileName)
 {
-    Base::FileInfo file(sFileName);
-
     try {
+        Base::FileInfo file(sFileName);
+        waitForFileAccess(file);
 #if defined(FC_OS_WIN32)
         std::wstring name = file.toStdWString();
         // NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)
@@ -1828,9 +1843,9 @@ int ParameterManager::LoadDocument(const XERCES_CPP_NAMESPACE_QUALIFIER InputSou
 
 void ParameterManager::SaveDocument(const char* sFileName) const
 {
-    Base::FileInfo file(sFileName);
-
     try {
+        Base::FileInfo file(sFileName);
+        waitForFileAccess(file);
         //
         // Plug in a format target to receive the resultant
         // XML stream from the serializer.
@@ -2060,16 +2075,15 @@ DOMPrintFilter::FilterAction DOMPrintFilter::acceptNode(const DOMNode* node) con
         }
     }
 
+    // clang-format off
     switch (node->getNodeType()) {
         case DOMNode::TEXT_NODE: {
             // Filter out text element if it is under a group node. Note text xml
             // element is plain text in between tags, and we do not store any text
             // there.
             auto parent = node->getParentNode();
-            if (parent
-                && XMLString::compareString(parent->getNodeName(),
-                                            XStr("FCParamGroup").unicodeForm())
-                    == 0) {
+            if (parent && XMLString::compareString(parent->getNodeName(),
+                                                   XStr("FCParamGroup").unicodeForm()) == 0) {
                 return DOMNodeFilter::FILTER_REJECT;
             }
             return DOMNodeFilter::FILTER_ACCEPT;
@@ -2082,6 +2096,7 @@ DOMPrintFilter::FilterAction DOMPrintFilter::acceptNode(const DOMNode* node) con
             return DOMNodeFilter::FILTER_ACCEPT;
         }
     }
+    // clang-format on
 }
 
 //**************************************************************************

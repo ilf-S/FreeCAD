@@ -5,8 +5,8 @@
     <name>CmdPathArea</name>
     <message>
       <location filename="../../Command.cpp" line="46"/>
-      <source>Path</source>
-      <translation>Pfad</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="47"/>
@@ -23,8 +23,8 @@
     <name>CmdPathAreaWorkplane</name>
     <message>
       <location filename="../../Command.cpp" line="128"/>
-      <source>Path</source>
-      <translation>Pfad</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="129"/>
@@ -41,8 +41,8 @@
     <name>CmdPathCompound</name>
     <message>
       <location filename="../../Command.cpp" line="218"/>
-      <source>Path</source>
-      <translation>Pfad</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="219"/>
@@ -59,8 +59,8 @@
     <name>CmdPathShape</name>
     <message>
       <location filename="../../Command.cpp" line="270"/>
-      <source>Path</source>
-      <translation>Pfad</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="271"/>
@@ -648,7 +648,7 @@ Für das Standard Rohmaterial aus dem Begrenzungsrahmen des Basisobjekts bedeute
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="257"/>
       <source>If checked the path is constrained by the solid. Otherwise the volume of the solid describes a 'keep out' zone</source>
-      <translation>Wenn aktiviert, wird der Pfad durch den Körper eingeschränkt. Andernfalls beschreibt das Volumen des Körpers eine Sperrbereich</translation>
+      <translation>Wenn aktiviert, wird der Werkzeugweg durch den Körper eingeschränkt. Andernfalls beschreibt das Volumen des Körpers einen Sperrbereich</translation>
     </message>
     <message>
       <location filename="../panels/DressupPathBoundary.ui" line="55"/>
@@ -1224,6 +1224,16 @@ Reset löscht alle aktuellen Elemente aus der Liste und füllt die Liste mit all
       <location filename="../panels/PageOpDrillingEdit.ui" line="169"/>
       <source>Chip Break</source>
       <translation>Span-Bruch</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="176"/>
+      <source>Feed retract</source>
+      <translation>Vorschub zurückziehen</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="179"/>
+      <source>G85: Retract from the hole at the given feedrate instead of rapid move</source>
+      <translation>G85: Zurückziehen aus dem Loch mit der angegebenen Vorschubgeschwindigkeit statt schneller Bewegung</translation>
     </message>
     <message>
       <location filename="../panels/PageOpEngraveEdit.ui" line="63"/>
@@ -1987,7 +1997,7 @@ Standard: OpToolDurchmesser</translation>
       <source>Expression set as ClearanceHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
-      <translation>Ausdruck als Sichere Höhe für neue Operationen gesetzt.
+      <translation>Ausdruck als Sicherheitsabstand für neue Operationen gesetzt.
 
 Standard: "OpStockZMax+SetupSheet.SafeHeightOffset"</translation>
     </message>
@@ -2451,11 +2461,6 @@ Wie Sie mit Namenskonflikten umgehen, erfahren Sie in der unten stehenden Richtl
       <translation>Standard-Nachbearbeitungsprogramm</translation>
     </message>
     <message>
-      <location filename="../preferences/PathJob.ui" line="315"/>
-      <source>DefaultPostProcessor</source>
-      <translation>Standard-Post-Prozessor</translation>
-    </message>
-    <message>
       <location filename="../preferences/PathJob.ui" line="325"/>
       <source>Default Arguments</source>
       <translation>Standardargumente</translation>
@@ -2501,11 +2506,6 @@ Bleibt das Feld leer, wird keine Vorlage vorausgewählt.</translation>
       <location filename="../preferences/PathJob.ui" line="312"/>
       <source>Select one of the post processors as the default.</source>
       <translation>Wählen Sie einen der Postprozessoren als Standard aus.</translation>
-    </message>
-    <message>
-      <location filename="../preferences/PathJob.ui" line="318"/>
-      <source>Mod/CAM</source>
-      <translation>Mod/CAM</translation>
     </message>
     <message>
       <location filename="../preferences/PathJob.ui" line="332"/>
@@ -3773,7 +3773,7 @@ FreeCAD hat keine Kenntnis davon, wo ein bestimmtes Koordinatensystem innerhalb 
       <source>Expression set as ClearanceHeight for new operations.
 
 Default: "OpStockZMax+SetupSheet.ClearanceHeightOffset"</source>
-      <translation>Ausdruck als Sichere Höhe für neue Operationen gesetzt.
+      <translation>Ausdruck als Sicherheitsabstand für neue Operationen gesetzt.
 
 Standard: "OpStockZMax+SetupSheet.SafeHeightOffset"</translation>
     </message>
@@ -3791,7 +3791,7 @@ Standard: "OpStockZMax+SetupSheet.SafeHeightOffset"</translation>
       <source>SafeHeightOffset can be for expressions to set the SafeHeight for new operations.
 
 Default: "5mm"</source>
-      <translation>SafeHeightOffset kann für Ausdrücke verwendet werden, um die Sichere Höhe für neue Operationen festzulegen.
+      <translation>SafeHeightOffset kann für Ausdrücke verwendet werden, um den Sicherheitsabstand für neue Operationen festzulegen.
 
 Voreinstellung: "5mm"</translation>
     </message>
@@ -4108,46 +4108,6 @@ Standard: "3 mm" - Das Werkzeug sollte in diesem Fall auf Verbindungsfahrten imm
   <context>
     <name>Path</name>
     <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
-      <source>The currently selected unit schema: 
-     '{}' for this document
- Does not use 'minutes' for velocity values. 
- 
-CNC machines require feed rate to be expressed in 
-unit/minute. To ensure correct G-code: 
-Select a minute-based schema in preferences.
-For example:
-    'Metric, Small Parts &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</source>
-      <translation>Das aktuell ausgewählte Einheitenschema: 
-     '{}' für dieses Dokument
- verwendet keine 'Minuten' für Geschwindigkeitswerte. 
- 
-CNC-Maschinen benötigen die Vorschubrate in 
-Einheit/Minute. Um einen korrekten G-Code sicherzustellen: 
-Wählen Sie in den Einstellungen ein Minuten basiertes Schema aus.
-Zum Beispiel:
-    'Metrisch, Kleine Teile &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
-      <source>Warning</source>
-      <translation>Warnung</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
-      <source>Ok</source>
-      <translation>Ok</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
-      <source>Don't Show This Anymore</source>
-      <translation>Dies nicht mehr anzeigen</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Base/Gui/IconViewProvider.py" line="97"/>
       <source>Edit</source>
       <translation>Bearbeiten</translation>
@@ -4214,11 +4174,6 @@ Zum Beispiel:
       <location filename="../../../PathScripts/PathUtilsGui.py" line="91"/>
       <source>Choose a Path Job</source>
       <translation>Einen Path-Auftrag auswählen</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
-      <source>Invalid Filename</source>
-      <translation>Ungültiger Dateiname</translation>
     </message>
     <message>
       <location filename="../../../PathScripts/PathUtils.py" line="545"/>
@@ -4379,13 +4334,13 @@ Zum Beispiel:
       <location filename="../../../Path/Dressup/DogboneII.py" line="250"/>
       <location filename="../../../Path/Dressup/Gui/Dogbone.py" line="463"/>
       <source>Dressup length if incision is set to 'custom'</source>
-      <translation>Aufbereitungs Länge, wenn der Schnitt auf "Custom" gesetzt wird</translation>
+      <translation>Aufbereitungs Länge, wenn der Schnitt auf "benutzerdefiniert" gesetzt wird</translation>
     </message>
     <message>
       <location filename="../../../Path/Dressup/DogboneII.py" line="258"/>
       <location filename="../../../Path/Dressup/Gui/Dogbone.py" line="445"/>
       <source>Bones that aren't dressed up</source>
-      <translation>Knchen die nicht erweitert wurden</translation>
+      <translation>Konchen die nicht aufbereitet wurden</translation>
     </message>
     <message>
       <location filename="../../../Path/Dressup/Tags.py" line="946"/>
@@ -4987,55 +4942,61 @@ Zum Beispiel:
     </message>
     <message>
       <location filename="../../../Path/Op/Drilling.py" line="105"/>
-      <location filename="../../../Path/Op/Drilling.py" line="129"/>
+      <location filename="../../../Path/Op/Drilling.py" line="137"/>
       <source>Use chipbreaking</source>
       <translation>Spanbrechen verwenden</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="117"/>
+      <location filename="../../../Path/Op/Drilling.py" line="114"/>
+      <location filename="../../../Path/Op/Drilling.py" line="194"/>
+      <source>Use G85 boring cycle with feed out</source>
+      <translation>G85 Bohrungs-Bearbeitungszeit mit zurückziehendem Vorschub verwenden</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Drilling.py" line="125"/>
       <source>Incremental Drill depth before retracting to clear chips</source>
       <translation>Inkrementelle Bohrtiefe vor jedem Zurückziehen, um Späne zu lösen und auszuwerfen</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="123"/>
+      <location filename="../../../Path/Op/Drilling.py" line="131"/>
       <source>Enable pecking</source>
       <translation>Spanbrechen aktivieren</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="135"/>
+      <location filename="../../../Path/Op/Drilling.py" line="143"/>
       <source>The time to dwell between peck cycles</source>
       <translation>Verweilzeit zwischen den Spanbrechzyklen</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="141"/>
+      <location filename="../../../Path/Op/Drilling.py" line="149"/>
       <source>Enable dwell</source>
       <translation>Pause aktivieren</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="150"/>
+      <location filename="../../../Path/Op/Drilling.py" line="158"/>
       <source>Calculate the tip length and subtract from final depth</source>
       <translation>Berechne die Spitzenlänge und subtrahiere von der Endtiefe</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="158"/>
-      <location filename="../../../Path/Op/Drilling.py" line="222"/>
+      <location filename="../../../Path/Op/Drilling.py" line="166"/>
+      <location filename="../../../Path/Op/Drilling.py" line="236"/>
       <source>Controls tool retract height between holes in same op, Default=G98: safety height</source>
       <translation>Steuert die Rückzugshöhe des Werkzeugs zwischen den Bohrungen im gleichen Arbeitsgang, Standard=G98: Sicherheitshöhe</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="167"/>
+      <location filename="../../../Path/Op/Drilling.py" line="175"/>
       <source>The height where cutting feed rate starts and retract height for peck operation</source>
       <translation>Die Höhe, in der der Schnittvorschub beginnt und die Rückzugshöhe für die Spanbruch Operation</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="173"/>
+      <location filename="../../../Path/Op/Drilling.py" line="181"/>
       <source>How far the drilling depth is extended</source>
       <translation>Wie viel tiefer gebohrt wird</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="180"/>
-      <location filename="../../../Path/Op/Drilling.py" line="212"/>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="134"/>
+      <location filename="../../../Path/Op/Drilling.py" line="188"/>
+      <location filename="../../../Path/Op/Drilling.py" line="226"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="148"/>
       <source>Apply G99 retraction: only retract to RetractHeight between holes in this operation</source>
       <translation>G99 Rückzug anwenden: Rückzug nur auf RetractHeight zwischen Löchern in dieser Operation</translation>
     </message>
@@ -5361,7 +5322,7 @@ Zum Beispiel:
       <location filename="../../../Path/Op/Surface.py" line="212"/>
       <location filename="../../../Path/Op/Waterline.py" line="232"/>
       <source>Avoid cutting the last 'N' faces in the Base Geometry list of selected faces.</source>
-      <translation>Das Schneiden der letzten 'N' Flächen der Basisgeometrie oder der ausgewählten Flächen vermeiden.</translation>
+      <translation>Das Fräsen der letzten 'N' Flächen in der Basisgeometrieliste der ausgewählten Flächen vermeiden.</translation>
     </message>
     <message>
       <location filename="../../../Path/Op/Surface.py" line="220"/>
@@ -5514,7 +5475,7 @@ Zum Beispiel:
     <message>
       <location filename="../../../Path/Op/ThreadMilling.py" line="372"/>
       <source>Set thread's TPI (turns per inch) - used for imperial threads</source>
-      <translation>TPI des Gewindes (Gewindegänge pro Zoll) festlegen - wird für Zollgewinde verwendet</translation>
+      <translation>TPI des Gewindes (Gewindegänge pro Zoll) festlegen - für Zollgewinde</translation>
     </message>
     <message>
       <location filename="../../../Path/Op/ThreadMilling.py" line="381"/>
@@ -5862,21 +5823,6 @@ Zum Beispiel:
   </context>
   <context>
     <name>PathPocket</name>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
-      <source>Normal</source>
-      <translation>Normal</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
     <message>
       <location filename="../../../Path/Op/Gui/PocketBase.py" line="82"/>
       <source>Pass Extension</source>
@@ -6320,14 +6266,6 @@ Abbruch der OP-Erstellung</translation>
       <location filename="../../../Path/Op/Gui/Array.py" line="334"/>
       <source>Arrays of toolpaths having different tool controllers are handled according to the tool controller of the first path.</source>
       <translation>Anordnungen von Werkzeugwegen mit unterschiedlichen Werkzeugsteuerungen werden entsprechend der Werkzeugsteuerung des ersten Werkzeugwegs behandelt.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathToolBit</name>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
-      <source>Toolbit cannot be edited: Shapefile not found</source>
-      <translation>Werkzeugspitze kann nicht bearbeitet werden: Formdatei nicht gefunden</translation>
     </message>
   </context>
   <context>
@@ -6926,6 +6864,7 @@ Abbruch der OP-Erstellung</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1621"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
       <source>Warning</source>
       <translation>Warnung</translation>
     </message>
@@ -6936,6 +6875,7 @@ Abbruch der OP-Erstellung</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1623"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
       <source>Ok</source>
       <translation>Ok</translation>
     </message>
@@ -6965,6 +6905,36 @@ Abbruch der OP-Erstellung</translation>
       <translation>Erzeugt einen CAM-Auftrag</translation>
     </message>
     <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
+      <source>The currently selected unit schema: 
+     '{}' for this document
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct G-code: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</source>
+      <translation>Das aktuell ausgewählte Einheitenschema: 
+     '{}' für dieses Dokument
+ verwendet keine 'Minuten' für Geschwindigkeitswerte. 
+ 
+CNC-Maschinen benötigen die Vorschubrate in 
+Einheit/Minute. Um einen korrekten G-Code sicherzustellen: 
+Wählen Sie in den Einstellungen ein Minuten basiertes Schema aus.
+Zum Beispiel:
+    'Metrisch, Kleine Teile &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
+      <source>Don't Show This Anymore</source>
+      <translation>Dies nicht mehr anzeigen</translation>
+    </message>
+    <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="88"/>
       <source>Solids</source>
       <translation>Volumenkörper</translation>
@@ -6973,6 +6943,21 @@ Abbruch der OP-Erstellung</translation>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="90"/>
       <source>Jobs</source>
       <translation>Aufträge</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Model</source>
+      <translation>Modell</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Count</source>
+      <translation>Anzahl</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="272"/>
+      <source>&lt;none&gt;</source>
+      <translation>&lt;keine&gt;</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="358"/>
@@ -7544,16 +7529,6 @@ Abbruch der OP-Erstellung</translation>
       <translation>Basisform %s ist bereits in der Liste</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
-      <source>Profile</source>
-      <translation>Profil</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation>Gesamtes Modell, ausgewählte Fläche(n) oder ausgewählte Kante(n) profilieren</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Tool/Gui/Controller.py" line="116"/>
       <source>Edit</source>
       <translation>Bearbeiten</translation>
@@ -7587,12 +7562,12 @@ Abbruch der OP-Erstellung</translation>
       <translation>2x Bohrspitze</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="189"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="209"/>
       <source>Drilling</source>
       <translation>Bohren</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="193"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="213"/>
       <source>Creates a Drilling toolpath from the features of a base object</source>
       <translation>Erstellt ein Bohrpfad aus den Merkmalen des Basisobjekts</translation>
     </message>
@@ -7696,6 +7671,26 @@ Abbruch der OP-Erstellung</translation>
       <location filename="../../../Path/Op/PocketBase.py" line="73"/>
       <source>Grid</source>
       <translation>Raster</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
+      <source>Normal</source>
+      <translation>Normal</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="185"/>
+      <source>Extensions</source>
+      <translation>Erweiterungen</translation>
     </message>
   </context>
   <context>
@@ -8202,7 +8197,7 @@ Abbruch der OP-Erstellung</translation>
     <message>
       <location filename="../../../Path/Op/Gui/Deburr.py" line="148"/>
       <source>Creates a Deburr toolpath along Edges or around Faces</source>
-      <translation>Erzeugt einen Entgrat-Werkzeugweg entlang von Kante oder um Flächen herum</translation>
+      <translation>Erstellt einen Werkzeugweg zum Entgraten an Kanten entlang oder um Flächen herum</translation>
     </message>
   </context>
   <context>
@@ -8318,12 +8313,12 @@ Abbruch der OP-Erstellung</translation>
   <context>
     <name>CAM_Gcode_pre</name>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="226"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="225"/>
       <source>No active document</source>
       <translation>Kein aktives Dokument</translation>
     </message>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="229"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="228"/>
       <source>No job object</source>
       <translation>Kein Auftrags Objekt</translation>
     </message>
@@ -8431,23 +8426,33 @@ Abbruch der OP-Erstellung</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="668"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="795"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="799"/>
       <source>Tooltable JSON (*.fctl)</source>
       <translation>Werkzeugtabelle JSON (*.fctl)</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="670"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="804"/>
       <source>Save toolbit library</source>
       <translation>Werkzeugbibliothek speichern</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="796"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="731"/>
+      <source>Tool</source>
+      <translation>Werkzeug</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="732"/>
+      <source>Shape</source>
+      <translation>Form</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
       <source>LinuxCNC tooltable (*.tbl)</source>
       <translation>LinuxCNC Werkzeugtabelle (*.tbl)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="798"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="802"/>
       <source>Camotics tooltable (*.json)</source>
       <translation>Camotics-Werkzeugtabelle (*.json)</translation>
     </message>
@@ -8476,6 +8481,42 @@ Abbruch der OP-Erstellung</translation>
       <location filename="../../../Path/Tool/Gui/BitLibraryCmd.py" line="80"/>
       <source>Open an editor to manage ToolBit libraries</source>
       <translation>Öffne den Werzeug Editor</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Profile</name>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
+      <source>Profile</source>
+      <translation>Profil</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation>Gesamtes Modell, ausgewählte Fläche(n) oder ausgewählte Kante(n) profilieren</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Toolbit</name>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
+      <source>Toolbit cannot be edited: Shapefile not found</source>
+      <translation>Werkzeug-Bit kann nicht bearbeitet werden: Formdatei nicht gefunden</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="193"/>
+      <source>Tool</source>
+      <translation>Werkzeug</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
+      <source>Invalid Filename</source>
+      <translation>Ungültiger Dateiname</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="242"/>
+      <source>Select Tool Shape</source>
+      <translation>Werkzeugtyp auswählen</translation>
     </message>
   </context>
 </TS>

@@ -403,7 +403,7 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <location filename="../../expanded_view.ui" line="128"/>
       <source>labelSort</source>
-      <translation type="unfinished">labelSort</translation>
+      <translation>ラベルソート</translation>
     </message>
     <message>
       <location filename="../../expanded_view.ui" line="193"/>
@@ -498,7 +498,7 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <location filename="../../developer_mode_freecad_versions.ui" line="48"/>
       <source>Advanced version mapping...</source>
-      <translation type="unfinished">Advanced version mapping...</translation>
+      <translation>高度なバージョンのマッピング...</translation>
     </message>
   </context>
   <context>
@@ -511,137 +511,137 @@ Do you want the Addon Manager to install them automatically? Choose &quot;Ignore
     <message>
       <location filename="../../AddonManagerOptions.ui" line="20"/>
       <source>If this option is selected, when launching the Addon Manager,
-installed addons will be checked for available updates
-(this requires the GitPython package installed on your system)</source>
-      <translation>このオプションが選択されている場合、アドオン・マネージャーの起動時にインストールされているアドオンに利用可能な更新があるかがチェックされます（システムにGitPythonパッケージがインストールされている必要があります）</translation>
+installed addons will be checked for available updates</source>
+      <translation type="unfinished">If this option is selected, when launching the Addon Manager,
+installed addons will be checked for available updates</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="25"/>
+      <location filename="../../AddonManagerOptions.ui" line="24"/>
       <source>Automatically check for updates at start (requires git)</source>
       <translation>開始時に更新を自動確認 (Gitが必要)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="41"/>
+      <location filename="../../AddonManagerOptions.ui" line="40"/>
       <source>Download Macro metadata (approximately 10MB)</source>
       <translation>マクロメタデータ（約10MB）をダウンロード</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="56"/>
+      <location filename="../../AddonManagerOptions.ui" line="55"/>
       <source>Cache update frequency</source>
       <translation>キャッシュ更新頻度</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="76"/>
+      <location filename="../../AddonManagerOptions.ui" line="75"/>
       <source>Manual (no automatic updates)</source>
       <translation>手動 (自動更新なし)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="81"/>
+      <location filename="../../AddonManagerOptions.ui" line="80"/>
       <source>Daily</source>
       <translation>日次</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="86"/>
+      <location filename="../../AddonManagerOptions.ui" line="85"/>
       <source>Weekly</source>
       <translation>週次</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="96"/>
+      <location filename="../../AddonManagerOptions.ui" line="95"/>
       <source>Hide Addons without a license</source>
       <translation type="unfinished">Hide Addons without a license</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="112"/>
+      <location filename="../../AddonManagerOptions.ui" line="111"/>
       <source>Hide Addons with non-FSF Free/Libre license</source>
       <translation type="unfinished">Hide Addons with non-FSF Free/Libre license</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="128"/>
+      <location filename="../../AddonManagerOptions.ui" line="127"/>
       <source>Hide Addons with non-OSI-approved license</source>
       <translation type="unfinished">Hide Addons with non-OSI-approved license</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="144"/>
+      <location filename="../../AddonManagerOptions.ui" line="143"/>
       <source>Hide Addons marked Python 2 Only</source>
       <translation>Python 2 専用のアドオンを非表示</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="160"/>
+      <location filename="../../AddonManagerOptions.ui" line="159"/>
       <source>Hide Addons marked Obsolete</source>
       <translation>廃止されたアドオンを非表示</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="176"/>
+      <location filename="../../AddonManagerOptions.ui" line="175"/>
       <source>Hide Addons that require a newer version of FreeCAD</source>
       <translation>新しいバージョンの FreeCAD が必要なアドオンを非表示</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="198"/>
+      <location filename="../../AddonManagerOptions.ui" line="197"/>
       <source>Custom repositories</source>
       <translation>カスタムリポジトリ</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="252"/>
+      <location filename="../../AddonManagerOptions.ui" line="251"/>
       <source>Proxy</source>
       <translation>プロキシ</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="258"/>
+      <location filename="../../AddonManagerOptions.ui" line="257"/>
       <source>No proxy</source>
       <translation>プロキシを使用しない</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="274"/>
+      <location filename="../../AddonManagerOptions.ui" line="273"/>
       <source>User system proxy</source>
       <translation>ユーザーシステムプロキシ</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="287"/>
+      <location filename="../../AddonManagerOptions.ui" line="286"/>
       <source>User-defined proxy:</source>
       <translation>ユーザー定義プロキシ:</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="324"/>
+      <location filename="../../AddonManagerOptions.ui" line="323"/>
       <source>Score source URL</source>
       <translation type="unfinished">Score source URL</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="343"/>
+      <location filename="../../AddonManagerOptions.ui" line="342"/>
       <source>The URL for the Addon Score data (see Addon Manager wiki page for formatting and hosting details).</source>
       <translation type="unfinished">The URL for the Addon Score data (see Addon Manager wiki page for formatting and hosting details).</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="354"/>
+      <location filename="../../AddonManagerOptions.ui" line="353"/>
       <source>Path to git executable (optional):</source>
       <translation>Git 実行ファイルのパス (オプション):</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="373"/>
+      <location filename="../../AddonManagerOptions.ui" line="372"/>
       <source>The path to the git executable. Autodetected if needed and not specified.</source>
       <translation>Git実行ファイルのパス。指定されていない場合には必要時に自動検出されます。</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="394"/>
+      <location filename="../../AddonManagerOptions.ui" line="393"/>
       <source>Advanced Options</source>
       <translation>詳細設定</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="400"/>
+      <location filename="../../AddonManagerOptions.ui" line="399"/>
       <source>Show option to change branches (requires git)</source>
       <translation>ブランチ変更オプションを表示 (gitが必要)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="413"/>
+      <location filename="../../AddonManagerOptions.ui" line="412"/>
       <source>Disable git (fall back to ZIP downloads only)</source>
       <translation>Git を無効にする (ZIP ダウンロードのみに戻ります)</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="426"/>
+      <location filename="../../AddonManagerOptions.ui" line="425"/>
       <source>Activate Addon Manager options intended for developers of new Addons.</source>
       <translation>新しいアドオン開発者向けのアドオン・マネージャー・オプションを有効にします。</translation>
     </message>
     <message>
-      <location filename="../../AddonManagerOptions.ui" line="429"/>
+      <location filename="../../AddonManagerOptions.ui" line="428"/>
       <source>Addon developer mode</source>
       <translation>アドオン開発者モード</translation>
     </message>
@@ -957,7 +957,7 @@ installed addons will be checked for available updates
     <message>
       <location filename="../../developer_mode_people.ui" line="14"/>
       <source>Add Person</source>
-      <translation type="unfinished">Add Person</translation>
+      <translation>人物の追加</translation>
     </message>
     <message>
       <location filename="../../developer_mode_people.ui" line="20"/>
@@ -1116,12 +1116,12 @@ installed addons will be checked for available updates
     <message>
       <location filename="../../AddonManager.py" line="223"/>
       <source>Starting up...</source>
-      <translation type="unfinished">Starting up...</translation>
+      <translation>起動中...</translation>
     </message>
     <message>
       <location filename="../../AddonManager.py" line="258"/>
       <source>Loading addon information</source>
-      <translation type="unfinished">Loading addon information</translation>
+      <translation>アドオンの情報を読み込んでいます...</translation>
     </message>
     <message>
       <location filename="../../AddonManager.py" line="284"/>
@@ -1193,17 +1193,17 @@ installed addons will be checked for available updates
     <message>
       <location filename="../../Widgets/addonmanager_widget_global_buttons.py" line="97"/>
       <source>Check for updates</source>
-      <translation type="unfinished">Check for updates</translation>
+      <translation>アップデートをチェック</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_global_buttons.py" line="98"/>
       <source>Python dependencies...</source>
-      <translation type="unfinished">Python dependencies...</translation>
+      <translation>Pythonの依存関係...</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_global_buttons.py" line="99"/>
       <source>Developer tools...</source>
-      <translation type="unfinished">Developer tools...</translation>
+      <translation>開発者ツール...</translation>
     </message>
     <message>
       <location filename="../../Widgets/addonmanager_widget_global_buttons.py" line="106"/>
@@ -1239,28 +1239,28 @@ installed addons will be checked for available updates
       <translation>作成者</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="165"/>
+      <location filename="../../manage_python_dependencies.py" line="164"/>
       <source>New Python Version Detected</source>
       <translation type="unfinished">New Python Version Detected</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="170"/>
+      <location filename="../../manage_python_dependencies.py" line="169"/>
       <source>This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</source>
       <translation type="unfinished">This appears to be the first time this version of Python has been used with the Addon Manager. Would you like to install the same auto-installed dependencies for it?</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="200"/>
+      <location filename="../../manage_python_dependencies.py" line="199"/>
       <source>Processing, please wait...</source>
       <translation type="unfinished">Processing, please wait...</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="248"/>
+      <location filename="../../manage_python_dependencies.py" line="247"/>
       <location filename="../../Widgets/addonmanager_widget_addon_buttons.py" line="115"/>
       <source>Update</source>
       <translation>更新</translation>
     </message>
     <message>
-      <location filename="../../manage_python_dependencies.py" line="343"/>
+      <location filename="../../manage_python_dependencies.py" line="341"/>
       <source>Updating...</source>
       <translation>更新中...</translation>
     </message>
@@ -2401,17 +2401,17 @@ installed addons will be checked for available updates
       <translation type="unfinished">some addons may have been updated</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="83"/>
+      <location filename="../../addonmanager_readme_controller.py" line="82"/>
       <source>Loading info for {} from the FreeCAD Macro Recipes wiki...</source>
       <translation type="unfinished">Loading info for {} from the FreeCAD Macro Recipes wiki...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="91"/>
+      <location filename="../../addonmanager_readme_controller.py" line="90"/>
       <source>Loading page for {} from {}...</source>
       <translation type="unfinished">Loading page for {} from {}...</translation>
     </message>
     <message>
-      <location filename="../../addonmanager_readme_controller.py" line="109"/>
+      <location filename="../../addonmanager_readme_controller.py" line="108"/>
       <source>Failed to download data from {} -- received response code {}.</source>
       <translation type="unfinished">Failed to download data from {} -- received response code {}.</translation>
     </message>

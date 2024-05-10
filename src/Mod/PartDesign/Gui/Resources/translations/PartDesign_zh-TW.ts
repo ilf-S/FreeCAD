@@ -940,22 +940,22 @@ so that self intersection is avoided.</source>
       <translation>將一個物件移至樹中</translation>
     </message>
     <message>
-      <location filename="../../TaskMultiTransformParameters.cpp" line="268"/>
+      <location filename="../../TaskMultiTransformParameters.cpp" line="267"/>
       <source>Mirrored</source>
       <translation>鏡像</translation>
     </message>
     <message>
-      <location filename="../../TaskMultiTransformParameters.cpp" line="307"/>
+      <location filename="../../TaskMultiTransformParameters.cpp" line="304"/>
       <source>Make LinearPattern</source>
       <translation>建立線形樣式</translation>
     </message>
     <message>
-      <location filename="../../TaskMultiTransformParameters.cpp" line="352"/>
+      <location filename="../../TaskMultiTransformParameters.cpp" line="348"/>
       <source>PolarPattern</source>
       <translation>環狀複製模式</translation>
     </message>
     <message>
-      <location filename="../../TaskMultiTransformParameters.cpp" line="390"/>
+      <location filename="../../TaskMultiTransformParameters.cpp" line="385"/>
       <source>Scaled</source>
       <translation>縮放</translation>
     </message>
@@ -2103,7 +2103,7 @@ click again to end selection</source>
       <translation>產生次數</translation>
     </message>
     <message>
-      <location filename="../../TaskLinearPatternParameters.cpp" line="332"/>
+      <location filename="../../TaskLinearPatternParameters.cpp" line="330"/>
       <source>Error</source>
       <translation>錯誤</translation>
     </message>
@@ -2714,7 +2714,7 @@ measured along the specified direction</source>
       <translation>產生次數</translation>
     </message>
     <message>
-      <location filename="../../TaskPolarPatternParameters.cpp" line="330"/>
+      <location filename="../../TaskPolarPatternParameters.cpp" line="329"/>
       <source>Error</source>
       <translation>錯誤</translation>
     </message>
@@ -3074,22 +3074,22 @@ click again to end selection</source>
   <context>
     <name>PartDesignGui::ViewProviderDatum</name>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="111"/>
+      <location filename="../../ViewProviderDatum.cpp" line="115"/>
       <source>Datum Plane parameters</source>
       <translation>基準平面參數</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="116"/>
+      <location filename="../../ViewProviderDatum.cpp" line="120"/>
       <source>Datum Line parameters</source>
       <translation>基準線參數</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="121"/>
+      <location filename="../../ViewProviderDatum.cpp" line="125"/>
       <source>Datum Point parameters</source>
       <translation>基準點參數</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="126"/>
+      <location filename="../../ViewProviderDatum.cpp" line="130"/>
       <source>Local Coordinate System parameters</source>
       <translation>局部座標系參數</translation>
     </message>
@@ -3360,7 +3360,7 @@ click again to end selection</source>
       <location filename="../../SketchWorkflow.cpp" line="591"/>
       <location filename="../../ViewProvider.cpp" line="96"/>
       <location filename="../../ViewProviderBoolean.cpp" line="78"/>
-      <location filename="../../ViewProviderDatum.cpp" line="246"/>
+      <location filename="../../ViewProviderDatum.cpp" line="250"/>
       <location filename="../../ViewProviderHole.cpp" line="77"/>
       <location filename="../../ViewProviderPrimitive.cpp" line="68"/>
       <location filename="../../ViewProviderShapeBinder.cpp" line="95"/>
@@ -3373,7 +3373,7 @@ click again to end selection</source>
       <location filename="../../SketchWorkflow.cpp" line="592"/>
       <location filename="../../ViewProvider.cpp" line="97"/>
       <location filename="../../ViewProviderBoolean.cpp" line="79"/>
-      <location filename="../../ViewProviderDatum.cpp" line="247"/>
+      <location filename="../../ViewProviderDatum.cpp" line="251"/>
       <location filename="../../ViewProviderHole.cpp" line="78"/>
       <location filename="../../ViewProviderPrimitive.cpp" line="69"/>
       <location filename="../../ViewProviderShapeBinder.cpp" line="96"/>
@@ -3705,7 +3705,7 @@ If you have a legacy document with PartDesign objects without Body, use the migr
     <message>
       <location filename="../../ViewProvider.cpp" line="63"/>
       <location filename="../../ViewProviderDressUp.cpp" line="50"/>
-      <location filename="../../ViewProviderShapeBinder.cpp" line="201"/>
+      <location filename="../../ViewProviderShapeBinder.cpp" line="209"/>
       <location filename="../../ViewProviderTransformed.cpp" line="76"/>
       <source>Edit %1</source>
       <translation>編輯 %1</translation>
@@ -3721,30 +3721,30 @@ If you have a legacy document with PartDesign objects without Body, use the migr
       <translation>編輯布林</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="110"/>
-      <location filename="../../ViewProviderDatum.cpp" line="204"/>
+      <location filename="../../ViewProviderDatum.cpp" line="114"/>
+      <location filename="../../ViewProviderDatum.cpp" line="208"/>
       <source>Plane</source>
       <translation>平面</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="115"/>
-      <location filename="../../ViewProviderDatum.cpp" line="200"/>
+      <location filename="../../ViewProviderDatum.cpp" line="119"/>
+      <location filename="../../ViewProviderDatum.cpp" line="204"/>
       <source>Line</source>
       <translation>線</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="120"/>
-      <location filename="../../ViewProviderDatum.cpp" line="208"/>
+      <location filename="../../ViewProviderDatum.cpp" line="124"/>
+      <location filename="../../ViewProviderDatum.cpp" line="212"/>
       <source>Point</source>
       <translation>點</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="125"/>
+      <location filename="../../ViewProviderDatum.cpp" line="129"/>
       <source>Coordinate System</source>
       <translation>座標系</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderDatum.cpp" line="225"/>
+      <location filename="../../ViewProviderDatum.cpp" line="229"/>
       <source>Edit datum</source>
       <translation>編輯基準</translation>
     </message>
@@ -3801,17 +3801,17 @@ This feature is broken and can't be edited.</source>
       <translation>編輯旋轉成形</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderShapeBinder.cpp" line="196"/>
+      <location filename="../../ViewProviderShapeBinder.cpp" line="204"/>
       <source>Edit shape binder</source>
       <translation>編輯形狀粘合劑</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderShapeBinder.cpp" line="305"/>
+      <location filename="../../ViewProviderShapeBinder.cpp" line="316"/>
       <source>Synchronize</source>
       <translation>同步</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderShapeBinder.cpp" line="307"/>
+      <location filename="../../ViewProviderShapeBinder.cpp" line="318"/>
       <source>Select bound object</source>
       <translation>選擇綁定物件</translation>
     </message>
@@ -4707,16 +4707,21 @@ over 90: larger hole radius at the bottom</source>
     </message>
     <message>
       <location filename="../../../App/FeatureBoolean.cpp" line="138"/>
-      <location filename="../../../App/FeatureGroove.cpp" line="217"/>
+      <location filename="../../../App/FeatureExtrude.cpp" line="716"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="219"/>
       <location filename="../../../App/FeatureHole.cpp" line="1900"/>
-      <location filename="../../../App/FeatureLoft.cpp" line="293"/>
-      <location filename="../../../App/FeatureLoft.cpp" line="311"/>
-      <location filename="../../../App/FeaturePad.cpp" line="229"/>
-      <location filename="../../../App/FeaturePipe.cpp" line="394"/>
-      <location filename="../../../App/FeaturePipe.cpp" line="414"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="295"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="313"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="526"/>
+      <location filename="../../../App/FeaturePad.cpp" line="236"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="399"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="419"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="735"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="755"/>
       <location filename="../../../App/FeaturePocket.cpp" line="222"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="103"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="123"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="137"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="150"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="166"/>
       <source>Resulting shape is not a solid</source>
       <translation>產成形狀不是固體</translation>
     </message>
@@ -4735,18 +4740,20 @@ over 90: larger hole radius at the bottom</source>
       <location filename="../../../App/FeatureChamfer.cpp" line="223"/>
       <location filename="../../../App/FeatureDraft.cpp" line="323"/>
       <location filename="../../../App/FeatureFillet.cpp" line="137"/>
-      <location filename="../../../App/FeatureGroove.cpp" line="224"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="226"/>
       <location filename="../../../App/FeatureHole.cpp" line="1908"/>
-      <location filename="../../../App/FeatureLoft.cpp" line="296"/>
-      <location filename="../../../App/FeatureLoft.cpp" line="314"/>
-      <location filename="../../../App/FeaturePad.cpp" line="233"/>
-      <location filename="../../../App/FeaturePad.cpp" line="242"/>
-      <location filename="../../../App/FeaturePipe.cpp" line="398"/>
-      <location filename="../../../App/FeaturePipe.cpp" line="418"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="298"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="316"/>
+      <location filename="../../../App/FeaturePad.cpp" line="240"/>
+      <location filename="../../../App/FeaturePad.cpp" line="249"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="403"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="423"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="739"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="759"/>
       <location filename="../../../App/FeaturePocket.cpp" line="191"/>
       <location filename="../../../App/FeaturePocket.cpp" line="226"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="107"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="127"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="154"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="170"/>
       <source>Result has multiple solids: that is not currently supported.</source>
       <translation>產生形狀有多重(非相連)固體：目前尚未支援。</translation>
     </message>
@@ -4799,17 +4806,20 @@ over 90: larger hole radius at the bottom</source>
       <translation>建立倒圓角失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="87"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="89"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="253"/>
       <source>Angle of groove too large</source>
       <translation>挖槽的角度太大</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="91"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="93"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="257"/>
       <source>Angle of groove too small</source>
       <translation>挖槽的角度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="108"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="110"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="276"/>
       <location filename="../../../App/FeatureHole.cpp" line="1669"/>
       <source>The requested feature cannot be created. The reason may be that:
   - the active Body does not contain a base shape, so there is no
@@ -4820,31 +4830,71 @@ over 90: larger hole radius at the bottom</source>
  - 所選擇的草圖不屬於活躍實體。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="130"/>
-      <location filename="../../../App/FeatureRevolution.cpp" line="126"/>
+      <location filename="../../../App/FeatureExtrude.cpp" line="441"/>
+      <source>Length too small</source>
+      <translation type="unfinished">Length too small</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="448"/>
+      <source>Second length too small</source>
+      <translation type="unfinished">Second length too small</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="482"/>
+      <source>Failed to obtain profile shape</source>
+      <translation type="unfinished">Failed to obtain profile shape</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="534"/>
+      <source>Creation failed because direction is orthogonal to sketch's normal vector</source>
+      <translation type="unfinished">Creation failed because direction is orthogonal to sketch's normal vector</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="553"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="132"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="293"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="140"/>
       <source>Creating a face from sketch failed</source>
       <translation>由草圖建立面失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="146"/>
-      <location filename="../../../App/FeatureRevolution.cpp" line="142"/>
+      <location filename="../../../App/FeatureExtrude.cpp" line="615"/>
+      <source>Up to face: Could not get SubShape!</source>
+      <translation type="unfinished">Up to face: Could not get SubShape!</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="657"/>
+      <source>Magnitude of taper angle matches or exceeds 90 degrees</source>
+      <translation type="unfinished">Magnitude of taper angle matches or exceeds 90 degrees</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="668"/>
+      <source>Padding with draft angle failed</source>
+      <translation type="unfinished">Padding with draft angle failed</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureGroove.cpp" line="148"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="315"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="158"/>
       <source>Revolve axis intersects the sketch</source>
       <translation type="unfinished">Revolve axis intersects the sketch</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="212"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="214"/>
       <source>Cut out of base feature failed</source>
       <translation type="unfinished">Cut out of base feature failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="202"/>
-      <location filename="../../../App/FeatureRevolution.cpp" line="198"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="204"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="323"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="265"/>
       <source>Could not revolve the sketch!</source>
       <translation type="unfinished">Could not revolve the sketch!</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureGroove.cpp" line="236"/>
-      <location filename="../../../App/FeatureRevolution.cpp" line="208"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="238"/>
+      <location filename="../../../App/FeatureGroove.cpp" line="363"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="277"/>
       <source>Could not create face from sketch.
 Intersecting sketch entities in a sketch are not allowed.</source>
       <translation type="unfinished">Could not create face from sketch.
@@ -4894,47 +4944,41 @@ Intersecting sketch entities in a sketch are not allowed.</translation>
       <translation>錯誤：面必須為平面</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="266"/>
-      <source>Error: Could not build</source>
-      <translation>錯誤：無法建立</translation>
-    </message>
-    <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="303"/>
-      <location filename="../../../App/FeatureHelix.cpp" line="339"/>
-      <location filename="../../../App/FeatureHelix.cpp" line="369"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="272"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="302"/>
       <location filename="../../../App/FeatureHole.cpp" line="2160"/>
       <source>Error: Result is not a solid</source>
       <translation>錯誤：產生形狀不是固體</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="319"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="252"/>
       <source>Error: There is nothing to subtract</source>
       <translation>錯誤：沒有東西可以減</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="323"/>
-      <location filename="../../../App/FeatureHelix.cpp" line="343"/>
-      <location filename="../../../App/FeatureHelix.cpp" line="373"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="256"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="276"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="306"/>
       <source>Error: Result has multiple solids</source>
       <translation>錯誤：產生形狀有多重(非相連)固體</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="333"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="266"/>
       <source>Error: Adding the helix failed</source>
       <translation>錯誤：添加螺旋失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="356"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="289"/>
       <source>Error: Intersecting the helix failed</source>
       <translation>錯誤：交叉螺旋失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="363"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="296"/>
       <source>Error: Subtracting the helix failed</source>
       <translation>錯誤：減去螺旋失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureHelix.cpp" line="385"/>
+      <location filename="../../../App/FeatureHelix.cpp" line="318"/>
       <source>Error: Could not create face from sketch</source>
       <translation>錯誤：無法從草圖建立面</translation>
     </message>
@@ -5005,8 +5049,8 @@ Intersecting sketch entities in a sketch are not allowed.</translation>
     </message>
     <message>
       <location filename="../../../App/FeatureHole.cpp" line="1892"/>
-      <location filename="../../../App/FeatureTransformed.cpp" line="283"/>
-      <location filename="../../../App/FeatureTransformed.cpp" line="298"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="304"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="319"/>
       <source>Boolean operation failed</source>
       <translation>布林運算失敗</translation>
     </message>
@@ -5033,214 +5077,243 @@ Intersecting sketch entities or multiple faces in a sketch are not allowed for m
       <translation>錯誤：無法建立螺紋</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="135"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="137"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="403"/>
       <source>Loft: At least one section is needed</source>
       <translation>拉伸成形：至少需要一個輪廊</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="140"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="142"/>
       <source>Loft: Could not obtain profile shape</source>
       <translation>拉伸成形：無法獲得輪廊形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="153"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="155"/>
       <source>Loft: When using points for profile/sections, the sketch should have a single point</source>
       <translation>拉伸成形：當使用點來進行輪廊/斷面時，其草圖必須只有一個單獨的點</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="161"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="163"/>
       <source>Loft: All sections need to be part features</source>
       <translation>拉伸成形：所有部份必須為零件特徵的一部份</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="166"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="168"/>
       <source>Loft: Could not obtain section shape</source>
       <translation>拉伸成形：無法獲得部份形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="182"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="184"/>
       <source>Loft: A section doesn't contain any wires nor is a single vertex</source>
       <translation>拉伸成形：一個部分不包含任何線條，也不是單一的頂點</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="184"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="186"/>
       <source>Loft: Only the profile and the last section can be vertices</source>
       <translation>拉伸成形：只有輪廊及最後一個斷面可以為頂點</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="186"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="188"/>
       <source>Loft: For closed lofts only the profile can be a vertex</source>
       <translation>拉伸成形：對於閉合的拉伸成形，只有剖面可以是頂點。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="193"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="195"/>
       <source>Loft: all loft sections need to have the same amount of inner wires</source>
       <translation>拉伸成形：所有拉伸成形部份必須有相同數量的內部線段</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="232"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="234"/>
       <source>Loft could not be built</source>
       <translation>拉伸成形無法被建立</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="265"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="267"/>
       <source>Loft: Result is not a solid</source>
       <translation>拉伸成形：產生形狀不是固體</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="278"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="280"/>
       <source>Loft: There is nothing to subtract from</source>
       <translation>拉伸成形：沒有東西可以減</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="288"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="290"/>
       <source>Loft: Adding the loft failed</source>
       <translation>拉伸成形：添加拉伸成形失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="306"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="308"/>
       <source>Loft: Subtracting the loft failed</source>
       <translation>拉伸成形：減去拉伸成形失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureLoft.cpp" line="330"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="332"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="539"/>
       <source>Loft: A fatal error occurred when making the loft</source>
       <translation>拉伸成形：在建立拉伸成形時發生致命錯誤</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="98"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="442"/>
+      <source>Loft: Creating a face from sketch failed</source>
+      <translation type="unfinished">Loft: Creating a face from sketch failed</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureLoft.cpp" line="475"/>
+      <source>Loft: Failed to create shell</source>
+      <translation type="unfinished">Loft: Failed to create shell</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeaturePad.cpp" line="105"/>
       <source>Pad: Can't pad up to shape without base shape.</source>
       <translation type="unfinished">Pad: Can't pad up to shape without base shape.</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="130"/>
+      <location filename="../../../App/FeaturePad.cpp" line="137"/>
       <source>Pad: Creation failed because direction is orthogonal to sketch's normal vector</source>
       <translation type="unfinished">Pad: Creation failed because direction is orthogonal to sketch's normal vector</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="141"/>
+      <location filename="../../../App/FeaturePad.cpp" line="148"/>
       <source>Pad: Creating a face from sketch failed</source>
       <translation type="unfinished">Pad: Creating a face from sketch failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="212"/>
+      <location filename="../../../App/FeaturePad.cpp" line="219"/>
       <source>Pad: Resulting shape is empty</source>
       <translation type="unfinished">Pad: Resulting shape is empty</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="223"/>
+      <location filename="../../../App/FeaturePad.cpp" line="230"/>
       <source>Pad: Fusion with base feature failed</source>
       <translation type="unfinished">Pad: Fusion with base feature failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePad.cpp" line="255"/>
+      <location filename="../../../App/FeatureExtrude.cpp" line="741"/>
+      <location filename="../../../App/FeaturePad.cpp" line="262"/>
       <source>Could not create face from sketch.
 Intersecting sketch entities or multiple faces in a sketch are not allowed.</source>
       <translation type="unfinished">Could not create face from sketch.
 Intersecting sketch entities or multiple faces in a sketch are not allowed.</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="172"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="177"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="513"/>
       <source>Pipe: Could not obtain profile shape</source>
       <translation>管件：無法獲得輪廊形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="177"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="182"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="518"/>
       <source>No spine linked</source>
       <translation>沒有連結到 spline 曲線</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="190"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="195"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="531"/>
       <source>No auxiliary spine linked.</source>
       <translation>沒有連結到輔助 spline 曲線</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="211"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="216"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="552"/>
       <source>Pipe: Only one isolated point is needed if using a sketch with isolated points for section</source>
       <translation>管件：在使用具有孤立點作為剖面的草圖時，只需要一個孤立點。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="217"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="222"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="558"/>
       <source>Pipe: At least one section is needed when using a single point for profile</source>
       <translation>管件：當使用一個點給輪廊時，至少需要一個剖面</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="231"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="236"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="572"/>
       <source>Pipe: All sections need to be part features</source>
       <translation>管件：所有剖面必須為零件特徵</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="237"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="242"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="578"/>
       <source>Pipe: Could not obtain section shape</source>
       <translation>管件：無法獲得剖面形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="246"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="251"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="587"/>
       <source>Pipe: Only the profile and last section can be vertices</source>
       <translation>管件：只有輪廊及最後一個斷面可以為頂點</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="255"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="260"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="596"/>
       <source>Multisections need to have the same amount of inner wires as the base section</source>
       <translation>多重剖面需要有與基本剖面相同數量的內部線</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="282"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="287"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="623"/>
       <source>Path must not be a null shape</source>
       <translation>路徑不能為空形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="317"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="322"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="658"/>
       <source>Pipe could not be built</source>
       <translation>無法建立管件</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="363"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="368"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="704"/>
       <source>Result is not a solid</source>
       <translation>產生形狀不是固體</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="378"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="383"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="719"/>
       <source>Pipe: There is nothing to subtract from</source>
       <translation>管件：沒有東西可以減</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="389"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="394"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="730"/>
       <source>Adding the pipe failed</source>
       <translation>添加管件失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="409"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="414"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="750"/>
       <source>Subtracting the pipe failed</source>
       <translation>管件減去操作失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="433"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="438"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="774"/>
       <source>A fatal error occurred when making the pipe</source>
       <translation>在建立管件時發生致命錯誤</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="556"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="898"/>
       <source>Invalid element in spine.</source>
       <translation>Spline 曲線中有無效元件。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="559"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="901"/>
       <source>Element in spine is neither an edge nor a wire.</source>
       <translation>Spline 曲線中的元件既不是一個邊也不是一條線。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="572"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="914"/>
       <source>Spine is not connected.</source>
       <translation>Spline 曲線未連線</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="576"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="918"/>
       <source>Spine is neither an edge nor a wire.</source>
       <translation>Spline 曲線不是一個邊也不是一條線。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePipe.cpp" line="580"/>
+      <location filename="../../../App/FeaturePipe.cpp" line="922"/>
       <source>Invalid spine.</source>
       <translation>無效的 spline 曲線。</translation>
     </message>
@@ -5275,130 +5348,148 @@ Intersecting sketch entities or multiple faces in a sketch are not allowed.</tra
       <translation type="unfinished">Pocket: Cut out of base feature failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="89"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="105"/>
       <source>Cannot subtract primitive feature without base feature</source>
       <translation type="unfinished">Cannot subtract primitive feature without base feature</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="98"/>
+      <location filename="../../../App/FeatureLoft.cpp" line="515"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="124"/>
+      <source>Unknown operation type</source>
+      <translation type="unfinished">Unknown operation type</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureLoft.cpp" line="521"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="131"/>
+      <source>Failed to perform boolean operation</source>
+      <translation type="unfinished">Failed to perform boolean operation</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="145"/>
       <source>Adding the primitive failed</source>
       <translation type="unfinished">Adding the primitive failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="118"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="161"/>
       <source>Subtracting the primitive failed</source>
       <translation type="unfinished">Subtracting the primitive failed</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="193"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="234"/>
       <source>Length of box too small</source>
       <translation>方塊長度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="195"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="236"/>
       <source>Width of box too small</source>
       <translation>方塊寬度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="197"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="238"/>
       <source>Height of box too small</source>
       <translation>方塊高度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="243"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="284"/>
       <source>Radius of cylinder too small</source>
       <translation>圓柱的半徑太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="245"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="286"/>
       <source>Height of cylinder too small</source>
       <translation>圓柱的高度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="247"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="288"/>
       <source>Rotation angle of cylinder too small</source>
       <translation>圓柱的旋轉角度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="300"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="341"/>
       <source>Radius of sphere too small</source>
       <translation>球體半徑太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="349"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="351"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="390"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="392"/>
       <source>Radius of cone cannot be negative</source>
       <translation>錐體半徑不能為負值</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="353"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="394"/>
       <source>Height of cone too small</source>
       <translation>錐體高度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="416"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="418"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="457"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="459"/>
       <source>Radius of ellipsoid too small</source>
       <translation>橢球體的半徑太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="500"/>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="502"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="541"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="543"/>
       <source>Radius of torus too small</source>
       <translation>環形圓(甜甜圈狀)的半徑太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="565"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="606"/>
       <source>Polygon of prism is invalid, must have 3 or more sides</source>
       <translation>角柱體的多邊形為無效的，必須具有3個或更多個邊</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="567"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="608"/>
       <source>Circumradius of the polygon, of the prism, is too small</source>
       <translation>多邊形或角柱體的外接圓半徑太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="569"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="610"/>
       <source>Height of prism is too small</source>
       <translation>角柱體的高度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="650"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="691"/>
       <source>delta x of wedge too small</source>
       <translation>楔形體的 x 差量太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="653"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="694"/>
       <source>delta y of wedge too small</source>
       <translation>楔形體的 y 差量太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="656"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="697"/>
       <source>delta z of wedge too small</source>
       <translation>楔形體的 z 差量太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="659"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="700"/>
       <source>delta z2 of wedge is negative</source>
       <translation>楔形體的 z2 差量為負值</translation>
     </message>
     <message>
-      <location filename="../../../App/FeaturePrimitive.cpp" line="662"/>
+      <location filename="../../../App/FeaturePrimitive.cpp" line="703"/>
       <source>delta x2 of wedge is negative</source>
       <translation>楔形體的 x2 差量為負值</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureRevolution.cpp" line="87"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="89"/>
       <source>Angle of revolution too large</source>
       <translation>旋轉角度太大</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureRevolution.cpp" line="91"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="95"/>
       <source>Angle of revolution too small</source>
       <translation>旋轉角度太小</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureRevolution.cpp" line="190"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="133"/>
+      <source>Reference axis is invalid</source>
+      <translation type="unfinished">Reference axis is invalid</translation>
+    </message>
+    <message>
+      <location filename="../../../App/FeatureExtrude.cpp" line="709"/>
+      <location filename="../../../App/FeatureRevolution.cpp" line="254"/>
       <source>Fusion with base feature failed</source>
       <translation>與基本特徵進行聯集失敗</translation>
     </message>
@@ -5413,22 +5504,22 @@ Intersecting sketch entities or multiple faces in a sketch are not allowed.</tra
       <translation>沒有與變換特徵相關聯的原始特徵。</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureTransformed.cpp" line="204"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="217"/>
       <source>Cannot transform invalid support shape</source>
       <translation>無法轉換無效支援形狀</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureTransformed.cpp" line="233"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="246"/>
       <source>Transformation failed</source>
       <translation>轉換失敗</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureTransformed.cpp" line="261"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="274"/>
       <source>Shape of additive/subtractive feature is empty</source>
       <translation>添加/除料特徵的形狀為空</translation>
     </message>
     <message>
-      <location filename="../../../App/FeatureTransformed.cpp" line="269"/>
+      <location filename="../../../App/FeatureTransformed.cpp" line="290"/>
       <source>Only additive and subtractive features can be transformed</source>
       <translation>只有添加與除料特徵可以被轉換</translation>
     </message>

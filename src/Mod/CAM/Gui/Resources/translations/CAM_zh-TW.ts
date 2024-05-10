@@ -5,8 +5,8 @@
     <name>CmdPathArea</name>
     <message>
       <location filename="../../Command.cpp" line="46"/>
-      <source>Path</source>
-      <translation>路徑</translation>
+      <source>CAM</source>
+      <translation type="unfinished">CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="47"/>
@@ -23,8 +23,8 @@
     <name>CmdPathAreaWorkplane</name>
     <message>
       <location filename="../../Command.cpp" line="128"/>
-      <source>Path</source>
-      <translation>路徑</translation>
+      <source>CAM</source>
+      <translation type="unfinished">CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="129"/>
@@ -41,8 +41,8 @@
     <name>CmdPathCompound</name>
     <message>
       <location filename="../../Command.cpp" line="218"/>
-      <source>Path</source>
-      <translation>路徑</translation>
+      <source>CAM</source>
+      <translation type="unfinished">CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="219"/>
@@ -59,8 +59,8 @@
     <name>CmdPathShape</name>
     <message>
       <location filename="../../Command.cpp" line="270"/>
-      <source>Path</source>
-      <translation>路徑</translation>
+      <source>CAM</source>
+      <translation type="unfinished">CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="271"/>
@@ -1225,6 +1225,16 @@ Reset deletes all current items from the list and fills the list with all circul
       <location filename="../panels/PageOpDrillingEdit.ui" line="169"/>
       <source>Chip Break</source>
       <translation type="unfinished">Chip Break</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="176"/>
+      <source>Feed retract</source>
+      <translation type="unfinished">Feed retract</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="179"/>
+      <source>G85: Retract from the hole at the given feedrate instead of rapid move</source>
+      <translation type="unfinished">G85: Retract from the hole at the given feedrate instead of rapid move</translation>
     </message>
     <message>
       <location filename="../panels/PageOpEngraveEdit.ui" line="63"/>
@@ -2454,11 +2464,6 @@ See the file save policy below on how to deal with name conflicts.</translation>
       <translation type="unfinished">Default Post Processor</translation>
     </message>
     <message>
-      <location filename="../preferences/PathJob.ui" line="315"/>
-      <source>DefaultPostProcessor</source>
-      <translation type="unfinished">DefaultPostProcessor</translation>
-    </message>
-    <message>
       <location filename="../preferences/PathJob.ui" line="325"/>
       <source>Default Arguments</source>
       <translation type="unfinished">Default Arguments</translation>
@@ -2504,11 +2509,6 @@ If left empty no template will be preselected.</translation>
       <location filename="../preferences/PathJob.ui" line="312"/>
       <source>Select one of the post processors as the default.</source>
       <translation type="unfinished">Select one of the post processors as the default.</translation>
-    </message>
-    <message>
-      <location filename="../preferences/PathJob.ui" line="318"/>
-      <source>Mod/CAM</source>
-      <translation type="unfinished">Mod/CAM</translation>
     </message>
     <message>
       <location filename="../preferences/PathJob.ui" line="332"/>
@@ -4111,46 +4111,6 @@ Default: 3 mm</translation>
   <context>
     <name>Path</name>
     <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
-      <source>The currently selected unit schema: 
-     '{}' for this document
- Does not use 'minutes' for velocity values. 
- 
-CNC machines require feed rate to be expressed in 
-unit/minute. To ensure correct G-code: 
-Select a minute-based schema in preferences.
-For example:
-    'Metric, Small Parts &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</source>
-      <translation type="unfinished">The currently selected unit schema: 
-     '{}' for this document
- Does not use 'minutes' for velocity values. 
- 
-CNC machines require feed rate to be expressed in 
-unit/minute. To ensure correct G-code: 
-Select a minute-based schema in preferences.
-For example:
-    'Metric, Small Parts &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
-      <source>Warning</source>
-      <translation>警告</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
-      <source>Ok</source>
-      <translation>確認</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
-      <source>Don't Show This Anymore</source>
-      <translation type="unfinished">Don't Show This Anymore</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Base/Gui/IconViewProvider.py" line="97"/>
       <source>Edit</source>
       <translation>編輯</translation>
@@ -4217,11 +4177,6 @@ For example:
       <location filename="../../../PathScripts/PathUtilsGui.py" line="91"/>
       <source>Choose a Path Job</source>
       <translation type="unfinished">Choose a Path Job</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
-      <source>Invalid Filename</source>
-      <translation type="unfinished">Invalid Filename</translation>
     </message>
     <message>
       <location filename="../../../PathScripts/PathUtils.py" line="545"/>
@@ -4990,55 +4945,61 @@ For example:
     </message>
     <message>
       <location filename="../../../Path/Op/Drilling.py" line="105"/>
-      <location filename="../../../Path/Op/Drilling.py" line="129"/>
+      <location filename="../../../Path/Op/Drilling.py" line="137"/>
       <source>Use chipbreaking</source>
       <translation type="unfinished">Use chipbreaking</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="117"/>
+      <location filename="../../../Path/Op/Drilling.py" line="114"/>
+      <location filename="../../../Path/Op/Drilling.py" line="194"/>
+      <source>Use G85 boring cycle with feed out</source>
+      <translation type="unfinished">Use G85 boring cycle with feed out</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Drilling.py" line="125"/>
       <source>Incremental Drill depth before retracting to clear chips</source>
       <translation type="unfinished">Incremental Drill depth before retracting to clear chips</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="123"/>
+      <location filename="../../../Path/Op/Drilling.py" line="131"/>
       <source>Enable pecking</source>
       <translation type="unfinished">Enable pecking</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="135"/>
+      <location filename="../../../Path/Op/Drilling.py" line="143"/>
       <source>The time to dwell between peck cycles</source>
       <translation type="unfinished">The time to dwell between peck cycles</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="141"/>
+      <location filename="../../../Path/Op/Drilling.py" line="149"/>
       <source>Enable dwell</source>
       <translation type="unfinished">Enable dwell</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="150"/>
+      <location filename="../../../Path/Op/Drilling.py" line="158"/>
       <source>Calculate the tip length and subtract from final depth</source>
       <translation type="unfinished">Calculate the tip length and subtract from final depth</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="158"/>
-      <location filename="../../../Path/Op/Drilling.py" line="222"/>
+      <location filename="../../../Path/Op/Drilling.py" line="166"/>
+      <location filename="../../../Path/Op/Drilling.py" line="236"/>
       <source>Controls tool retract height between holes in same op, Default=G98: safety height</source>
       <translation type="unfinished">Controls tool retract height between holes in same op, Default=G98: safety height</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="167"/>
+      <location filename="../../../Path/Op/Drilling.py" line="175"/>
       <source>The height where cutting feed rate starts and retract height for peck operation</source>
       <translation type="unfinished">The height where cutting feed rate starts and retract height for peck operation</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="173"/>
+      <location filename="../../../Path/Op/Drilling.py" line="181"/>
       <source>How far the drilling depth is extended</source>
       <translation type="unfinished">How far the drilling depth is extended</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="180"/>
-      <location filename="../../../Path/Op/Drilling.py" line="212"/>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="134"/>
+      <location filename="../../../Path/Op/Drilling.py" line="188"/>
+      <location filename="../../../Path/Op/Drilling.py" line="226"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="148"/>
       <source>Apply G99 retraction: only retract to RetractHeight between holes in this operation</source>
       <translation type="unfinished">Apply G99 retraction: only retract to RetractHeight between holes in this operation</translation>
     </message>
@@ -5867,21 +5828,6 @@ For example:
   <context>
     <name>PathPocket</name>
     <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
-      <source>Normal</source>
-      <translation>垂直</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
-      <source>Y</source>
-      <translation>Ÿ</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Op/Gui/PocketBase.py" line="82"/>
       <source>Pass Extension</source>
       <translation type="unfinished">Pass Extension</translation>
@@ -6324,14 +6270,6 @@ Aborting op creation</translation>
       <location filename="../../../Path/Op/Gui/Array.py" line="334"/>
       <source>Arrays of toolpaths having different tool controllers are handled according to the tool controller of the first path.</source>
       <translation type="unfinished">Arrays of toolpaths having different tool controllers are handled according to the tool controller of the first path.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathToolBit</name>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
-      <source>Toolbit cannot be edited: Shapefile not found</source>
-      <translation type="unfinished">Toolbit cannot be edited: Shapefile not found</translation>
     </message>
   </context>
   <context>
@@ -6930,6 +6868,7 @@ Aborting op creation</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1621"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
       <source>Warning</source>
       <translation>警告</translation>
     </message>
@@ -6940,6 +6879,7 @@ Aborting op creation</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1623"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
       <source>Ok</source>
       <translation>確認</translation>
     </message>
@@ -6969,6 +6909,36 @@ Aborting op creation</translation>
       <translation type="unfinished">Creates a CAM Job</translation>
     </message>
     <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
+      <source>The currently selected unit schema: 
+     '{}' for this document
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct G-code: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</source>
+      <translation type="unfinished">The currently selected unit schema: 
+     '{}' for this document
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct G-code: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
+      <source>Don't Show This Anymore</source>
+      <translation type="unfinished">Don't Show This Anymore</translation>
+    </message>
+    <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="88"/>
       <source>Solids</source>
       <translation>固體</translation>
@@ -6977,6 +6947,21 @@ Aborting op creation</translation>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="90"/>
       <source>Jobs</source>
       <translation type="unfinished">Jobs</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Model</source>
+      <translation>模型</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Count</source>
+      <translation>計數</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="272"/>
+      <source>&lt;none&gt;</source>
+      <translation type="unfinished">&lt;none&gt;</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="358"/>
@@ -7548,16 +7533,6 @@ Aborting op creation</translation>
       <translation type="unfinished">Base shape %s already in the list</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
-      <source>Profile</source>
-      <translation>輪廓</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Tool/Gui/Controller.py" line="116"/>
       <source>Edit</source>
       <translation>編輯</translation>
@@ -7591,12 +7566,12 @@ Aborting op creation</translation>
       <translation type="unfinished">2x Drill Tip</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="189"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="209"/>
       <source>Drilling</source>
       <translation>鑽孔</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="193"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="213"/>
       <source>Creates a Drilling toolpath from the features of a base object</source>
       <translation type="unfinished">Creates a Drilling toolpath from the features of a base object</translation>
     </message>
@@ -7700,6 +7675,26 @@ Aborting op creation</translation>
       <location filename="../../../Path/Op/PocketBase.py" line="73"/>
       <source>Grid</source>
       <translation>格線</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
+      <source>Normal</source>
+      <translation>垂直</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
+      <source>Y</source>
+      <translation>Ÿ</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="185"/>
+      <source>Extensions</source>
+      <translation type="unfinished">Extensions</translation>
     </message>
   </context>
   <context>
@@ -8322,12 +8317,12 @@ Aborting op creation</translation>
   <context>
     <name>CAM_Gcode_pre</name>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="226"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="225"/>
       <source>No active document</source>
       <translation>無可用文件</translation>
     </message>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="229"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="228"/>
       <source>No job object</source>
       <translation type="unfinished">No job object</translation>
     </message>
@@ -8435,23 +8430,33 @@ Aborting op creation</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="668"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="795"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="799"/>
       <source>Tooltable JSON (*.fctl)</source>
       <translation type="unfinished">Tooltable JSON (*.fctl)</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="670"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="804"/>
       <source>Save toolbit library</source>
       <translation type="unfinished">Save toolbit library</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="796"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="731"/>
+      <source>Tool</source>
+      <translation>工具</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="732"/>
+      <source>Shape</source>
+      <translation>造型</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
       <source>LinuxCNC tooltable (*.tbl)</source>
       <translation type="unfinished">LinuxCNC tooltable (*.tbl)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="798"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="802"/>
       <source>Camotics tooltable (*.json)</source>
       <translation type="unfinished">Camotics tooltable (*.json)</translation>
     </message>
@@ -8480,6 +8485,42 @@ Aborting op creation</translation>
       <location filename="../../../Path/Tool/Gui/BitLibraryCmd.py" line="80"/>
       <source>Open an editor to manage ToolBit libraries</source>
       <translation type="unfinished">Open an editor to manage ToolBit libraries</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Profile</name>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
+      <source>Profile</source>
+      <translation>輪廓</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation type="unfinished">Profile entire model, selected face(s) or selected edge(s)</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Toolbit</name>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
+      <source>Toolbit cannot be edited: Shapefile not found</source>
+      <translation type="unfinished">Toolbit cannot be edited: Shapefile not found</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="193"/>
+      <source>Tool</source>
+      <translation>工具</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
+      <source>Invalid Filename</source>
+      <translation type="unfinished">Invalid Filename</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="242"/>
+      <source>Select Tool Shape</source>
+      <translation type="unfinished">Select Tool Shape</translation>
     </message>
   </context>
 </TS>

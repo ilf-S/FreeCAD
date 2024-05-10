@@ -67,9 +67,7 @@ BuildRequires:  eigen3-devel
 BuildRequires:	qt5-qtxmlpatterns-devel
 
 # Qt5 dependencies
-BuildRequires:  qt5-qtwebengine-devel
-#BuildRequires:  qt5-qtwebkit-devel
-BuildRequires:  qt5-qtsvg-devel
+\BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qttools-static
 
 BuildRequires:  fmt-devel

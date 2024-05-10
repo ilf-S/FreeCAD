@@ -88,12 +88,12 @@
   <context>
     <name>CmdTechDrawActiveView</name>
     <message>
-      <location filename="../../Command.cpp" line="449"/>
+      <location filename="../../Command.cpp" line="650"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="450"/>
+      <location filename="../../Command.cpp" line="651"/>
       <source>Insert Active View (3D View)</source>
       <translation>Уметни слику погледа</translation>
     </message>
@@ -121,23 +121,23 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="534"/>
       <source>Insert Annotation</source>
-      <translation>Унеси Напомену</translation>
+      <translation>Унеси напомену</translation>
     </message>
   </context>
   <context>
     <name>CmdTechDrawArchView</name>
     <message>
-      <location filename="../../Command.cpp" line="1417"/>
+      <location filename="../../Command.cpp" line="1601"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1418"/>
+      <location filename="../../Command.cpp" line="1602"/>
       <source>Insert Arch Workbench Object</source>
       <translation>Уметни објекат Arch радног окружења</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1419"/>
+      <location filename="../../Command.cpp" line="1603"/>
       <source>Insert a View of a Section Plane from Arch Workbench</source>
       <translation>Уметни поглед на објекат из Arch радног окружења</translation>
     </message>
@@ -145,14 +145,14 @@
   <context>
     <name>CmdTechDrawBalloon</name>
     <message>
-      <location filename="../../Command.cpp" line="1042"/>
+      <location filename="../../Command.cpp" line="1227"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1043"/>
+      <location filename="../../Command.cpp" line="1228"/>
       <source>Insert Balloon Annotation</source>
-      <translation>Уметни Позициону ознаку</translation>
+      <translation>Уметни позициону ознаку</translation>
     </message>
   </context>
   <context>
@@ -165,7 +165,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="577"/>
       <source>Insert Center Line</source>
-      <translation>Уметни осну линију</translation>
+      <translation>Уметни осне линије</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="650"/>
@@ -176,12 +176,12 @@
   <context>
     <name>CmdTechDrawClipGroup</name>
     <message>
-      <location filename="../../Command.cpp" line="1106"/>
+      <location filename="../../Command.cpp" line="1291"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1107"/>
+      <location filename="../../Command.cpp" line="1292"/>
       <source>Insert Clip Group</source>
       <translation>Уметни Групу погледа</translation>
     </message>
@@ -189,12 +189,12 @@
   <context>
     <name>CmdTechDrawClipGroupAdd</name>
     <message>
-      <location filename="../../Command.cpp" line="1143"/>
+      <location filename="../../Command.cpp" line="1328"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1144"/>
+      <location filename="../../Command.cpp" line="1329"/>
       <source>Add View to Clip Group</source>
       <translation>Додај поглед у Групу погледа</translation>
     </message>
@@ -202,12 +202,12 @@
   <context>
     <name>CmdTechDrawClipGroupRemove</name>
     <message>
-      <location filename="../../Command.cpp" line="1227"/>
+      <location filename="../../Command.cpp" line="1412"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1228"/>
+      <location filename="../../Command.cpp" line="1413"/>
       <source>Remove View from Clip Group</source>
       <translation>Уклони поглед из Групе погледа</translation>
     </message>
@@ -215,17 +215,17 @@
   <context>
     <name>CmdTechDrawComplexSection</name>
     <message>
-      <location filename="../../Command.cpp" line="634"/>
+      <location filename="../../Command.cpp" line="835"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="635"/>
+      <location filename="../../Command.cpp" line="836"/>
       <source>Insert Complex Section</source>
       <translation>Уметни сложени пресек</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="636"/>
+      <location filename="../../Command.cpp" line="837"/>
       <source>Insert a Complex Section</source>
       <translation>Уметни сложени пресек</translation>
     </message>
@@ -266,7 +266,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="208"/>
       <source>Insert Cosmetic Vertex</source>
-      <translation>Уметни помоћну тачку</translation>
+      <translation>Уметни помоћне тачке</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="283"/>
@@ -295,12 +295,12 @@
   <context>
     <name>CmdTechDrawDetailView</name>
     <message>
-      <location filename="../../Command.cpp" line="760"/>
+      <location filename="../../Command.cpp" line="961"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="761"/>
+      <location filename="../../Command.cpp" line="962"/>
       <source>Insert Detail View</source>
       <translation>Уметни детаљни поглед</translation>
     </message>
@@ -334,17 +334,17 @@
   <context>
     <name>CmdTechDrawDraftView</name>
     <message>
-      <location filename="../../Command.cpp" line="1353"/>
+      <location filename="../../Command.cpp" line="1538"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1354"/>
+      <location filename="../../Command.cpp" line="1539"/>
       <source>Insert Draft Workbench Object</source>
       <translation>Уметни објекат Draft радног окружења</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1355"/>
+      <location filename="../../Command.cpp" line="1540"/>
       <source>Insert a View of a Draft Workbench object</source>
       <translation>Уметни поглед на објекат из Draft радног окружења</translation>
     </message>
@@ -352,22 +352,22 @@
   <context>
     <name>CmdTechDrawExportPageDXF</name>
     <message>
-      <location filename="../../Command.cpp" line="1593"/>
+      <location filename="../../Command.cpp" line="1777"/>
       <source>File</source>
       <translation>Датотека</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1594"/>
+      <location filename="../../Command.cpp" line="1778"/>
       <source>Export Page as DXF</source>
-      <translation>Извези цртеж као DXF</translation>
+      <translation>Извези цртеж у DXF формату</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1628"/>
+      <location filename="../../Command.cpp" line="1812"/>
       <source>Save DXF file</source>
       <translation>Сачувај DXF датотеку</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1629"/>
+      <location filename="../../Command.cpp" line="1813"/>
       <source>DXF (*.dxf)</source>
       <translation>DXF (*.dxf)</translation>
     </message>
@@ -375,14 +375,14 @@
   <context>
     <name>CmdTechDrawExportPageSVG</name>
     <message>
-      <location filename="../../Command.cpp" line="1552"/>
+      <location filename="../../Command.cpp" line="1736"/>
       <source>File</source>
       <translation>Датотека</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1553"/>
+      <location filename="../../Command.cpp" line="1737"/>
       <source>Export Page as SVG</source>
-      <translation>Извези цртеж као SVG</translation>
+      <translation>Извези цртеж у SVG формату</translation>
     </message>
   </context>
   <context>
@@ -938,7 +938,7 @@
       <location filename="../../CommandExtensionPack.cpp" line="176"/>
       <location filename="../../CommandExtensionPack.cpp" line="364"/>
       <source>Add Bolt Circle Centerlines</source>
-      <translation>Додај симетрале на кружницу шрафа</translation>
+      <translation>Додај симетрале кружно распоређеним кружницама</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="177"/>
@@ -1361,7 +1361,7 @@
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="835"/>
       <source>Add Cosmetic Intersection Vertex(es)</source>
-      <translation>Додај Помоћну пресечну тачку(е)</translation>
+      <translation>Додај помоћне пресечне тачке</translation>
     </message>
     <message>
       <location filename="../../CommandExtensionPack.cpp" line="837"/>
@@ -1415,7 +1415,7 @@
     <message>
       <location filename="../../CommandDecorate.cpp" line="169"/>
       <source>Apply Geometric Hatch to Face</source>
-      <translation>Примени геометријску шрафуру на страницу</translation>
+      <translation>Шрафирај страницу геометријском шрафуром</translation>
     </message>
   </context>
   <context>
@@ -1554,35 +1554,35 @@
   <context>
     <name>CmdTechDrawPageDefault</name>
     <message>
-      <location filename="../../Command.cpp" line="96"/>
+      <location filename="../../Command.cpp" line="105"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="97"/>
+      <location filename="../../Command.cpp" line="106"/>
       <source>Insert Default Page</source>
-      <translation>Уметни подразумевани празни цртеж</translation>
+      <translation>Подразумевани празни цртеж</translation>
     </message>
   </context>
   <context>
     <name>CmdTechDrawPageTemplate</name>
     <message>
-      <location filename="../../Command.cpp" line="164"/>
+      <location filename="../../Command.cpp" line="166"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="165"/>
+      <location filename="../../Command.cpp" line="167"/>
       <source>Insert Page using Template</source>
-      <translation>Изабери и уметни припремљени празни цртеж</translation>
+      <translation>Изабери подразумевани празни цртеж</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="178"/>
+      <location filename="../../Command.cpp" line="180"/>
       <source>Select a Template File</source>
       <translation>Изабери датотеку празног цртежа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="179"/>
+      <location filename="../../Command.cpp" line="181"/>
       <source>Template (*.svg)</source>
       <translation>Празни цртеж (*.svg)</translation>
     </message>
@@ -1590,12 +1590,12 @@
   <context>
     <name>CmdTechDrawPrintAll</name>
     <message>
-      <location filename="../../Command.cpp" line="281"/>
+      <location filename="../../Command.cpp" line="272"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="282"/>
+      <location filename="../../Command.cpp" line="273"/>
       <source>Print All Pages</source>
       <translation>Штампај све странице</translation>
     </message>
@@ -1603,12 +1603,12 @@
   <context>
     <name>CmdTechDrawProjectShape</name>
     <message>
-      <location filename="../../Command.cpp" line="1656"/>
+      <location filename="../../Command.cpp" line="1840"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1657"/>
+      <location filename="../../Command.cpp" line="1841"/>
       <source>Project shape...</source>
       <translation>Пројицирај објекат у 3Д поглед...</translation>
     </message>
@@ -1616,17 +1616,17 @@
   <context>
     <name>CmdTechDrawProjectionGroup</name>
     <message>
-      <location filename="../../Command.cpp" line="804"/>
+      <location filename="../../Command.cpp" line="1005"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="805"/>
+      <location filename="../../Command.cpp" line="1006"/>
       <source>Insert Projection Group</source>
       <translation>Уметни групу основних погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="806"/>
+      <location filename="../../Command.cpp" line="1007"/>
       <source>Insert multiple linked views of drawable object(s)</source>
       <translation>Уметни неколико повезаних основних погледа објекта на цртеж</translation>
     </message>
@@ -1660,12 +1660,12 @@
   <context>
     <name>CmdTechDrawRedrawPage</name>
     <message>
-      <location filename="../../Command.cpp" line="245"/>
+      <location filename="../../Command.cpp" line="236"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="246"/>
+      <location filename="../../Command.cpp" line="237"/>
       <source>Redraw Page</source>
       <translation>Освежи цртеж</translation>
     </message>
@@ -1680,28 +1680,28 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="156"/>
       <source>Insert Rich Text Annotation</source>
-      <translation>Унеси форматирану Напомену</translation>
+      <translation>Унеси форматирану напомену</translation>
     </message>
   </context>
   <context>
     <name>CmdTechDrawSectionGroup</name>
     <message>
-      <location filename="../../Command.cpp" line="479"/>
+      <location filename="../../Command.cpp" line="680"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="480"/>
+      <location filename="../../Command.cpp" line="681"/>
       <source>Insert a simple or complex Section View</source>
       <translation>Уметни пун или сложени пресек</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="545"/>
+      <location filename="../../Command.cpp" line="746"/>
       <source>Section View</source>
       <translation>Пун пресек</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="549"/>
+      <location filename="../../Command.cpp" line="750"/>
       <source>Complex Section</source>
       <translation>Сложени пресек</translation>
     </message>
@@ -1709,12 +1709,12 @@
   <context>
     <name>CmdTechDrawSectionView</name>
     <message>
-      <location filename="../../Command.cpp" line="571"/>
+      <location filename="../../Command.cpp" line="772"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="572"/>
+      <location filename="../../Command.cpp" line="773"/>
       <source>Insert Section View</source>
       <translation>Уметни пресек</translation>
     </message>
@@ -1735,17 +1735,17 @@
   <context>
     <name>CmdTechDrawSpreadsheetView</name>
     <message>
-      <location filename="../../Command.cpp" line="1488"/>
+      <location filename="../../Command.cpp" line="1672"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1489"/>
+      <location filename="../../Command.cpp" line="1673"/>
       <source>Insert Spreadsheet View</source>
       <translation>Уметни табелу</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1490"/>
+      <location filename="../../Command.cpp" line="1674"/>
       <source>Insert View to a spreadsheet</source>
       <translation>Уметни табелу у цртеж</translation>
     </message>
@@ -1856,17 +1856,17 @@
   <context>
     <name>CmdTechDrawSymbol</name>
     <message>
-      <location filename="../../Command.cpp" line="1300"/>
+      <location filename="../../Command.cpp" line="1485"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1301"/>
+      <location filename="../../Command.cpp" line="1486"/>
       <source>Insert SVG Symbol</source>
       <translation>Уметни SVG симбол</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1302"/>
+      <location filename="../../Command.cpp" line="1487"/>
       <source>Insert symbol from an SVG file</source>
       <translation>Уметни симбол из SVG датотеке</translation>
     </message>
@@ -1914,19 +1914,33 @@
   <context>
     <name>CmdTechDrawView</name>
     <message>
-      <location filename="../../Command.cpp" line="306"/>
+      <location filename="../../Command.cpp" line="297"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="307"/>
+      <location filename="../../Command.cpp" line="298"/>
       <source>Insert View</source>
       <translation>Уметни поглед</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="308"/>
-      <source>Insert a View</source>
-      <translation>Уметни поглед</translation>
+      <location filename="../../Command.cpp" line="299"/>
+      <source>Insert a View in current page.
+Selected objects, spreadsheets or Arch WB section planes will be added.
+Without a selection, a file browser lets you select a SVG or image file.</source>
+      <translation type="unfinished">Insert a View in current page.
+Selected objects, spreadsheets or Arch WB section planes will be added.
+Without a selection, a file browser lets you select a SVG or image file.</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="425"/>
+      <source>If you want to insert a view from existing objects, please select them before invoking this tool. Without a selection, a file browser will open, to insert a SVG or image file.</source>
+      <translation type="unfinished">If you want to insert a view from existing objects, please select them before invoking this tool. Without a selection, a file browser will open, to insert a SVG or image file.</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="426"/>
+      <source>Do not show this message again</source>
+      <translation type="unfinished">Do not show this message again</translation>
     </message>
   </context>
   <context>
@@ -1939,64 +1953,72 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1546"/>
       <source>Add Welding Information to Leaderline</source>
-      <translation>Додај информације о вару показној линији</translation>
+      <translation>Додај показној линији информације о вару</translation>
     </message>
   </context>
   <context>
     <name>Command</name>
     <message>
-      <location filename="../../Command.cpp" line="116"/>
-      <location filename="../../Command.cpp" line="192"/>
+      <location filename="../../Command.cpp" line="121"/>
+      <location filename="../../Command.cpp" line="191"/>
       <source>Drawing create page</source>
       <translation>Направи цртеж</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="393"/>
+      <location filename="../../Command.cpp" line="481"/>
       <source>Create view</source>
       <translation>Направи поглед</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="888"/>
+      <location filename="../../Command.cpp" line="597"/>
+      <source>Create broken view</source>
+      <translation>Направи скраћени поглед</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1089"/>
       <source>Create Projection Group</source>
       <translation>Направи групу основних погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1124"/>
+      <location filename="../../Command.cpp" line="1309"/>
       <source>Create Clip</source>
       <translation>Направи Групу погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1196"/>
+      <location filename="../../Command.cpp" line="1381"/>
       <source>ClipGroupAdd</source>
       <translation>Додај поглед у Групу погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1267"/>
+      <location filename="../../Command.cpp" line="1452"/>
       <source>ClipGroupRemove</source>
       <translation>Уклони поглед из Групе погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1326"/>
+      <location filename="../../Command.cpp" line="448"/>
+      <location filename="../../Command.cpp" line="1511"/>
       <source>Create Symbol</source>
       <translation>Направи симбол</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1390"/>
+      <location filename="../../Command.cpp" line="1574"/>
       <source>Create DraftView</source>
       <translation>Направи Draft поглед</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1464"/>
+      <location filename="../../Command.cpp" line="359"/>
+      <location filename="../../Command.cpp" line="1648"/>
       <source>Create ArchView</source>
       <translation>Направи Arch поглед</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1514"/>
+      <location filename="../../Command.cpp" line="341"/>
+      <location filename="../../Command.cpp" line="1698"/>
       <source>Create spreadsheet view</source>
       <translation>Направи поглед од табеле</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1636"/>
+      <location filename="../../Command.cpp" line="1820"/>
       <location filename="../../PagePrinter.cpp" line="388"/>
       <source>Save page to dxf</source>
       <translation>Сачувај цртеж као dxf</translation>
@@ -2043,6 +2065,7 @@
       <translation>Направи геометријску шрафуру</translation>
     </message>
     <message>
+      <location filename="../../Command.cpp" line="463"/>
       <location filename="../../CommandDecorate.cpp" line="267"/>
       <source>Create Image</source>
       <translation>Направи слику</translation>
@@ -2053,12 +2076,12 @@
       <translation>Превуци позициону ознаку</translation>
     </message>
     <message>
-      <location filename="../../QGIViewDimension.cpp" line="699"/>
+      <location filename="../../QGIViewDimension.cpp" line="691"/>
       <source>Drag Dimension</source>
       <translation>Превуци коту</translation>
     </message>
     <message>
-      <location filename="../../QGSPage.cpp" line="535"/>
+      <location filename="../../QGSPage.cpp" line="523"/>
       <source>Create Balloon</source>
       <translation>Направи позициону ознаку</translation>
     </message>
@@ -2686,23 +2709,24 @@
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../../Command.cpp" line="379"/>
-      <location filename="../../Command.cpp" line="608"/>
-      <location filename="../../Command.cpp" line="725"/>
-      <location filename="../../Command.cpp" line="732"/>
-      <location filename="../../Command.cpp" line="737"/>
-      <location filename="../../Command.cpp" line="775"/>
-      <location filename="../../Command.cpp" line="874"/>
-      <location filename="../../Command.cpp" line="1156"/>
-      <location filename="../../Command.cpp" line="1173"/>
-      <location filename="../../Command.cpp" line="1178"/>
-      <location filename="../../Command.cpp" line="1187"/>
-      <location filename="../../Command.cpp" line="1240"/>
-      <location filename="../../Command.cpp" line="1259"/>
-      <location filename="../../Command.cpp" line="1369"/>
-      <location filename="../../Command.cpp" line="1445"/>
-      <location filename="../../Command.cpp" line="1451"/>
-      <location filename="../../Command.cpp" line="1502"/>
+      <location filename="../../Command.cpp" line="581"/>
+      <location filename="../../Command.cpp" line="591"/>
+      <location filename="../../Command.cpp" line="809"/>
+      <location filename="../../Command.cpp" line="926"/>
+      <location filename="../../Command.cpp" line="933"/>
+      <location filename="../../Command.cpp" line="938"/>
+      <location filename="../../Command.cpp" line="976"/>
+      <location filename="../../Command.cpp" line="1075"/>
+      <location filename="../../Command.cpp" line="1341"/>
+      <location filename="../../Command.cpp" line="1358"/>
+      <location filename="../../Command.cpp" line="1363"/>
+      <location filename="../../Command.cpp" line="1372"/>
+      <location filename="../../Command.cpp" line="1425"/>
+      <location filename="../../Command.cpp" line="1444"/>
+      <location filename="../../Command.cpp" line="1554"/>
+      <location filename="../../Command.cpp" line="1629"/>
+      <location filename="../../Command.cpp" line="1635"/>
+      <location filename="../../Command.cpp" line="1686"/>
       <location filename="../../CommandAnnotate.cpp" line="319"/>
       <location filename="../../CommandAnnotate.cpp" line="420"/>
       <location filename="../../CommandAnnotate.cpp" line="1309"/>
@@ -2717,37 +2741,62 @@
       <translation>Погрешан избор</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="380"/>
-      <location filename="../../Command.cpp" line="875"/>
+      <location filename="../../Command.cpp" line="592"/>
+      <location filename="../../Command.cpp" line="1076"/>
       <source>No Shapes, Groups or Links in this selection</source>
       <translation>Нису изабрани облици, групе или везе</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="609"/>
-      <location filename="../../Command.cpp" line="776"/>
+      <location filename="../../Command.cpp" line="564"/>
+      <source>Empty selection</source>
+      <translation type="unfinished">Empty selection</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="439"/>
+      <source>Select a SVG or Image file to open</source>
+      <translation type="unfinished">Select a SVG or Image file to open</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="441"/>
+      <source>SVG or Image files</source>
+      <translation type="unfinished">SVG or Image files</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="565"/>
+      <source>Please select objects to break or a base view and break definition objects.</source>
+      <translation type="unfinished">Please select objects to break or a base view and break definition objects.</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="582"/>
+      <source>No Break objects found in this selection</source>
+      <translation type="unfinished">No Break objects found in this selection</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="810"/>
+      <location filename="../../Command.cpp" line="977"/>
       <source>Select at least 1 DrawViewPart object as Base.</source>
       <translation>Изабери најмање један поглед као основни.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="726"/>
+      <location filename="../../Command.cpp" line="927"/>
       <source>I do not know what base view to use.</source>
       <translation>Не знам који основни поглед да користим.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="733"/>
+      <location filename="../../Command.cpp" line="934"/>
       <source>No Base View, Shapes, Groups or Links in this selection</source>
       <translation>Нису изабрани облици, групе, везе или основни поглед</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="738"/>
+      <location filename="../../Command.cpp" line="939"/>
       <source>No profile object found in selection</source>
       <translation>Није изабран објекат са профилом</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="958"/>
-      <location filename="../../Command.cpp" line="965"/>
-      <location filename="../../Command.cpp" line="973"/>
-      <location filename="../../Command.cpp" line="985"/>
+      <location filename="../../Command.cpp" line="1143"/>
+      <location filename="../../Command.cpp" line="1150"/>
+      <location filename="../../Command.cpp" line="1158"/>
+      <location filename="../../Command.cpp" line="1170"/>
       <location filename="../../CommandCreateDims.cpp" line="166"/>
       <location filename="../../CommandCreateDims.cpp" line="288"/>
       <location filename="../../CommandCreateDims.cpp" line="410"/>
@@ -2768,25 +2817,25 @@
       <translation>Погрешан избор</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="959"/>
+      <location filename="../../Command.cpp" line="1144"/>
       <location filename="../../CommandCreateDims.cpp" line="1426"/>
       <source>Select an object first</source>
       <translation>Прво изабери објекат</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="966"/>
+      <location filename="../../Command.cpp" line="1151"/>
       <location filename="../../CommandCreateDims.cpp" line="1434"/>
       <source>Too many objects selected</source>
       <translation>Превише објеката је изабрано</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="974"/>
+      <location filename="../../Command.cpp" line="1159"/>
       <location filename="../../CommandCreateDims.cpp" line="1443"/>
       <source>Create a page first.</source>
       <translation>Прво направи страницу.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="986"/>
+      <location filename="../../Command.cpp" line="1171"/>
       <location filename="../../CommandCreateDims.cpp" line="167"/>
       <location filename="../../CommandCreateDims.cpp" line="289"/>
       <location filename="../../CommandCreateDims.cpp" line="411"/>
@@ -2799,87 +2848,88 @@
       <translation>Није изабран поглед дела.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1157"/>
+      <location filename="../../Command.cpp" line="1342"/>
       <source>Select one Clip group and one View.</source>
       <translation>Изабери једну Групу погледа и један поглед.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1174"/>
+      <location filename="../../Command.cpp" line="1359"/>
       <source>Select exactly one View to add to group.</source>
       <translation>Изабери поглед који желиш да додаш у групу.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1179"/>
+      <location filename="../../Command.cpp" line="1364"/>
       <source>Select exactly one Clip group.</source>
       <translation>Изабери само једну Групу погледа.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1188"/>
+      <location filename="../../Command.cpp" line="1373"/>
       <source>Clip and View must be from same Page.</source>
       <translation>Група погледа и поглед морају бити са истог цртежа.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1241"/>
+      <location filename="../../Command.cpp" line="1426"/>
       <source>Select exactly one View to remove from Group.</source>
       <translation>Изабери поглед који желиш да уклониш из групе.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1260"/>
+      <location filename="../../Command.cpp" line="1445"/>
       <source>View does not belong to a Clip</source>
       <translation>Поглед не припада Групи погледа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1319"/>
+      <location filename="../../Command.cpp" line="1504"/>
       <source>Choose an SVG file to open</source>
       <translation>Изабери SVG датотеку за отварање</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1321"/>
+      <location filename="../../Command.cpp" line="1506"/>
       <source>Scalable Vector Graphic</source>
       <translation>Scalable Vector Graphic</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1321"/>
+      <location filename="../../Command.cpp" line="441"/>
+      <location filename="../../Command.cpp" line="1506"/>
       <source>All Files</source>
       <translation>Све датотеке</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1370"/>
+      <location filename="../../Command.cpp" line="1555"/>
       <source>Select at least one object.</source>
       <translation>Изабери бар један објекат.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1446"/>
+      <location filename="../../Command.cpp" line="1630"/>
       <source>Please select only 1 Arch Section.</source>
       <translation type="unfinished">Please select only 1 Arch Section.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1452"/>
+      <location filename="../../Command.cpp" line="1636"/>
       <source>No Arch Sections in selection.</source>
       <translation type="unfinished">No Arch Sections in selection.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1503"/>
+      <location filename="../../Command.cpp" line="1687"/>
       <source>Select exactly one Spreadsheet object.</source>
       <translation>Изабери само један табеларни објекат.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1577"/>
+      <location filename="../../Command.cpp" line="1761"/>
       <source>No Drawing View</source>
       <translation>Нема погледа цртежа</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1578"/>
+      <location filename="../../Command.cpp" line="1762"/>
       <source>Open Drawing View before attempting export to SVG.</source>
       <translation>Пре покушаја извоза цртежа у SVG формату мораш га прво направити.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1613"/>
+      <location filename="../../Command.cpp" line="1797"/>
       <source>Can not export selection</source>
       <translation>Изабрано се не може извести</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1614"/>
+      <location filename="../../Command.cpp" line="1798"/>
       <source>Page contains DrawViewArch which will not be exported. Continue?</source>
       <translation type="unfinished">Page contains DrawViewArch which will not be exported. Continue?</translation>
     </message>
@@ -2927,7 +2977,7 @@
       <location filename="../../CommandCreateDims.cpp" line="1192"/>
       <location filename="../../CommandDecorate.cpp" line="387"/>
       <location filename="../../CommandDecorate.cpp" line="393"/>
-      <location filename="../../TaskDimension.cpp" line="417"/>
+      <location filename="../../TaskDimension.cpp" line="442"/>
       <location filename="../../TaskDimRepair.cpp" line="126"/>
       <location filename="../../TaskDimRepair.cpp" line="138"/>
       <location filename="../../TaskDimRepair.cpp" line="149"/>
@@ -3058,9 +3108,9 @@
       <translation>Изабери 2 тачкаста објекта и 1 поглед. (2)</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="491"/>
-      <location filename="../../Command.cpp" line="584"/>
-      <location filename="../../Command.cpp" line="647"/>
+      <location filename="../../Command.cpp" line="692"/>
+      <location filename="../../Command.cpp" line="785"/>
+      <location filename="../../Command.cpp" line="848"/>
       <location filename="../../CommandAnnotate.cpp" line="107"/>
       <location filename="../../CommandAnnotate.cpp" line="168"/>
       <location filename="../../CommandAnnotate.cpp" line="220"/>
@@ -3108,9 +3158,9 @@
       <translation>Задатак у току</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="492"/>
-      <location filename="../../Command.cpp" line="585"/>
-      <location filename="../../Command.cpp" line="648"/>
+      <location filename="../../Command.cpp" line="693"/>
+      <location filename="../../Command.cpp" line="786"/>
+      <location filename="../../Command.cpp" line="849"/>
       <location filename="../../CommandAnnotate.cpp" line="108"/>
       <location filename="../../CommandAnnotate.cpp" line="169"/>
       <location filename="../../CommandAnnotate.cpp" line="221"/>
@@ -3408,7 +3458,7 @@
     <message>
       <location filename="../../MDIViewPage.cpp" line="314"/>
       <source>Export Page As PDF</source>
-      <translation>Извези цртеж као PDF</translation>
+      <translation>Извези цртеж у PDF формату</translation>
     </message>
     <message>
       <location filename="../../MDIViewPage.cpp" line="496"/>
@@ -3418,22 +3468,22 @@
     <message>
       <location filename="../../MDIViewPage.cpp" line="499"/>
       <source>Export page as SVG</source>
-      <translation>Извези цртеж као SVG</translation>
+      <translation>Извези цртеж у SVG формату</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderPage.cpp" line="211"/>
+      <location filename="../../ViewProviderPage.cpp" line="212"/>
       <location filename="../../ViewProviderProjGroup.cpp" line="161"/>
       <location filename="../../ViewProviderTemplate.cpp" line="201"/>
       <source>Are you sure you want to continue?</source>
       <translation>Да ли си сигуран да желиш да наставиш?</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderPage.cpp" line="232"/>
+      <location filename="../../ViewProviderPage.cpp" line="233"/>
       <source>Show drawing</source>
       <translation>Прикажи цртеж</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderPage.cpp" line="234"/>
+      <location filename="../../ViewProviderPage.cpp" line="235"/>
       <source>Toggle KeepUpdated</source>
       <translation>Укљ/Искљ KeepUpdated (Одржавај ажурним)</translation>
     </message>
@@ -3579,7 +3629,7 @@
     </message>
     <message>
       <location filename="../../ViewProviderBalloon.cpp" line="88"/>
-      <location filename="../../ViewProviderDimension.cpp" line="123"/>
+      <location filename="../../ViewProviderDimension.cpp" line="126"/>
       <source>Edit %1</source>
       <translation>Уреди %1</translation>
     </message>
@@ -3740,7 +3790,19 @@
       <translation>Изабери две праве линије</translation>
     </message>
     <message>
-      <location filename="../../TaskDimension.cpp" line="418"/>
+      <location filename="../../TaskDimension.cpp" line="146"/>
+      <location filename="../../TaskDimension.cpp" line="161"/>
+      <source>Missing Dimension</source>
+      <translation type="unfinished">Missing Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../TaskDimension.cpp" line="147"/>
+      <location filename="../../TaskDimension.cpp" line="162"/>
+      <source>Dimension not found.  Was it deleted? Can not continue.</source>
+      <translation type="unfinished">Dimension not found.  Was it deleted? Can not continue.</translation>
+    </message>
+    <message>
+      <location filename="../../TaskDimension.cpp" line="443"/>
       <source>Select 2 Vertexes or 1 Edge</source>
       <translation>Изабери 2 темена или 1 ивицу</translation>
     </message>
@@ -3851,6 +3913,16 @@ thick: %4</translation>
       <source>Document Name:</source>
       <translation type="unfinished">Document Name:</translation>
     </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="164"/>
+      <source>Projection Group</source>
+      <translation>Група основних погледа</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="174"/>
+      <source>Part View</source>
+      <translation type="unfinished">Part View</translation>
+    </message>
   </context>
   <context>
     <name>Std_Delete</name>
@@ -3862,47 +3934,47 @@ it has a weld symbol that would become broken.</source>
 има симбол заваривања који би се покварио.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderViewPart.cpp" line="355"/>
+      <location filename="../../ViewProviderViewPart.cpp" line="362"/>
       <source>You cannot delete this view because it has one or more dependent views that would become broken.</source>
       <translation>Не можеш обрисати овај поглед јер има један или више зависних објеката који ће постати неисправни.</translation>
     </message>
     <message>
       <location filename="../../ViewProviderLeader.cpp" line="212"/>
-      <location filename="../../ViewProviderPage.cpp" line="214"/>
+      <location filename="../../ViewProviderPage.cpp" line="215"/>
       <location filename="../../ViewProviderProjGroup.cpp" line="148"/>
       <location filename="../../ViewProviderProjGroup.cpp" line="164"/>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="148"/>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="157"/>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="165"/>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="173"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="155"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="164"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="172"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="180"/>
       <location filename="../../ViewProviderTemplate.cpp" line="205"/>
-      <location filename="../../ViewProviderViewPart.cpp" line="358"/>
+      <location filename="../../ViewProviderViewPart.cpp" line="365"/>
       <location filename="../../ViewProviderWeld.cpp" line="145"/>
       <source>Object dependencies</source>
       <translation>Међузависности објеката</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="145"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="152"/>
       <source>You cannot delete the anchor view of a projection group.</source>
       <translation>Не можеш обрисати главни поглед групе основних погледа.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="154"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="161"/>
       <source>You cannot delete this view because it has a section view that would become broken.</source>
       <translation>Не можеш да избришеш овај поглед јер има пресек који би у том случају постао оштећен.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="162"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="169"/>
       <source>You cannot delete this view because it has a detail view that would become broken.</source>
       <translation>Не можеш да избришеш овај поглед јер има детаљни поглед који би постао оштећен.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderProjGroupItem.cpp" line="170"/>
+      <location filename="../../ViewProviderProjGroupItem.cpp" line="177"/>
       <source>You cannot delete this view because it has a leader line that would become broken.</source>
       <translation>Не можеш да обришеш овај поглед јер има показну линију која би била оштећена.</translation>
     </message>
     <message>
-      <location filename="../../ViewProviderPage.cpp" line="205"/>
+      <location filename="../../ViewProviderPage.cpp" line="206"/>
       <source>The page is not empty, therefore the
 following referencing objects might be lost:</source>
       <translation>Цртеж није празан, због тога
@@ -5209,7 +5281,7 @@ for ProjectionGroups</source>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="571"/>
       <source>Starting directory for menu &apos;Insert Page using Template&apos;</source>
-      <translation>Почетна фасцикла са припремљеним празним цртежима за алатку &apos;Изабери и уметни припремљени празни цртеж&apos;</translation>
+      <translation>Фасцикла са припремљеним празним цртежима за алатку &apos;Изабери подразумевани празни цртеж&apos;</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="598"/>
@@ -6887,7 +6959,7 @@ be used instead of the dimension value</source>
     <message>
       <location filename="../../TaskGeomHatch.ui" line="26"/>
       <source>Apply Geometric Hatch to Face</source>
-      <translation>Примени геометријску шрафуру на страницу</translation>
+      <translation>Шрафирај страницу геометријском шрафуром</translation>
     </message>
     <message>
       <location filename="../../TaskGeomHatch.ui" line="38"/>
@@ -7300,227 +7372,232 @@ You can pick further points to get line segments.</source>
       <translation>Група основних погледа</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="34"/>
+      <location filename="../../TaskProjGroup.ui" line="120"/>
+      <source>Direction</source>
+      <translation>Правац</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.ui" line="126"/>
+      <source>Spin clock wise</source>
+      <translation type="unfinished">Spin clock wise</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.ui" line="537"/>
       <source>Projection</source>
       <translation>Распоред погледа</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="41"/>
+      <location filename="../../TaskProjGroup.ui" line="544"/>
       <source>First or Third Angle</source>
       <translation>Европски или амерички</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="45"/>
+      <location filename="../../TaskProjGroup.ui" line="548"/>
       <source>First Angle</source>
       <translation>Први угао</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="50"/>
+      <location filename="../../TaskProjGroup.ui" line="553"/>
       <source>Third Angle</source>
       <translation>Трећи угао</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="55"/>
-      <location filename="../../TaskProjGroup.ui" line="78"/>
+      <location filename="../../TaskProjGroup.ui" line="45"/>
+      <location filename="../../TaskProjGroup.ui" line="558"/>
       <source>Page</source>
       <translation>Страна</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="67"/>
+      <location filename="../../TaskProjGroup.ui" line="34"/>
       <source>Scale</source>
       <translation>Размера</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="74"/>
+      <location filename="../../TaskProjGroup.ui" line="41"/>
       <source>Scale Page/Auto/Custom</source>
       <translation>Размера Цртеж/Ауто/Сопствена</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="83"/>
+      <location filename="../../TaskProjGroup.ui" line="50"/>
       <source>Automatic</source>
       <translation>Аутоматски</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="88"/>
+      <location filename="../../TaskProjGroup.ui" line="55"/>
       <source>Custom</source>
       <translation>Сопствена</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="100"/>
-      <source>Custom Scale</source>
-      <translation>Сопствена размера</translation>
-    </message>
-    <message>
-      <location filename="../../TaskProjGroup.ui" line="120"/>
+      <location filename="../../TaskProjGroup.ui" line="76"/>
       <source>Scale Numerator</source>
       <translation>Бројилац размере</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="143"/>
+      <location filename="../../TaskProjGroup.ui" line="99"/>
       <source>Scale Denominator</source>
       <translation>Именилац размере</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="179"/>
-      <source>Adjust Primary Direction</source>
-      <translation>Подеси главни правац</translation>
-    </message>
-    <message>
-      <location filename="../../TaskProjGroup.ui" line="205"/>
+      <location filename="../../TaskProjGroup.ui" line="153"/>
       <source>Rotate up</source>
       <translation>Окрени нагоре</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="226"/>
+      <location filename="../../TaskProjGroup.ui" line="174"/>
+      <source>Spin counter clock wise</source>
+      <translation type="unfinished">Spin counter clock wise</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.ui" line="195"/>
       <source>Rotate left</source>
       <translation>Окрени улево</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="261"/>
+      <location filename="../../TaskProjGroup.ui" line="224"/>
       <source>Current primary view direction</source>
       <translation>Тренутни главни правац погледа</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="274"/>
+      <location filename="../../TaskProjGroup.ui" line="231"/>
       <source>Rotate right</source>
       <translation>Окрени удесно</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="308"/>
+      <location filename="../../TaskProjGroup.ui" line="252"/>
+      <source>Set document front view as primary direction.</source>
+      <translation type="unfinished">Set document front view as primary direction.</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.ui" line="273"/>
       <source>Rotate down</source>
       <translation>Окрени надоле</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="353"/>
+      <location filename="../../TaskProjGroup.ui" line="294"/>
+      <source>Set direction of the camera, or selected face if any, as primary direction.</source>
+      <translation type="unfinished">Set direction of the camera, or selected face if any, as primary direction.</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.ui" line="318"/>
       <source>Secondary Projections</source>
       <translation>Основни погледи</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="367"/>
+      <location filename="../../TaskProjGroup.ui" line="324"/>
       <source>LeftFrontTop</source>
       <translation>СлеваСпредаОдгоре</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="390"/>
-      <location filename="../../TaskProjGroup.cpp" line="466"/>
-      <location filename="../../TaskProjGroup.cpp" line="473"/>
+      <location filename="../../TaskProjGroup.ui" line="347"/>
+      <location filename="../../TaskProjGroup.cpp" line="643"/>
+      <location filename="../../TaskProjGroup.cpp" line="650"/>
       <source>Top</source>
       <translation>Одозго</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="407"/>
+      <location filename="../../TaskProjGroup.ui" line="364"/>
       <source>RightFrontTop</source>
       <translation>СдеснаСпредаОдгоре</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="437"/>
-      <location filename="../../TaskProjGroup.cpp" line="468"/>
-      <location filename="../../TaskProjGroup.cpp" line="470"/>
+      <location filename="../../TaskProjGroup.ui" line="394"/>
+      <location filename="../../TaskProjGroup.cpp" line="645"/>
+      <location filename="../../TaskProjGroup.cpp" line="647"/>
       <source>Left</source>
       <translation>Слева</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="457"/>
+      <location filename="../../TaskProjGroup.ui" line="414"/>
       <source>Primary</source>
       <translation>Главни</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="477"/>
-      <location filename="../../TaskProjGroup.cpp" line="468"/>
-      <location filename="../../TaskProjGroup.cpp" line="470"/>
+      <location filename="../../TaskProjGroup.ui" line="434"/>
+      <location filename="../../TaskProjGroup.cpp" line="645"/>
+      <location filename="../../TaskProjGroup.cpp" line="647"/>
       <source>Right</source>
       <translation>Сдесна</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="494"/>
-      <location filename="../../TaskProjGroup.cpp" line="471"/>
+      <location filename="../../TaskProjGroup.ui" line="451"/>
+      <location filename="../../TaskProjGroup.cpp" line="648"/>
       <source>Rear</source>
       <translation>Страга</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="524"/>
+      <location filename="../../TaskProjGroup.ui" line="481"/>
       <source>LeftFrontBottom</source>
       <translation>СлеваСпредаОдоздо</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="544"/>
-      <location filename="../../TaskProjGroup.cpp" line="466"/>
-      <location filename="../../TaskProjGroup.cpp" line="473"/>
+      <location filename="../../TaskProjGroup.ui" line="501"/>
+      <location filename="../../TaskProjGroup.cpp" line="643"/>
+      <location filename="../../TaskProjGroup.cpp" line="650"/>
       <source>Bottom</source>
       <translation>Одоздо</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="561"/>
+      <location filename="../../TaskProjGroup.ui" line="518"/>
       <source>RightFrontBottom</source>
       <translation>СдеснаСпредаОдоздо</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="595"/>
-      <source>Spin CW</source>
-      <translation>Окрени у смеру казаљке на сату</translation>
-    </message>
-    <message>
-      <location filename="../../TaskProjGroup.ui" line="623"/>
-      <source>Spin CCW</source>
-      <translation>Окрени супротно смеру казаљке на сату</translation>
-    </message>
-    <message>
-      <location filename="../../TaskProjGroup.ui" line="653"/>
+      <location filename="../../TaskProjGroup.ui" line="568"/>
       <source>Distributes projections automatically
 using the given X/Y Spacing</source>
       <translation>Распоређује пројекције аутоматски помоћу задатог X/Y размака</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="657"/>
+      <location filename="../../TaskProjGroup.ui" line="572"/>
       <source>Auto Distribute</source>
       <translation>Аутоматски распореди</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="678"/>
+      <location filename="../../TaskProjGroup.ui" line="593"/>
       <source>X Spacing</source>
       <translation>X Размак</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="710"/>
+      <location filename="../../TaskProjGroup.ui" line="625"/>
       <source>Horizontal space between border of projections</source>
       <translation>Хоризонтални размак између основних погледа</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="738"/>
+      <location filename="../../TaskProjGroup.ui" line="653"/>
       <source>Y Spacing</source>
       <translation>Y Размак</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.ui" line="757"/>
+      <location filename="../../TaskProjGroup.ui" line="672"/>
       <source>Vertical space between border of projections</source>
       <translation>Вертикални размак између основних погледа</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.cpp" line="465"/>
-      <location filename="../../TaskProjGroup.cpp" line="474"/>
+      <location filename="../../TaskProjGroup.cpp" line="642"/>
+      <location filename="../../TaskProjGroup.cpp" line="651"/>
       <source>FrontTopLeft</source>
       <translation>СпредаОдозгоСлева</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.cpp" line="465"/>
-      <location filename="../../TaskProjGroup.cpp" line="474"/>
+      <location filename="../../TaskProjGroup.cpp" line="642"/>
+      <location filename="../../TaskProjGroup.cpp" line="651"/>
       <source>FrontBottomRight</source>
       <translation>СпредаОдоздоСдесна</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.cpp" line="467"/>
-      <location filename="../../TaskProjGroup.cpp" line="472"/>
+      <location filename="../../TaskProjGroup.cpp" line="644"/>
+      <location filename="../../TaskProjGroup.cpp" line="649"/>
       <source>FrontTopRight</source>
       <translation>СпредаОдозгоСдесна</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.cpp" line="467"/>
-      <location filename="../../TaskProjGroup.cpp" line="472"/>
+      <location filename="../../TaskProjGroup.cpp" line="644"/>
+      <location filename="../../TaskProjGroup.cpp" line="649"/>
       <source>FrontBottomLeft</source>
       <translation>СпредаОдоздоСлева</translation>
     </message>
     <message>
-      <location filename="../../TaskProjGroup.cpp" line="469"/>
+      <location filename="../../TaskProjGroup.cpp" line="646"/>
       <source>Front</source>
       <translation>Спреда</translation>
     </message>
@@ -8148,7 +8225,7 @@ using the given X/Y Spacing</source>
   <context>
     <name>TechDraw_ComplexSection</name>
     <message>
-      <location filename="../../Command.cpp" line="551"/>
+      <location filename="../../Command.cpp" line="752"/>
       <source>Insert complex Section View</source>
       <translation>Уметни полупресек, степенасти пресек или заокренути пресек</translation>
     </message>
@@ -8195,7 +8272,7 @@ using the given X/Y Spacing</source>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="288"/>
       <source>Inserts Cosmetic Vertices at Midpoint of selected Edges</source>
-      <translation>Умеће помоћне тачке у средине изабраних ивица</translation>
+      <translation>Уметни помоћне тачке у средине изабраних ивица</translation>
     </message>
   </context>
   <context>
@@ -8209,7 +8286,7 @@ using the given X/Y Spacing</source>
   <context>
     <name>TechDraw_SectionView</name>
     <message>
-      <location filename="../../Command.cpp" line="546"/>
+      <location filename="../../Command.cpp" line="747"/>
       <source>Insert simple Section View</source>
       <translation>Уметни пун пресек</translation>
     </message>
@@ -8317,47 +8394,42 @@ using the given X/Y Spacing</source>
       <translation type="unfinished">TechDraw Centerlines</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="55"/>
+      <location filename="../../Workbench.cpp" line="54"/>
       <source>TechDraw Extend Dimensions</source>
       <translation type="unfinished">TechDraw Extend Dimensions</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="57"/>
+      <location filename="../../Workbench.cpp" line="56"/>
       <source>TechDraw Pages</source>
       <translation>TechDraw цртежи</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="58"/>
+      <location filename="../../Workbench.cpp" line="57"/>
       <source>TechDraw Stacking</source>
       <translation>TechDraw редослед</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="60"/>
+      <location filename="../../Workbench.cpp" line="59"/>
       <source>TechDraw Views</source>
       <translation>TechDraw погледи</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="52"/>
-      <source>TechDraw Clips</source>
-      <translation>TechDraw Група погледа</translation>
-    </message>
-    <message>
-      <location filename="../../Workbench.cpp" line="54"/>
+      <location filename="../../Workbench.cpp" line="53"/>
       <source>TechDraw Dimensions</source>
       <translation>TechDraw коте</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="59"/>
+      <location filename="../../Workbench.cpp" line="58"/>
       <source>TechDraw Tool Attributes</source>
       <translation type="unfinished">TechDraw Tool Attributes</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="56"/>
+      <location filename="../../Workbench.cpp" line="55"/>
       <source>TechDraw File Access</source>
       <translation type="unfinished">TechDraw File Access</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="53"/>
+      <location filename="../../Workbench.cpp" line="52"/>
       <source>TechDraw Decoration</source>
       <translation type="unfinished">TechDraw Decoration</translation>
     </message>
@@ -8367,27 +8439,27 @@ using the given X/Y Spacing</source>
       <translation>TechDraw Напомена</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="61"/>
+      <location filename="../../Workbench.cpp" line="60"/>
       <source>Views From Other Workbenches</source>
       <translation type="unfinished">Views From Other Workbenches</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="62"/>
+      <location filename="../../Workbench.cpp" line="61"/>
       <source>Clipped Views</source>
       <translation type="unfinished">Clipped Views</translation>
     </message>
     <message>
-      <location filename="../../Workbench.cpp" line="63"/>
+      <location filename="../../Workbench.cpp" line="62"/>
       <source>Hatching</source>
-      <translation type="unfinished">Hatching</translation>
+      <translation>Шрафирање</translation>
+    </message>
+    <message>
+      <location filename="../../Workbench.cpp" line="63"/>
+      <source>Symbols</source>
+      <translation>Симболи</translation>
     </message>
     <message>
       <location filename="../../Workbench.cpp" line="64"/>
-      <source>Symbols</source>
-      <translation type="unfinished">Symbols</translation>
-    </message>
-    <message>
-      <location filename="../../Workbench.cpp" line="65"/>
       <source>Views</source>
       <translation>Погледи</translation>
     </message>
@@ -8639,22 +8711,22 @@ using the given X/Y Spacing</source>
       <translation>Изабери коту растојања или пречника и покушај поново</translation>
     </message>
     <message>
-      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="42"/>
+      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="43"/>
       <source>loose fit</source>
       <translation>лабаво налегање</translation>
     </message>
     <message>
-      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="43"/>
+      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="44"/>
       <source>snug fit</source>
       <translation>лабаво налегање</translation>
     </message>
     <message>
-      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="44"/>
+      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="45"/>
       <source>press fit</source>
       <translation>чврсто налегање</translation>
     </message>
     <message>
-      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="59"/>
+      <location filename="../../../TechDrawTools/TaskHoleShaftFit.py" line="92"/>
       <source>Hole / Shaft Fit ISO 286</source>
       <translation>Налегање отвор/осовина ISO 286</translation>
     </message>
@@ -8773,7 +8845,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawPage</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="55"/>
+      <location filename="../../../App/DrawView.cpp" line="56"/>
       <source>Page</source>
       <translation>Страна</translation>
     </message>
@@ -8781,7 +8853,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawSVGTemplate</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="56"/>
+      <location filename="../../../App/DrawView.cpp" line="57"/>
       <source>Template</source>
       <translation>Празни цртеж</translation>
     </message>
@@ -8789,7 +8861,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawView</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="57"/>
+      <location filename="../../../App/DrawView.cpp" line="58"/>
       <source>View</source>
       <translation>Поглед</translation>
     </message>
@@ -8797,7 +8869,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewPart</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="58"/>
+      <location filename="../../../App/DrawView.cpp" line="59"/>
       <source>View</source>
       <translation>Поглед</translation>
     </message>
@@ -8805,7 +8877,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewSection</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="59"/>
+      <location filename="../../../App/DrawView.cpp" line="60"/>
       <source>Section</source>
       <translation>Пресек</translation>
     </message>
@@ -8813,7 +8885,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawComplexSection</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="60"/>
+      <location filename="../../../App/DrawView.cpp" line="61"/>
       <source>Section</source>
       <translation>Пресек</translation>
     </message>
@@ -8821,7 +8893,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewDetail</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="61"/>
+      <location filename="../../../App/DrawView.cpp" line="62"/>
       <source>Detail</source>
       <translation>Детаљ</translation>
     </message>
@@ -8829,7 +8901,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawActiveView</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="62"/>
+      <location filename="../../../App/DrawView.cpp" line="63"/>
       <source>ActiveView</source>
       <translation>Активни поглед</translation>
     </message>
@@ -8837,7 +8909,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewAnnotation</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="63"/>
+      <location filename="../../../App/DrawView.cpp" line="64"/>
       <source>Annotation</source>
       <translation>Напомена</translation>
     </message>
@@ -8845,7 +8917,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewImage</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="64"/>
+      <location filename="../../../App/DrawView.cpp" line="65"/>
       <source>Image</source>
       <translation>Слика</translation>
     </message>
@@ -8853,7 +8925,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewSymbol</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="65"/>
+      <location filename="../../../App/DrawView.cpp" line="66"/>
       <source>Symbol</source>
       <translation>Ознака шава</translation>
     </message>
@@ -8861,7 +8933,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewArch</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="66"/>
+      <location filename="../../../App/DrawView.cpp" line="67"/>
       <source>Arch</source>
       <translation>Лук</translation>
     </message>
@@ -8869,7 +8941,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewDraft</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="67"/>
+      <location filename="../../../App/DrawView.cpp" line="68"/>
       <source>Draft</source>
       <translation>Закошење</translation>
     </message>
@@ -8877,7 +8949,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawLeaderLine</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="68"/>
+      <location filename="../../../App/DrawView.cpp" line="69"/>
       <source>LeaderLine</source>
       <translation>Показна линија</translation>
     </message>
@@ -8885,7 +8957,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewBalloon</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="69"/>
+      <location filename="../../../App/DrawView.cpp" line="70"/>
       <source>Balloon</source>
       <translation>Позициона ознака</translation>
     </message>
@@ -8893,7 +8965,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewDimension</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="70"/>
+      <location filename="../../../App/DrawView.cpp" line="71"/>
       <source>Dimension</source>
       <translation>Кота</translation>
     </message>
@@ -8901,7 +8973,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawViewDimExtent</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="71"/>
+      <location filename="../../../App/DrawView.cpp" line="72"/>
       <source>Extent</source>
       <translation>Опсег</translation>
     </message>
@@ -8909,7 +8981,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawHatch</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="72"/>
+      <location filename="../../../App/DrawView.cpp" line="73"/>
       <source>Hatch</source>
       <translation>Шрафура</translation>
     </message>
@@ -8917,7 +8989,7 @@ there is an open task dialog.</source>
   <context>
     <name>DrawGeomHatch</name>
     <message>
-      <location filename="../../../App/DrawView.cpp" line="73"/>
+      <location filename="../../../App/DrawView.cpp" line="74"/>
       <source>GeomHatch</source>
       <translation>Геометријска шрафура</translation>
     </message>
@@ -9074,7 +9146,7 @@ there is an open task dialog.</source>
     <message>
       <location filename="../../../TechDrawTools/CommandVertexCreations.py" line="77"/>
       <source>Add an offset vertex</source>
-      <translation>Додај одмакнуто теме</translation>
+      <translation>Додај одмакнуту тачку</translation>
     </message>
     <message>
       <location filename="../../../TechDrawTools/CommandVertexCreations.py" line="83"/>
@@ -9416,6 +9488,81 @@ there is an open task dialog.</source>
       <location filename="../../CommandExtensionDims.cpp" line="406"/>
       <source>Insert repeated feature count at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</source>
       <translation type="unfinished">Insert repeated feature count at the beginning of the dimension text:&lt;br&gt;- Select one or more dimensions&lt;br&gt;- Click this tool</translation>
+    </message>
+  </context>
+  <context>
+    <name>Preferences</name>
+    <message>
+      <location filename="../../../App/Preferences.cpp" line="433"/>
+      <source>The LineStandard parameter is invalid. Using zero instead.</source>
+      <translation type="unfinished">The LineStandard parameter is invalid. Using zero instead.</translation>
+    </message>
+  </context>
+  <context>
+    <name>TaskDimension</name>
+    <message>
+      <location filename="../../ViewProviderDimension.cpp" line="299"/>
+      <source>You cannot delete this dimension now because
+there is an open task dialog.</source>
+      <translation type="unfinished">You cannot delete this dimension now because
+there is an open task dialog.</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderDimension.cpp" line="302"/>
+      <source>Can Not Delete</source>
+      <translation>Не може да се избрише</translation>
+    </message>
+  </context>
+  <context>
+    <name>CmdTechDrawBrokenView</name>
+    <message>
+      <location filename="../../Command.cpp" line="525"/>
+      <source>TechDraw</source>
+      <translation>TechDraw</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="526"/>
+      <location filename="../../Command.cpp" line="527"/>
+      <source>Insert Broken View</source>
+      <translation>Уметни скраћени поглед</translation>
+    </message>
+  </context>
+  <context>
+    <name>TechDrawGui::DirectionEditDialog</name>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="917"/>
+      <source>Direction</source>
+      <translation>Правац</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="922"/>
+      <source>X: </source>
+      <translation type="unfinished">X: </translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="930"/>
+      <source>Y: </source>
+      <translation type="unfinished">Y: </translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="938"/>
+      <source>Z: </source>
+      <translation type="unfinished">Z: </translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="954"/>
+      <source>OK</source>
+      <translation>У реду</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="955"/>
+      <source>Cancel</source>
+      <translation>Откажи</translation>
+    </message>
+    <message>
+      <location filename="../../TaskProjGroup.cpp" line="961"/>
+      <source>Rotate by</source>
+      <translation type="unfinished">Rotate by</translation>
     </message>
   </context>
 </TS>

@@ -2,328 +2,457 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="hu" sourcelanguage="en">
   <context>
-    <name>AssemblyGui::TaskAssemblyConstraints</name>
+    <name>Assembly_CreateAssembly</name>
     <message>
-      <source>Constraints</source>
-      <translation>Kényszerítések</translation>
+      <location filename="../../../CommandCreateAssembly.py" line="48"/>
+      <source>Create Assembly</source>
+      <translation>Szerelvény létrehozása</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateAssembly.py" line="53"/>
+      <source>Create an assembly object in the current document, or in the current active assembly (if any). Limit of one root assembly per file.</source>
+      <translation>Összeszerelési tárgy létrehozása az aktuális dokumentumban vagy az aktuális aktív összeszerelésben (ha van ilyen). Fájlonként legfeljebb egy gyökér-összeállítás lehet.</translation>
     </message>
   </context>
   <context>
-    <name>AssemblyGui::Workbench</name>
+    <name>Assembly_CreateJointFixed</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="68"/>
+      <source>Create a Fixed Joint</source>
+      <translation>Egy rögzített csatlakozás létrehozása</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateJoint.py" line="75"/>
+      <source>1 - If an assembly is active : Create a joint permanently locking two parts together, preventing any movement or rotation.</source>
+      <translation>1 - Ha az összeszerelés aktív : Hozzon létre egy csatlakozást, amely tartósan rögzít két alkatrészt egymáshoz, megakadályozva minden mozgást vagy elfordulást.</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateJoint.py" line="81"/>
+      <source>2 - If a part is active : Position sub parts by matching selected coordinate systems. The second part selected will move.</source>
+      <translation>2 - Ha egy alkatrész aktív : Alrészek pozicionálása a kiválasztott koordináta-rendszerek csatlakozásával. A második kiválasztott alkatrész elmozdul.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddExistingComponent</name>
+    <name>Assembly_CreateJointRevolute</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="103"/>
+      <source>Create Revolute Joint</source>
+      <translation>Kiforgatás csatlakozás létrehozás</translation>
     </message>
     <message>
-      <source>Add existing Component...</source>
-      <translation>Meglévő alkatrész hozzáadása...</translation>
-    </message>
-    <message>
-      <source>Add a existing Component into the active Assembly, STEP, IGES or BREP</source>
-      <translation>Egy meglévő komponens hozzáadása az aktív STEP, IGES vagy BREP összeállításhoz</translation>
+      <location filename="../../../CommandCreateJoint.py" line="110"/>
+      <source>Create a Revolute Joint: Allows rotation around a single axis between selected parts.</source>
+      <translation>Hozzon létre egy forgásirányú csatlakozást: Lehetővé teszi a kiválasztott alkatrészek egyetlen tengely körüli elforgatását.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddNewComponent</name>
+    <name>Assembly_CreateJointCylindrical</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="131"/>
+      <source>Create Cylindrical Joint</source>
+      <translation>Hozzon létre hengeres csatlakozást</translation>
     </message>
     <message>
-      <source>Add new Assembly</source>
-      <translation>Új összeállítás hozzáadása</translation>
-    </message>
-    <message>
-      <source>Add a new Subassembly into the active Assembly</source>
-      <translation>Új részegység hozzáadása az aktív összeállításhoz</translation>
+      <location filename="../../../CommandCreateJoint.py" line="138"/>
+      <source>Create a Cylindrical Joint: Enables rotation along one axis while permitting movement along the same axis between assembled parts.</source>
+      <translation>Hozzon létre egy hengeres csatlakozást: Lehetővé teszi a forgást egy tengely mentén, miközben lehetővé teszi a mozgást ugyanazon tengely mentén az összeszerelt alkatrészek között.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddNewPart</name>
+    <name>Assembly_CreateJointSlider</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="157"/>
+      <source>Create Slider Joint</source>
+      <translation>Csúszócsatlakozás létrehozása</translation>
     </message>
     <message>
-      <source>Add new Part</source>
-      <translation>Új rész hozzáadása</translation>
-    </message>
-    <message>
-      <source>Add a new Part into the active Assembly</source>
-      <translation>Új rész hozzáadása az aktív összeállításhoz</translation>
+      <location filename="../../../CommandCreateJoint.py" line="164"/>
+      <source>Create a Slider Joint: Allows linear movement along a single axis but restricts rotation between selected parts.</source>
+      <translation>Hozzon létre egy csatlakozást: Lehetővé teszi a lineáris mozgást egyetlen tengely mentén, de korlátozza a kiválasztott alkatrészek közötti forgást.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraint</name>
+    <name>Assembly_CreateJointBall</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="183"/>
+      <source>Create Ball Joint</source>
+      <translation>Létrehozza a gömb csatlakozást</translation>
     </message>
     <message>
-      <source>Constraint</source>
-      <translation>Kényszerít</translation>
-    </message>
-    <message>
-      <source>Add arbitrary constraints to the assembly</source>
-      <translation>Tetszőleges kényszerítések hozzáadása az összeállításhoz</translation>
+      <location filename="../../../CommandCreateJoint.py" line="190"/>
+      <source>Create a Ball Joint: Connects parts at a point, allowing unrestricted movement as long as the connection points remain in contact.</source>
+      <translation>Hozzon létre egy gömb csatlakozást: Egy ponton összekapcsolja az alkatrészeket, és korlátlan mozgást tesz lehetővé, amíg a kapcsolódási pontok érintkeznek egymással.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintAlignment</name>
+    <name>Assembly_CreateJointDistance</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="209"/>
+      <source>Create Distance Joint</source>
+      <translation>Távolsági csatlakozás létrehozása</translation>
     </message>
     <message>
-      <source>Constraint alignment...</source>
-      <translation>Kényszerítés igazítás...</translation>
-    </message>
-    <message>
-      <source>Align the selected entities</source>
-      <translation>Kiválasztott szerkezetek igazítása</translation>
+      <location filename="../../../CommandCreateJoint.py" line="216"/>
+      <source>Create a Distance Joint: Fix the distance between the selected objects.</source>
+      <translation>Hozzon létre egy távolsági csatlakozást: A kijelölt tárgyak közötti távolság rögzítése.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintAngle</name>
+    <name>Assembly_ToggleGrounded</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandCreateJoint.py" line="250"/>
+      <source>Toggle grounded</source>
+      <translation>Zárolt kapcsoló</translation>
     </message>
     <message>
-      <source>Constraint Angle...</source>
-      <translation>Szög kényszerítés...</translation>
-    </message>
-    <message>
-      <source>Set the angle between two selected entities</source>
-      <translation>Két kijelölt elem közötti szög beállítása</translation>
+      <location filename="../../../CommandCreateJoint.py" line="257"/>
+      <source>Grounding a part permanently locks its position in the assembly, preventing any movement or rotation. You need at least one grounded part before starting to assemble.</source>
+      <translation>Egy alkatrész zárolása tartósan rögzíti annak helyzetét a szerelvényben, megakadályozva minden mozgást vagy elfordulást. Az összeszerelés megkezdése előtt legalább egy zárolt alkatrészre van szükség.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintCoincidence</name>
+    <name>Assembly_ExportASMT</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandExportASMT.py" line="47"/>
+      <source>Export ASMT File</source>
+      <translation>ASMT fájl exportálás</translation>
     </message>
     <message>
-      <source>Constraint coincidence...</source>
-      <translation>Egymásra illeszt...</translation>
-    </message>
-    <message>
-      <source>Make the selected entities coincident</source>
-      <translation>A kiválasztott szerkezetek egybeesővé tétele</translation>
+      <location filename="../../../CommandExportASMT.py" line="52"/>
+      <source>Export currently active assembly as a ASMT file.</source>
+      <translation>Aktuálisan aktív szerelvény exportálása ASMT fájlként.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintDistance</name>
+    <name>Assembly_InsertLink</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandInsertLink.py" line="52"/>
+      <source>Insert Link</source>
+      <translation>Link beszúrása</translation>
     </message>
     <message>
-      <source>Constraint Distance...</source>
-      <translation>Távolság kényszerítés...</translation>
+      <location filename="../../../CommandInsertLink.py" line="59"/>
+      <source>Insert a Link into the currently active assembly. This will create dynamic links to parts/bodies/primitives/assemblies. To insert external objects, make sure that the file is &lt;b&gt;open in the current session&lt;/b&gt;</source>
+      <translation>Link beillesztése az éppen aktív összeállításba.
+Ez dinamikus linkeket hoz létre alkatrészekhez/testekhez/alapanyagokhoz/összeállításokhoz.
+Külső tárgyak beszúrásához győződjön meg róla, hogy a fájl &lt;b&gt;megnyitott az aktuális munkamenetben.&lt;/b&gt;</translation>
     </message>
     <message>
-      <source>Set the distance between two selected entities</source>
-      <translation>Két kijelölt szerkezet közötti távolság beállítása</translation>
-    </message>
-  </context>
-  <context>
-    <name>CmdAssemblyConstraintFix</name>
-    <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandInsertLink.py" line="61"/>
+      <source>Insert by left clicking items in the list.</source>
+      <translation>Beszúrás a listában lévő elemekre balra kattintva.</translation>
     </message>
     <message>
-      <source>Constraint Fix...</source>
-      <translation>Fix kényszerítés...</translation>
+      <location filename="../../../CommandInsertLink.py" line="65"/>
+      <source>Remove by right clicking items in the list.</source>
+      <translation>Eltávolítás a listában lévő elemekre jobb egérgombbal kattintva.</translation>
     </message>
     <message>
-      <source>Fix a part in it's rotation and translation</source>
-      <translation>Az alkatrészek forgásának és fordításának blokkolása</translation>
-    </message>
-  </context>
-  <context>
-    <name>CmdAssemblyConstraintOrientation</name>
-    <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
-    </message>
-    <message>
-      <source>Constraint Orientation...</source>
-      <translation>Igazítás kényszerítése...</translation>
-    </message>
-    <message>
-      <source>Set the orientation of two selected entities in regard to each other</source>
-      <translation>Két kiválasztott szerkezet egymáshoz viszonyított tájolása</translation>
+      <location filename="../../../CommandInsertLink.py" line="70"/>
+      <source>Press shift to add several links while clicking on the view.</source>
+      <translation>Több link hozzáadásához nyomja le a shift billentyűt, miközben a nézetre kattint.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyImport</name>
+    <name>Assembly_SolveAssembly</name>
     <message>
-      <source>Assembly</source>
-      <translation>Összeállítás</translation>
+      <location filename="../../../CommandSolveAssembly.py" line="51"/>
+      <source>Solve Assembly</source>
+      <translation>Összeállítás megoldó</translation>
     </message>
     <message>
-      <source>Import assembly...</source>
-      <translation>Összeállítás importálás...</translation>
-    </message>
-    <message>
-      <source>Import one or more files and create a assembly structure.</source>
-      <translation>Importáljon egy vagy több fájlt, és hozzon létre egy összeszerelési struktúrát.</translation>
+      <location filename="../../../CommandSolveAssembly.py" line="58"/>
+      <source>Solve the currently active assembly.</source>
+      <translation>Az aktuálisan aktív összeállítás megoldása.</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
-      <source>No active or selected assembly</source>
-      <translation>Nincs aktív vagy kiválasztott szerelvény</translation>
-    </message>
-    <message>
-      <source>You need a active or selected assembly to insert a part in.</source>
-      <translation>Az alkatrész beszúrásához egy aktív vagy kiválasztott szerelvényre van szükség.</translation>
-    </message>
-    <message>
-      <source>You need a active or selected assembly to insert a component in.</source>
-      <translation>Egy aktív vagy kiválasztott szerelvényre van szüksége az alkatrész beillesztéséhez.</translation>
-    </message>
-    <message>
-      <source>No active Assembly</source>
-      <translation>Nincs aktív összeállítás</translation>
-    </message>
-    <message>
-      <source>You need a active (blue) Assembly to insert a Constraint. Please create a new one or make one active (double click).</source>
-      <translation>A kényszerítés beszúrásához aktív (kék) összeállításra van szükség. Kérjük, hozzon létre egy újat, vagy tegyen egyet aktívvá (dupla kattintással).</translation>
+      <location filename="../../../InitGui.py" line="74"/>
+      <source>Assembly</source>
+      <translation>Összeállítás</translation>
     </message>
   </context>
   <context>
-    <name>TaskAssemblyConstraints</name>
+    <name>Workbench</name>
     <message>
-      <source>Form</source>
-      <translation>Űrlap</translation>
+      <location filename="../../../InitGui.py" line="98"/>
+      <source>Assembly</source>
+      <translation>Összeállítás</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The first geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az első geometria, amelyre a kényszer vonatkozik. Vegye figyelembe, hogy az első és a második geometria felcserélhető. Ha törölni szeretné, használja a jobb oldali gombot. Ha üres, akkor csak válasszon ki egy tetszőleges geometriát a 3D nézetben, és az ide kerül be.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../InitGui.py" line="99"/>
+      <source>Assembly Joints</source>
+      <translation>Összeállítás csatlakoztatása</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the first geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az első geometria törlése&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../InitGui.py" line="102"/>
+      <source>&amp;Assembly</source>
+      <translation>&amp;Összeállítás</translation>
+    </message>
+  </context>
+  <context>
+    <name>Assembly</name>
+    <message>
+      <location filename="../../../JointObject.py" line="48"/>
+      <source>Fixed</source>
+      <translation>Rögzített</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
+      <location filename="../../../JointObject.py" line="49"/>
+      <source>Revolute</source>
+      <translation>Kiforgat</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The second geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A második geometria, amelyre a kényszer vonatkozik. Vegye figyelembe, hogy az első és a második geometria felcserélhető. Ha törölni szeretné, használja a jobb oldali gombot. Ha üres, akkor csak válasszon ki egy tetszőleges geometriát a 3D nézetben, és az ide kerül be.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="50"/>
+      <source>Cylindrical</source>
+      <translation>Hengeres</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the second geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az második geometria törlése&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="51"/>
+      <source>Slider</source>
+      <translation>Csúszka</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the angle between the geometries normals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktuális geometriák közötti szög beállítása&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="52"/>
+      <source>Ball</source>
+      <translation>Gömbcsatlakozás</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Szög</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Special constraint which is in general used to let the geometries be on each other. Therefore it's often the same as align, with the difference that it is also defined for points, as a point can lie on a plane. Note that this constraint has a special behaviour for cylinders. For example, a cylindrical surface can't be on a plane, only touch it. Therefore this is not valid. Furthermore point and line coincident with cylinders don't work on the cylinder surface, but on its center line. The reason for that it is, that this centerline would not be accessible with other constraints, but the surface coincident can be also achieved with the align constraint and value 0.  At last specialty the cylinder cylinder constraint shall be mentioned: It works also on the cylinder centerlines and therefore makes them concentric. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Speciális kényszer, amelyet általában arra használnak, hogy a geometriák egymáson legyenek. Ezért gyakran ugyanaz, mint az igazítás, azzal a különbséggel, hogy pontokra is definiálható, hiszen egy pont feküdhet síkban is. Megjegyezzük, hogy ez a kényszer speciálisan viselkedik a hengerek esetében. Például egy hengeres felület nem lehet síkban, csak érintkezhet vele. Ezért ez nem érvényes. Továbbá a hengerrel egybeeső pont és vonal nem a henger felületén, hanem a középvonalán működik. Ennek az az oka, hogy ez a középvonal más kényszerekkel nem lenne elérhető, de a felület egybeesése az igazítás kényszerrel és a 0 értékkel is elérhető.  Utolsó különlegességként a henger henger kényszert kell megemlíteni: Ez a henger középvonalakra is hat, és így koncentrikusan teszi azokat. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Coincident</source>
-      <translation>Egybeeső</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fixes the first geometry in its rotation and translation. Note that fix only works its the direct parent assembly. If you stack assemblies, the parent assembly will not be fixed inside the other ones.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az elforgatás és a fordítás első geometriáját javítja. Vegye figyelembe, hogy a javítás csak akkor működik, ha a közvetlen szülő egy szerelvény. Ha összeállításokat halmoz fel, a szülőszerelvény nem lesz rögzítve a többi között.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Fix</source>
-      <translation>Javítás</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the distance between first and second geometry. Note that in many cases the shortest distance is used (e.g. line - line)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az első és a második geometria közötti távolság beállítása. Vegye figyelembe, hogy sok esetben a legrövidebb távolságot használja (pl. vonal - vonal)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
+      <location filename="../../../JointObject.py" line="53"/>
       <source>Distance</source>
       <translation>Távolság</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to set the orientation of the geometries normals in relation to each other. Possible values are parallel (means equal or opposite normals), equal normals, opposite normals or perpendicular ones. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Meghatározza a geometria aktuális vektorainak egymáshoz viszonyított orientációját. A lehetséges értékek: párhuzamos (azaz aktuális egyenlő vagy ellentétes), aktuális egyenlő, aktuális ellentétes vagy merőleges. Vegye figyelembe, hogy hengerek esetében az aktuális alapkört kell használni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../Preferences.py" line="47"/>
+      <source>Ask</source>
+      <translation>Kérdez</translation>
     </message>
     <message>
-      <source>Orientation</source>
-      <translation>Tájolás</translation>
+      <location filename="../../../Preferences.py" line="48"/>
+      <source>Always</source>
+      <translation>Mindig</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adds a orientation and a distance constraint. Therefore this constraint is only valid where both of the individual constraints are, e.g. you can't align a point and a plane as point-plane orientation is invalid. Furthermore it can happen that this constraint is only valid for a certain orientation, e.g. plane - line has only a defined distance, when the orientation is perpendicular. The reason behind this is, that a non-perpendicular line would always cut the plane and therefore the shortest distance would always be 0. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Hozzáad egy orientációs és egy távolsági megkötést. Ezért ez a kényszer csak ott érvényes, ahol mindkét egyedi kényszer érvényes, pl. egy pontot és egy síkot nem lehet összehangolni, mivel a pont-sík orientáció érvénytelen. Továbbá előfordulhat, hogy ez a kényszer csak egy bizonyos orientációra érvényes, pl. sík - vonal csak akkor van meghatározott távolság, ha az orientáció merőleges. Ennek az az oka, hogy egy nem merőleges vonal mindig elvágná a síkot, és ezért a legrövidebb távolság mindig 0 lenne. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../Preferences.py" line="49"/>
+      <source>Never</source>
+      <translation>Soha</translation>
+    </message>
+  </context>
+  <context>
+    <name>App::Property</name>
+    <message>
+      <location filename="../../../JointObject.py" line="116"/>
+      <source>The type of the joint</source>
+      <translation>Csatlakozás típusa</translation>
     </message>
     <message>
-      <source>Align</source>
-      <translation>Igazítás</translation>
+      <location filename="../../../JointObject.py" line="126"/>
+      <source>The first object of the joint</source>
+      <translation>Csatlakozás első tárgya</translation>
     </message>
     <message>
-      <source>value</source>
-      <translation>érték</translation>
+      <location filename="../../../JointObject.py" line="133"/>
+      <source>The first part of the joint</source>
+      <translation>Csatlakozás első alkatrésze</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the full solution space. The nearest solution will be found.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A teljes megoldási területet használja. A legközelebbi megoldást fogja megtalálni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="140"/>
+      <source>The selected element of the first object</source>
+      <translation>Az első tárgy kiválasztott eleme</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Positive solution space. Reduces the valid solutions to the positive domain, e.g. point over the plane at specified distance, not under. Or point outside a cylinder at specified distance, not inside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pozitív megoldási tér. Az érvényes megoldások szűkítése a pozitív tartományra, pl. pont a sík felett a megadott távolságban, nem alatta. Vagy pont egy hengeren kívül, megadott távolságban, nem belül.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="147"/>
+      <source>The selected vertex of the first object</source>
+      <translation>Az első tárgy kiválasztott csúcspontja</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Negative solution space. Reduces the valid solutions to the negative domain, e.g. point under the plane at specified distance, not over. Or point inside a cylinder at specified distance, not outside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Negatív megoldási tér. Az érvényes megoldások negatív tartományra szűkítése, pl. pont a sík alatt a megadott távolságban, nem pedig fölötte. Vagy pont egy henger belsejében meghatározott távolságban, nem pedig azon kívül.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="157"/>
+      <source>This is the local coordinate system within object1 that will be used for the joint.</source>
+      <translation>Ez az a helyi koordináta-rendszer az tárgy1-en belül, amelyet a csatlakozáshoz használni fogunk.</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals parallel, that means they can point in the same or opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Párhuzamossá teszi az aktuális geometriát, vagyis ugyanabba vagy ellentétes irányba mutathatnak. Vegye figyelembe, hogy hengerek esetén az aktuális alapkört használja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="167"/>
+      <source>This prevents Placement1 from recomputing, enabling custom positioning of the placement.</source>
+      <translation>Ez megakadályozza a beillesztés1 újraszámítását, lehetővé téve az elhelyezés egyéni pozicionálását.</translation>
     </message>
     <message>
-      <source>Parallel</source>
-      <translation>Párhuzamos</translation>
+      <location filename="../../../JointObject.py" line="175"/>
+      <source>The second object of the joint</source>
+      <translation>Csatlakozás második tárgya</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the same direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktuális geometriák ugyanabba az irányba mutatnak. Vegye figyelembe, hogy hengerek esetén az aktuális alapkört használja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="182"/>
+      <source>The second part of the joint</source>
+      <translation>Csatlakozás második alkatrésze</translation>
     </message>
     <message>
-      <source>Equal</source>
-      <translation>Egyenlő</translation>
+      <location filename="../../../JointObject.py" line="189"/>
+      <source>The selected element of the second object</source>
+      <translation>A második tárgy kiválasztott eleme</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktuális geometriák ellentétes irányba mutatnak. Vegye figyelembe, hogy hengerek esetén az aktuális alapkört használja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="196"/>
+      <source>The selected vertex of the second object</source>
+      <translation>A második tárgy kiválasztott csúcspontja</translation>
     </message>
     <message>
-      <source>Opposite</source>
-      <translation>Ellentétes</translation>
+      <location filename="../../../JointObject.py" line="206"/>
+      <source>This is the local coordinate system within object2 that will be used for the joint.</source>
+      <translation>Ez az a helyi koordináta-rendszer az tárgy2-n belül, amelyet a csatlakozáshoz használni fogunk.</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals perpendicular. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aktuális geometriát merőlegesre állítja. Vegye figyelembe, hogy a hengerek esetében az aktuális alapkört használja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="216"/>
+      <source>This prevents Placement2 from recomputing, enabling custom positioning of the placement.</source>
+      <translation>Ez megakadályozza a beillesztés2 újraszámítását, lehetővé téve az elhelyezés egyéni pozicionálását.</translation>
     </message>
     <message>
-      <source>Perpend.</source>
-      <translation>Merőleges.</translation>
+      <location filename="../../../JointObject.py" line="226"/>
+      <source>This is the distance of the joint. It is used only by the distance joint.</source>
+      <translation>Ez a csatlakozás távolsága. Csak a párhuzamos csatlakozás használja.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="236"/>
+      <source>This is the rotation of the joint.</source>
+      <translation>Ez a csatlakozás elfordulása.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="246"/>
+      <source>This is the offset vector of the joint.</source>
+      <translation>Ez a csatlakozás eltolási vektora.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="256"/>
+      <source>This indicates if the joint is active.</source>
+      <translation>Ez jelzi, hogy a csatlakozás aktív-e.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="889"/>
+      <source>The object to ground</source>
+      <translation>A rögzitendő tárgy</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="901"/>
+      <source>This is where the part is grounded.</source>
+      <translation>Itt van az alkatrész rögzítve.</translation>
+    </message>
+  </context>
+  <context>
+    <name>TaskAssemblyCreateJoint</name>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="14"/>
+      <source>Create Joint</source>
+      <translation>Csatlakozás létrehozása</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="28"/>
+      <source>Distance</source>
+      <translation>Távolság</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="52"/>
+      <source>Offset</source>
+      <translation>Eltolás</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="76"/>
+      <source>Rotation</source>
+      <translation>Forgatás</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="104"/>
+      <source>Reverse the direction of the joint.</source>
+      <translation>Fordítsa meg a csatlakozás irányát.</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="107"/>
+      <source>Reverse</source>
+      <translation>Fordított</translation>
+    </message>
+  </context>
+  <context>
+    <name>TaskAssemblyInsertLink</name>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="14"/>
+      <source>Insert Link</source>
+      <translation>Link beszúrása</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="20"/>
+      <source>Search parts...</source>
+      <translation>Tárgyak keresése...</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="32"/>
+      <source>Don't find your part? </source>
+      <translation>Nem találja az alkatrészt? </translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="39"/>
+      <source>Open file</source>
+      <translation>Fájl megnyitása</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="48"/>
+      <source>If checked, the selected object will be inserted inside a Part container, unless it is already a Part.</source>
+      <translation>Ha jelölt, a kijelölt tárgy be lesz illesztve egy alkatrész konténerbe, kivéve, ha ez már egy alkatrész.</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="51"/>
+      <source>Insert as part</source>
+      <translation>Beillesztés alkatrészként</translation>
+    </message>
+  </context>
+  <context>
+    <name>AssemblyGui::DlgSettingsAssembly</name>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="14"/>
+      <source>General</source>
+      <translation>Általános</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="20"/>
+      <source>Allow to leave edit mode when pressing Esc button</source>
+      <translation>Az Esc gomb megnyomásakor a szerkesztőmód elhagyásának engedélyezése</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="23"/>
+      <source>Esc leave edit mode</source>
+      <translation>Esc elhagyja a szerkesztő módot</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="39"/>
+      <source>Ground first part:</source>
+      <translation>Első alkatrész földelése:</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="46"/>
+      <source>When you insert the first part in the assembly, you can choose to ground the part automatically.</source>
+      <translation>Amikor behelyezi az első alkatrészt a szerelvénybe, választhatja az alkatrész automatikus földelését.</translation>
+    </message>
+  </context>
+  <context>
+    <name>AssemblyGui::ViewProviderAssembly</name>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="136"/>
+      <source>Delete associated joints</source>
+      <translation>Kapcsolódó csatlakozás törlése</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="148"/>
+      <source>The object is associated to one or more joints.</source>
+      <translation>A tárgy egy vagy több csatlakozással rendelkezik.</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="150"/>
+      <source>Do you want to move the object and delete associated joints?</source>
+      <translation>El akarja mozgatni a tárgyat és törölni a hozzá tartozó csatlakozásokat?</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="651"/>
+      <source>Move part</source>
+      <translation>Mozgassa a részt</translation>
     </message>
   </context>
 </TS>

@@ -5,8 +5,8 @@
     <name>CmdPathArea</name>
     <message>
       <location filename="../../Command.cpp" line="46"/>
-      <source>Path</source>
-      <translation>Szerszámpálya</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="47"/>
@@ -23,8 +23,8 @@
     <name>CmdPathAreaWorkplane</name>
     <message>
       <location filename="../../Command.cpp" line="128"/>
-      <source>Path</source>
-      <translation>Szerszámpálya</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="129"/>
@@ -41,8 +41,8 @@
     <name>CmdPathCompound</name>
     <message>
       <location filename="../../Command.cpp" line="218"/>
-      <source>Path</source>
-      <translation>Szerszámpálya</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="219"/>
@@ -59,8 +59,8 @@
     <name>CmdPathShape</name>
     <message>
       <location filename="../../Command.cpp" line="270"/>
-      <source>Path</source>
-      <translation>Szerszámpálya</translation>
+      <source>CAM</source>
+      <translation>CAM</translation>
     </message>
     <message>
       <location filename="../../Command.cpp" line="271"/>
@@ -222,11 +222,11 @@ Any values of the SetupSheet that are changed from their default are preselected
 This option is most useful if stock is a box or cylinder, or if the machine has a standard placement for machining.
 
 Note that this option is disabled if a stock object from an existing solid is used in the job - they cannot be stored in a template.</source>
-      <translation>Ha engedélyezte, a készlet létrehozás szerepel a sablonban. Ha egy sablon nem tartalmaz készletdefiníciót, akkor az alapértelmezett készlet létrehozási algoritmust használja (létrehozás az Alaptárgy kötött mezőjéből). 
+      <translation>Ha engedélyezve van, akkor a készlet létrehozása szerepel a sablonban. Ha a sablon nem tartalmaz készletdefiníciót, akkor az alapértelmezett készletkészítési algoritmus kerül alkalmazásra (készítés az alaptárgy határolókeretéből).
 
-Ez az opció akkor a leghasznosabb, ha a készlet egy doboz vagy henger, vagy ha a gép szabványos elhelyezéssel rendelkezik a megmunkáláshoz. 
+Ez az opció akkor a leghasznosabb, ha a készlet egy keret vagy henger, vagy ha a gépnek van egy szabványos elhelyezése a megmunkáláshoz.
 
-Ne feledje, hogy ez a beállítás le van tiltva, ha egy meglévő szilárd anyagból származó készlet tárgyat használ a feladatban - nem tárolhatók sablonban.</translation>
+Vegye figyelembe, hogy ez az opció le van tiltva, ha a munkában egy meglévő szilárdtestből származó készlet tárgyat használ - ezek nem tárolhatók a sablonban.</translation>
     </message>
     <message>
       <location filename="../panels/DlgJobTemplateExport.ui" line="184"/>
@@ -274,11 +274,11 @@ Ne feledje, hogy csak olyan műveletek vannak felsorolva, amelyek jelenleg konfi
 For Box and Cylinder stocks this means the actual size of the stock solid being created.
 
 For stock from the Base object's bounding box it means the extra material in all directions. A stock object created from such a template will get its basic size from the new job's Base object and apply the stored extra settings.</source>
-      <translation>Ha engedélyezve van, a készletobjektum aktuális méretbeállításai szerepelnek a sablonban. 
+      <translation>Ha engedélyezve van, a sablon tartalmazza a készlet tárgy aktuális méretbeállításait.
 
-A doboz- és hengerkészletek számára ez a létrehozott szilárd anyag tényleges méretét jelenti. 
+A keretes és hengeres készletek esetében ez a létrehozandó készlettest tényleges méretét jelenti.
 
-Az alaptárgy kötött dobozából származó készlet minden irányban az extra anyagot jelenti. Az ilyen sablonból létrehozott készlet tárgy az alapméretet az új feladat Alaptárgyából kapja, és alkalmazza a tárolt extra beállításokat.</translation>
+Az alap tárgy határoló keretéből származó készletek esetében ez az összes irányban lévő extra anyagot jelenti. Az ilyen sablonból létrehozott készlet tárgy alapméretét az új feladat Bázis tárgyából kapja, és alkalmazza a tárolt extra beállításokat.</translation>
     </message>
     <message>
       <location filename="../panels/DlgJobTemplateExport.ui" line="168"/>
@@ -1132,7 +1132,7 @@ A Visszaállítás törli az összes aktuális elemet a listából, és kitölti
     <message>
       <location filename="../panels/PageOpDeburrEdit.ui" line="289"/>
       <source>Round joint</source>
-      <translation>Körkörös illesztés</translation>
+      <translation>Körkörös csatlakozás</translation>
     </message>
     <message>
       <location filename="../panels/PageOpDeburrEdit.ui" line="308"/>
@@ -1223,6 +1223,16 @@ A Visszaállítás törli az összes aktuális elemet a listából, és kitölti
       <location filename="../panels/PageOpDrillingEdit.ui" line="169"/>
       <source>Chip Break</source>
       <translation>Forgácstörés</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="176"/>
+      <source>Feed retract</source>
+      <translation>Adagolás visszahúzása</translation>
+    </message>
+    <message>
+      <location filename="../panels/PageOpDrillingEdit.ui" line="179"/>
+      <source>G85: Retract from the hole at the given feedrate instead of rapid move</source>
+      <translation>G85: Gyors mozgás helyett visszahúzás a furatból a megadott előtolási sebességgel</translation>
     </message>
     <message>
       <location filename="../panels/PageOpEngraveEdit.ui" line="63"/>
@@ -2448,11 +2458,6 @@ A névkonfliktusok kezeléséről lásd az alábbi fájlmentési szabályzatot.<
       <translation>Alapértelmezett utófeldolgozó</translation>
     </message>
     <message>
-      <location filename="../preferences/PathJob.ui" line="315"/>
-      <source>DefaultPostProcessor</source>
-      <translation>AlapértelmezettUtófeldolgozó</translation>
-    </message>
-    <message>
       <location filename="../preferences/PathJob.ui" line="325"/>
       <source>Default Arguments</source>
       <translation>Alapértelmezett érvek</translation>
@@ -2500,11 +2505,6 @@ Ha a mező üresen marad, nem lesz előre kiválasztott sablon.</translation>
       <translation>Válassza ki az egyik utófeldolgozót alapértelmezettként.</translation>
     </message>
     <message>
-      <location filename="../preferences/PathJob.ui" line="318"/>
-      <source>Mod/CAM</source>
-      <translation>Mod/CAM</translation>
-    </message>
-    <message>
       <location filename="../preferences/PathJob.ui" line="332"/>
       <source>Optional arguments passed to the default Post Processor specified above. See the Post Processor's documentation for supported arguments.</source>
       <translation>A fent megadott alapértelmezett utófeldolgozónak átadott választható érvelések. A támogatott érvelésekért olvassa el a utófeldolgozó dokumentációját.</translation>
@@ -2532,7 +2532,7 @@ Ha a mező üresen marad, nem lesz előre kiválasztott sablon.</translation>
     <message>
       <location filename="../preferences/PathJob.ui" line="405"/>
       <source>Extend Model's Bounding Box</source>
-      <translation>A modellt körülvevő határolókeret kiterjesztése</translation>
+      <translation>Az üzemmódot körülvevő keret kibővítése l</translation>
     </message>
     <message>
       <location filename="../preferences/PathJob.ui" line="429"/>
@@ -3878,7 +3878,7 @@ A névkonfliktusok kezeléséről lásd az alábbi fájlmentési szabályzatot.<
     <message>
       <location filename="../panels/PathEdit.ui" line="397"/>
       <source>If multiple coordinate systems are in use, setting this to TRUE will cause the gcode to be written to multiple output files as controlled by the 'order by' property.  For example, if ordering by Fixture, the first output file will be for the first fixture and separate file for the second.</source>
-      <translation>Ha különböző koordináta rendszereket használunk, akkor ennek az opciónak a IGAZ értékre állítása azt eredményezi, hogy a gcode több kimeneti fájlba íródik a 'Rendezés eszerint' tulajdonságnak megfelelően.  Például, ha rögzítés szerint szeretne rendezni, akkor az első kimeneti fájl az első rögzítéshez, a másodikhoz pedig egy külön fájl lesz.</translation>
+      <translation>Ha különböző koordináta rendszereket használunk, akkor ennek az opciónak a IGAZ értékre állítása azt eredményezi, hogy a g-kód több kimeneti fájlba íródik a 'Rendezés eszerint' tulajdonságnak megfelelően.  Például, ha rögzítés szerint szeretne rendezni, akkor az első kimeneti fájl az első rögzítéshez, a másodikhoz pedig egy külön fájl lesz.</translation>
     </message>
     <message>
       <location filename="../panels/PathEdit.ui" line="400"/>
@@ -4103,46 +4103,6 @@ Default: 3 mm</source>
   <context>
     <name>Path</name>
     <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
-      <source>The currently selected unit schema: 
-     '{}' for this document
- Does not use 'minutes' for velocity values. 
- 
-CNC machines require feed rate to be expressed in 
-unit/minute. To ensure correct G-code: 
-Select a minute-based schema in preferences.
-For example:
-    'Metric, Small Parts &amp; CNC'
-    'US Customary'
-    'Imperial Decimal'</source>
-      <translation>Az aktuálisan kiválasztott egységséma:
-     '{}' ehhez a dokumentumhoz
- Nem használja a 'perc' értéket a sebességértékekhez.
- 
-A CNC-gépeknél az előtolási sebességet
-egység/perc. A helyes G-kód biztosítása érdekében:
-Válasszon perc alapú sémát a beállításokban.
-Például:
-     'Metrikus, kis alkatrészek és CNC'
-    'US szokásos'
-    'Birodalmi tizedesjegy'</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
-      <source>Warning</source>
-      <translation>Figyelmeztetés</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
-      <source>Ok</source>
-      <translation>Ok</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
-      <source>Don't Show This Anymore</source>
-      <translation>Ne mutasd ezt többet</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Base/Gui/IconViewProvider.py" line="97"/>
       <source>Edit</source>
       <translation>Szerkesztés</translation>
@@ -4209,11 +4169,6 @@ Például:
       <location filename="../../../PathScripts/PathUtilsGui.py" line="91"/>
       <source>Choose a Path Job</source>
       <translation>Tevékenység elérési útjának kijelölése</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
-      <source>Invalid Filename</source>
-      <translation>Érvénytelen fájlnév</translation>
     </message>
     <message>
       <location filename="../../../PathScripts/PathUtils.py" line="545"/>
@@ -4982,55 +4937,61 @@ Például:
     </message>
     <message>
       <location filename="../../../Path/Op/Drilling.py" line="105"/>
-      <location filename="../../../Path/Op/Drilling.py" line="129"/>
+      <location filename="../../../Path/Op/Drilling.py" line="137"/>
       <source>Use chipbreaking</source>
       <translation>Forgácstörő használata</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="117"/>
+      <location filename="../../../Path/Op/Drilling.py" line="114"/>
+      <location filename="../../../Path/Op/Drilling.py" line="194"/>
+      <source>Use G85 boring cycle with feed out</source>
+      <translation>Használja a G85 fúrási ciklust előtolással</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Drilling.py" line="125"/>
       <source>Incremental Drill depth before retracting to clear chips</source>
       <translation>Fogásmélység növekmény értéke mielőtt kihúzza, a forgács eltávolításhoz</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="123"/>
+      <location filename="../../../Path/Op/Drilling.py" line="131"/>
       <source>Enable pecking</source>
       <translation>Vagdosás engedélyezése</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="135"/>
+      <location filename="../../../Path/Op/Drilling.py" line="143"/>
       <source>The time to dwell between peck cycles</source>
       <translation>A lépésciklusok közötti tartási idő</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="141"/>
+      <location filename="../../../Path/Op/Drilling.py" line="149"/>
       <source>Enable dwell</source>
       <translation>Pihentetés engedélyezése</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="150"/>
+      <location filename="../../../Path/Op/Drilling.py" line="158"/>
       <source>Calculate the tip length and subtract from final depth</source>
       <translation>Kiszámítja a csúcs hosszát, és levonja a végső mélységből</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="158"/>
-      <location filename="../../../Path/Op/Drilling.py" line="222"/>
+      <location filename="../../../Path/Op/Drilling.py" line="166"/>
+      <location filename="../../../Path/Op/Drilling.py" line="236"/>
       <source>Controls tool retract height between holes in same op, Default=G98: safety height</source>
       <translation>A vezérlőeszközök visszahúzzák a magasságot a furatok között ugyanabban az üzemmódban, Alapértelmezett=G98: biztonsági magasság</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="167"/>
+      <location filename="../../../Path/Op/Drilling.py" line="175"/>
       <source>The height where cutting feed rate starts and retract height for peck operation</source>
       <translation>Az a magasság, ahol a vágási előtolási sebesség megkezdődik és visszahúzódik a vágás művelethez</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="173"/>
+      <location filename="../../../Path/Op/Drilling.py" line="181"/>
       <source>How far the drilling depth is extended</source>
       <translation>Meddig növelhető a fúrási mélység</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Drilling.py" line="180"/>
-      <location filename="../../../Path/Op/Drilling.py" line="212"/>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="134"/>
+      <location filename="../../../Path/Op/Drilling.py" line="188"/>
+      <location filename="../../../Path/Op/Drilling.py" line="226"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="148"/>
       <source>Apply G99 retraction: only retract to RetractHeight between holes in this operation</source>
       <translation>G99 visszahúzás alkalmazása: csak a művelet furatai között húzza vissza a visszahúzási magasság értéket</translation>
     </message>
@@ -5859,21 +5820,6 @@ Például:
   <context>
     <name>PathPocket</name>
     <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
-      <source>Normal</source>
-      <translation>Alapértelmezett</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Op/Gui/PocketBase.py" line="82"/>
       <source>Pass Extension</source>
       <translation>Áthalad a meghosszabbításon</translation>
@@ -6316,14 +6262,6 @@ Az op-létrehozás megszakítása</translation>
       <location filename="../../../Path/Op/Gui/Array.py" line="334"/>
       <source>Arrays of toolpaths having different tool controllers are handled according to the tool controller of the first path.</source>
       <translation>A különböző szerszámvezérlővel rendelkező szerszámpályák sorozatait az első pálya szerszámvezérlője szerint kell kezelni.</translation>
-    </message>
-  </context>
-  <context>
-    <name>PathToolBit</name>
-    <message>
-      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
-      <source>Toolbit cannot be edited: Shapefile not found</source>
-      <translation>Az eszközhegye nem szerkeszthető: Az alakzatfájl nem található</translation>
     </message>
   </context>
   <context>
@@ -6922,6 +6860,7 @@ Az op-létrehozás megszakítása</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1621"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="71"/>
       <source>Warning</source>
       <translation>Figyelmeztetés</translation>
     </message>
@@ -6932,6 +6871,7 @@ Az op-létrehozás megszakítása</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/Job.py" line="1623"/>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="76"/>
       <source>Ok</source>
       <translation>Ok</translation>
     </message>
@@ -6961,6 +6901,36 @@ Az op-létrehozás megszakítása</translation>
       <translation>CAM feladatot hoz létre</translation>
     </message>
     <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="69"/>
+      <source>The currently selected unit schema: 
+     '{}' for this document
+ Does not use 'minutes' for velocity values. 
+ 
+CNC machines require feed rate to be expressed in 
+unit/minute. To ensure correct G-code: 
+Select a minute-based schema in preferences.
+For example:
+    'Metric, Small Parts &amp; CNC'
+    'US Customary'
+    'Imperial Decimal'</source>
+      <translation>Az aktuálisan kiválasztott egységséma:
+     '{}' ehhez a dokumentumhoz
+ Nem használja a 'perc' értéket a sebességértékekhez.
+ 
+A CNC-gépeknél az előtolási sebességet
+egység/perc. A helyes G-kód biztosítása érdekében:
+Válasszon perc alapú sémát a beállításokban.
+Például:
+     'Metrikus, kis alkatrészek és CNC'
+    'US szokásos'
+    'Birodalmi tizedesjegy'</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="79"/>
+      <source>Don't Show This Anymore</source>
+      <translation>Ne mutasd ezt többet</translation>
+    </message>
+    <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="88"/>
       <source>Solids</source>
       <translation>Szilárd testek</translation>
@@ -6969,6 +6939,21 @@ Az op-létrehozás megszakítása</translation>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="90"/>
       <source>Jobs</source>
       <translation>Feladatok</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Model</source>
+      <translation>Modell</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="190"/>
+      <source>Count</source>
+      <translation>Számol</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Main/Gui/JobDlg.py" line="272"/>
+      <source>&lt;none&gt;</source>
+      <translation>&lt;none&gt;</translation>
     </message>
     <message>
       <location filename="../../../Path/Main/Gui/JobDlg.py" line="358"/>
@@ -7540,16 +7525,6 @@ Az op-létrehozás megszakítása</translation>
       <translation>Alap alakzat %s már szerepel a listában</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
-      <source>Profile</source>
-      <translation>Profil</translation>
-    </message>
-    <message>
-      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
-      <source>Profile entire model, selected face(s) or selected edge(s)</source>
-      <translation>Használja ki a teljes modellt, jelölje ki a felülete(ke)t vagy a kijelölt él(ek)et</translation>
-    </message>
-    <message>
       <location filename="../../../Path/Tool/Gui/Controller.py" line="116"/>
       <source>Edit</source>
       <translation>Szerkesztés</translation>
@@ -7583,12 +7558,12 @@ Az op-létrehozás megszakítása</translation>
       <translation>2x fúró hegy</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="189"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="209"/>
       <source>Drilling</source>
       <translation>Fúrás</translation>
     </message>
     <message>
-      <location filename="../../../Path/Op/Gui/Drilling.py" line="193"/>
+      <location filename="../../../Path/Op/Gui/Drilling.py" line="213"/>
       <source>Creates a Drilling toolpath from the features of a base object</source>
       <translation>Fúrási útvonalat hoz létre az alap tárgy egy jellegzetességéből</translation>
     </message>
@@ -7692,6 +7667,26 @@ Az op-létrehozás megszakítása</translation>
       <location filename="../../../Path/Op/PocketBase.py" line="73"/>
       <source>Grid</source>
       <translation>Rács</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="179"/>
+      <source>Normal</source>
+      <translation>Alapértelmezett</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="180"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="181"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/FeatureExtension.py" line="185"/>
+      <source>Extensions</source>
+      <translation>Bővítések</translation>
     </message>
   </context>
   <context>
@@ -8314,12 +8309,12 @@ Az op-létrehozás megszakítása</translation>
   <context>
     <name>CAM_Gcode_pre</name>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="226"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="225"/>
       <source>No active document</source>
       <translation>Nincs aktív dokumentum</translation>
     </message>
     <message>
-      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="229"/>
+      <location filename="../../../Path/Post/scripts/gcode_pre.py" line="228"/>
       <source>No job object</source>
       <translation>Nincs munka tárgy</translation>
     </message>
@@ -8427,23 +8422,33 @@ Az op-létrehozás megszakítása</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="668"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="795"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="799"/>
       <source>Tooltable JSON (*.fctl)</source>
       <translation>Eszközasztal JSON (*.json)</translation>
     </message>
     <message>
       <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="670"/>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="804"/>
       <source>Save toolbit library</source>
       <translation>Szerszámkönyvtár mentése</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="796"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="731"/>
+      <source>Tool</source>
+      <translation>Eszköz</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="732"/>
+      <source>Shape</source>
+      <translation>Alakzat</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="800"/>
       <source>LinuxCNC tooltable (*.tbl)</source>
       <translation>LinuxCNC szerszámlista (*.tbl)</translation>
     </message>
     <message>
-      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="798"/>
+      <location filename="../../../Path/Tool/Gui/BitLibrary.py" line="802"/>
       <source>Camotics tooltable (*.json)</source>
       <translation>Camotics eszköztábla (*.json)</translation>
     </message>
@@ -8472,6 +8477,42 @@ Az op-létrehozás megszakítása</translation>
       <location filename="../../../Path/Tool/Gui/BitLibraryCmd.py" line="80"/>
       <source>Open an editor to manage ToolBit libraries</source>
       <translation>Szerkesztő megnyitása a szerszámbetét-tárak kezeléséhez</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Profile</name>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="165"/>
+      <source>Profile</source>
+      <translation>Profil</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Op/Gui/Profile.py" line="168"/>
+      <source>Profile entire model, selected face(s) or selected edge(s)</source>
+      <translation>Használja ki a teljes modellt, jelölje ki a felülete(ke) t vagy a kijelölt él(ek) et</translation>
+    </message>
+  </context>
+  <context>
+    <name>CAM_Toolbit</name>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="118"/>
+      <source>Toolbit cannot be edited: Shapefile not found</source>
+      <translation>Szerszámbetétek nem szerkeszthetők: Az alakzatfájl nem található</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="193"/>
+      <source>Tool</source>
+      <translation>Eszköz</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="199"/>
+      <source>Invalid Filename</source>
+      <translation>Érvénytelen fájlnév</translation>
+    </message>
+    <message>
+      <location filename="../../../Path/Tool/Gui/Bit.py" line="242"/>
+      <source>Select Tool Shape</source>
+      <translation>Eszköz alakzat kiválasztása</translation>
     </message>
   </context>
 </TS>

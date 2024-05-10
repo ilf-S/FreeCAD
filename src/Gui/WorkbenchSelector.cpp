@@ -27,7 +27,9 @@
 # include <QAbstractItemView>
 # include <QActionGroup>
 # include <QApplication>
+# include <QMenuBar>
 # include <QScreen>
+# include <QStatusBar>
 # include <QToolBar>
 #endif
 
@@ -117,7 +119,7 @@ WorkbenchTabWidget::WorkbenchTabWidget(WorkbenchGroup* aGroup, QWidget* parent)
         std::string activeWbName = WorkbenchManager::instance()->activeName();
         for (int i = 0; i < count(); ++i) {
             if (wbActionGroup->actions()[i]->objectName().toStdString() == activeWbName) {
-                setCurrentIndex(i);
+                setCurrentIndex(i + 1);
                 break;
             }
         }
@@ -145,15 +147,18 @@ WorkbenchTabWidget::WorkbenchTabWidget(WorkbenchGroup* aGroup, QWidget* parent)
     refreshList(aGroup->getEnabledWbActions());
     connect(aGroup, &WorkbenchGroup::workbenchListRefreshed, this, &WorkbenchTabWidget::refreshList);
     connect(aGroup->groupAction(), &QActionGroup::triggered, this, [this, aGroup](QAction* action) {
-        int index = std::min<int>(aGroup->actions().indexOf(action), this->count() - 1);
+        int index = aGroup->actions().indexOf(action) + 1;
+        if (index > this->count() - 1) {
+            index = 0;
+        }
         setCurrentIndex(index);
     });
     connect(this, qOverload<int>(&QTabBar::tabBarClicked), aGroup, [aGroup, moreAction](int index) {
-        if (index < aGroup->getEnabledWbActions().size()) {
-            aGroup->actions()[index]->trigger();
-        }
-        else {
+        if(index == 0) {
             moreAction->trigger();
+        }
+        else if (index <= aGroup->getEnabledWbActions().size()) {
+            aGroup->actions()[index - 1]->trigger();
         }
     });
 
@@ -175,6 +180,14 @@ void WorkbenchTabWidget::refreshList(QList<QAction*> actionList)
     hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Workbenches");
     int itemStyleIndex = hGrp->GetInt("WorkbenchSelectorItem", 0);
 
+    QIcon icon = Gui::BitmapFactory().iconFromTheme("list-add");
+    if (itemStyleIndex == 2) {
+        addTab(QString::fromLatin1("+"));
+    }
+    else {
+        addTab(icon, QString::fromLatin1(""));
+    }
+
     for (QAction* action : actionList) {
         QIcon icon = action->icon();
         if (icon.isNull() || itemStyleIndex == 2) {
@@ -192,31 +205,35 @@ void WorkbenchTabWidget::refreshList(QList<QAction*> actionList)
         }
     }
 
-    QIcon icon = Gui::BitmapFactory().iconFromTheme("list-add");
-    if (itemStyleIndex == 2) {
-        addTab(tr("More"));
-    }
-    else if (itemStyleIndex == 1) {
-        addTab(icon, QString::fromLatin1(""));
-    }
-    else {
-        addTab(icon, tr("More"));
-    }
-
     buildPrefMenu();
 }
 
 void WorkbenchTabWidget::updateLayoutAndTabOrientation(bool floating)
 {
-    if (!parentWidget()->inherits("QToolBar") || floating) {
+    auto parent = parentWidget();
+    if (!parent || !parent->inherits("QToolBar")) {
         return;
     }
 
     ParameterGrp::handle hGrp = App::GetApplication()
         .GetParameterGroupByPath("User parameter:BaseApp/Preferences/Workbenches");
 
-    QToolBar* tb = qobject_cast<QToolBar*>(parentWidget());
-    Qt::ToolBarArea area = getMainWindow()->toolBarArea(tb);
+    Qt::ToolBarArea area;
+    parent = parent->parentWidget();
+
+    if (floating) {
+        area = Qt::TopToolBarArea;
+    }
+    else if (parent && parent->parentWidget() == getMainWindow()->statusBar()) {
+        area = Qt::BottomToolBarArea;
+    }
+    else if (parent && parent->parentWidget() == getMainWindow()->menuBar()) {
+        area = Qt::TopToolBarArea;
+    }
+    else {
+        QToolBar* tb = qobject_cast<QToolBar*>(parentWidget());
+        area = getMainWindow()->toolBarArea(tb);
+    }
 
     if (area == Qt::LeftToolBarArea || area == Qt::RightToolBarArea) {
         setShape(area == Qt::LeftToolBarArea ? QTabBar::RoundedWest : QTabBar::RoundedEast);

@@ -1836,7 +1836,8 @@ std::string DrawUtil::translateArbitrary(std::string context, std::string baseNa
 bool DrawUtil::isCosmeticVertex(App::DocumentObject* owner, std::string element)
 {
     auto ownerView = static_cast<TechDraw::DrawViewPart*>(owner);
-    auto vertex = ownerView->getVertex(element);
+    auto vertexIndex = DrawUtil::getIndexFromName(element);
+    auto vertex = ownerView->getProjVertexByIndex(vertexIndex);
     if (vertex) {
         return vertex->getCosmetic();
     }
@@ -1943,7 +1944,7 @@ void DrawUtil::dumpEdge(const char* label, int i, TopoDS_Edge e)
         vEnd.Z(),
         static_cast<int>(e.Orientation()));
     double edgeLength = GCPnts_AbscissaPoint::Length(adapt, Precision::Confusion());
-    Base::Console().Message(">>>>>>> length: %.3f  distance: %.3f ration: %.3f type: %d\n",
+    Base::Console().Message(">>>>>>> length: %.3f  distance: %.3f ratio: %.3f type: %d\n",
                             edgeLength,
                             vStart.Distance(vEnd),
                             edgeLength / vStart.Distance(vEnd),

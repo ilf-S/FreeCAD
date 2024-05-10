@@ -2,328 +2,455 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de" sourcelanguage="en">
   <context>
-    <name>AssemblyGui::TaskAssemblyConstraints</name>
+    <name>Assembly_CreateAssembly</name>
     <message>
-      <source>Constraints</source>
-      <translation>Einschränkungen</translation>
+      <location filename="../../../CommandCreateAssembly.py" line="48"/>
+      <source>Create Assembly</source>
+      <translation>Baugruppe erstellen</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateAssembly.py" line="53"/>
+      <source>Create an assembly object in the current document, or in the current active assembly (if any). Limit of one root assembly per file.</source>
+      <translation>Erzeugt ein Baugruppen-Objekt im aktuellen Dokument oder in der aktuell aktiven Baugruppe (falls vorhanden). Das Limit ist eine Über-Baugruppe pro Datei.</translation>
     </message>
   </context>
   <context>
-    <name>AssemblyGui::Workbench</name>
+    <name>Assembly_CreateJointFixed</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="68"/>
+      <source>Create a Fixed Joint</source>
+      <translation>Starre Verbindung erstellen</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateJoint.py" line="75"/>
+      <source>1 - If an assembly is active : Create a joint permanently locking two parts together, preventing any movement or rotation.</source>
+      <translation>1 - Ist eine Baugruppe aktiv: Erstellt eine dauerhaft starre Verbindung zwischen zwei Bauteilen, welche jegliche Verschiebung oder Drehung verhindert.</translation>
+    </message>
+    <message>
+      <location filename="../../../CommandCreateJoint.py" line="81"/>
+      <source>2 - If a part is active : Position sub parts by matching selected coordinate systems. The second part selected will move.</source>
+      <translation>2 - Ist ein Bauteil aktiv: Unterbauteile werden durch Angleichen der ausgewählten Koordinatensysteme zueinander ausgerichtet. Das als zweites ausgewählte Bauteil wird sich bewegen.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddExistingComponent</name>
+    <name>Assembly_CreateJointRevolute</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="103"/>
+      <source>Create Revolute Joint</source>
+      <translation>Drehverbindung erstellen</translation>
     </message>
     <message>
-      <source>Add existing Component...</source>
-      <translation>Vorhandene Komponente hinzufügen...</translation>
-    </message>
-    <message>
-      <source>Add a existing Component into the active Assembly, STEP, IGES or BREP</source>
-      <translation>Vorhandene Komponente in aktives Assembly, STEP, IGES oder BREP einfügen</translation>
+      <location filename="../../../CommandCreateJoint.py" line="110"/>
+      <source>Create a Revolute Joint: Allows rotation around a single axis between selected parts.</source>
+      <translation>Erzeuge eine Drehverbindung: Erlaubt die Drehung um eine Achse zwischen zwei ausgwählten Bauteilen.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddNewComponent</name>
+    <name>Assembly_CreateJointCylindrical</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="131"/>
+      <source>Create Cylindrical Joint</source>
+      <translation>Zylindrische Verbindung erstellen</translation>
     </message>
     <message>
-      <source>Add new Assembly</source>
-      <translation>Neues Assembly hinzufügen</translation>
-    </message>
-    <message>
-      <source>Add a new Subassembly into the active Assembly</source>
-      <translation>Neues Subassembly in aktives Assembly einfügen</translation>
+      <location filename="../../../CommandCreateJoint.py" line="138"/>
+      <source>Create a Cylindrical Joint: Enables rotation along one axis while permitting movement along the same axis between assembled parts.</source>
+      <translation>Erzeugt eine zylindrische Verbindung: Erlaubt die Drehung um eine Achse ohne lineare Bewegung entlang derselben Achse zwischen ausgewählen Bauteilen.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyAddNewPart</name>
+    <name>Assembly_CreateJointSlider</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="157"/>
+      <source>Create Slider Joint</source>
+      <translation>Gleitverbindung erstellen</translation>
     </message>
     <message>
-      <source>Add new Part</source>
-      <translation>Neues Part hinzufügen</translation>
-    </message>
-    <message>
-      <source>Add a new Part into the active Assembly</source>
-      <translation>Neues Part in aktives Assembly einfügen</translation>
+      <location filename="../../../CommandCreateJoint.py" line="164"/>
+      <source>Create a Slider Joint: Allows linear movement along a single axis but restricts rotation between selected parts.</source>
+      <translation>Erzeugt eine Gleitverbindung: Erlaubt lineare Bewegungen entlang einer Achse und schränkt die Drehung zwischen den ausgewählen Bauteilen ein.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraint</name>
+    <name>Assembly_CreateJointBall</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="183"/>
+      <source>Create Ball Joint</source>
+      <translation>Kugelverbindung erstellen</translation>
     </message>
     <message>
-      <source>Constraint</source>
-      <translation>Bedingung</translation>
-    </message>
-    <message>
-      <source>Add arbitrary constraints to the assembly</source>
-      <translation>Beliebige Beschränkung auf das Assembly hinzufügen</translation>
+      <location filename="../../../CommandCreateJoint.py" line="190"/>
+      <source>Create a Ball Joint: Connects parts at a point, allowing unrestricted movement as long as the connection points remain in contact.</source>
+      <translation>Erzeugt eine Kugelverbindung: Verbindet Bauteile an einem Punkt und erlaubt uneingeschränkte Bewegung, solange die Punkte in Kontakt bleiben.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintAlignment</name>
+    <name>Assembly_CreateJointDistance</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="209"/>
+      <source>Create Distance Joint</source>
+      <translation>Parallelverbindung erstellen</translation>
     </message>
     <message>
-      <source>Constraint alignment...</source>
-      <translation type="unfinished">Constraint alignment...</translation>
-    </message>
-    <message>
-      <source>Align the selected entities</source>
-      <translation type="unfinished">Align the selected entities</translation>
+      <location filename="../../../CommandCreateJoint.py" line="216"/>
+      <source>Create a Distance Joint: Fix the distance between the selected objects.</source>
+      <translation>Erzeuge eine Parallelverbindung: Fixiert die Entfernung zwischen den ausgewählten Objekten.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintAngle</name>
+    <name>Assembly_ToggleGrounded</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandCreateJoint.py" line="250"/>
+      <source>Toggle grounded</source>
+      <translation>Festsetzen umschalten</translation>
     </message>
     <message>
-      <source>Constraint Angle...</source>
-      <translation>Winkel festlegen...</translation>
-    </message>
-    <message>
-      <source>Set the angle between two selected entities</source>
-      <translation type="unfinished">Set the angle between two selected entities</translation>
+      <location filename="../../../CommandCreateJoint.py" line="257"/>
+      <source>Grounding a part permanently locks its position in the assembly, preventing any movement or rotation. You need at least one grounded part before starting to assemble.</source>
+      <translation>Das Festsetzen eines Bauteils fixiert seine Position in der Baugruppe und verhindert jegliches Verschieben oder Drehen. Es muss mindestens ein Bauteil in der Baugruppe festgesetzt werden, bevor weitere Bauteilverbindungen erstellt werden können.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintCoincidence</name>
+    <name>Assembly_ExportASMT</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandExportASMT.py" line="47"/>
+      <source>Export ASMT File</source>
+      <translation>ASMT-Datei exportieren</translation>
     </message>
     <message>
-      <source>Constraint coincidence...</source>
-      <translation type="unfinished">Constraint coincidence...</translation>
-    </message>
-    <message>
-      <source>Make the selected entities coincident</source>
-      <translation type="unfinished">Make the selected entities coincident</translation>
+      <location filename="../../../CommandExportASMT.py" line="52"/>
+      <source>Export currently active assembly as a ASMT file.</source>
+      <translation>Exportiert die aktuell aktive Baugruppe als ASMT-Datei.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintDistance</name>
+    <name>Assembly_InsertLink</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandInsertLink.py" line="52"/>
+      <source>Insert Link</source>
+      <translation>Verknüpfung einfügen</translation>
     </message>
     <message>
-      <source>Constraint Distance...</source>
-      <translation>Bedingung Distanz...</translation>
+      <location filename="../../../CommandInsertLink.py" line="59"/>
+      <source>Insert a Link into the currently active assembly. This will create dynamic links to parts/bodies/primitives/assemblies. To insert external objects, make sure that the file is &lt;b&gt;open in the current session&lt;/b&gt;</source>
+      <translation>Fügt eine Verknüpfung in die aktuell aktive Baugruppe ein. Dies wird dynamische Verknüpfungen zu Bauteilen, (Grund)Körper und Baugruppen erstellen. Um externe Objekte einzufügen, muss die Datei in der &lt;b&gt;aktuellen Instanz geöffnet sein&lt;/b&gt;</translation>
     </message>
     <message>
-      <source>Set the distance between two selected entities</source>
-      <translation type="unfinished">Set the distance between two selected entities</translation>
-    </message>
-  </context>
-  <context>
-    <name>CmdAssemblyConstraintFix</name>
-    <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandInsertLink.py" line="61"/>
+      <source>Insert by left clicking items in the list.</source>
+      <translation>Einfügen durch Linksklick auf Elemente der Liste.</translation>
     </message>
     <message>
-      <source>Constraint Fix...</source>
-      <translation type="unfinished">Constraint Fix...</translation>
+      <location filename="../../../CommandInsertLink.py" line="65"/>
+      <source>Remove by right clicking items in the list.</source>
+      <translation>Entfernen durch Rechtsklick auf Elemente der Liste.</translation>
     </message>
     <message>
-      <source>Fix a part in it's rotation and translation</source>
-      <translation type="unfinished">Fix a part in it's rotation and translation</translation>
+      <location filename="../../../CommandInsertLink.py" line="70"/>
+      <source>Press shift to add several links while clicking on the view.</source>
+      <translation>Umschalttaste drücken, um durch Klicken in der Ansicht mehrere Verknüpfungen hinzuzufügen.</translation>
     </message>
   </context>
   <context>
-    <name>CmdAssemblyConstraintOrientation</name>
+    <name>Assembly_SolveAssembly</name>
     <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
+      <location filename="../../../CommandSolveAssembly.py" line="51"/>
+      <source>Solve Assembly</source>
+      <translation>Baugruppe lösen</translation>
     </message>
     <message>
-      <source>Constraint Orientation...</source>
-      <translation type="unfinished">Constraint Orientation...</translation>
-    </message>
-    <message>
-      <source>Set the orientation of two selected entities in regard to each other</source>
-      <translation type="unfinished">Set the orientation of two selected entities in regard to each other</translation>
-    </message>
-  </context>
-  <context>
-    <name>CmdAssemblyImport</name>
-    <message>
-      <source>Assembly</source>
-      <translation>Baugruppe</translation>
-    </message>
-    <message>
-      <source>Import assembly...</source>
-      <translation>Assembly importieren...</translation>
-    </message>
-    <message>
-      <source>Import one or more files and create a assembly structure.</source>
-      <translation>Ein oder mehrere Files importieren und Assembly-Struktur erstellen.</translation>
+      <location filename="../../../CommandSolveAssembly.py" line="58"/>
+      <source>Solve the currently active assembly.</source>
+      <translation>Löst die aktuell aktive Baugruppe (Neuberechnung).</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
-      <source>No active or selected assembly</source>
-      <translation>Kein aktives oder ausgewähltes Assembly</translation>
-    </message>
-    <message>
-      <source>You need a active or selected assembly to insert a part in.</source>
-      <translation>Sie benötigen ein aktives oder ausgewähltes Assembly, um ein Part einzufügen.</translation>
-    </message>
-    <message>
-      <source>You need a active or selected assembly to insert a component in.</source>
-      <translation>Sie benötigen ein aktives oder ausgewähltes Assembly, um eine Komponente einzufügen.</translation>
-    </message>
-    <message>
-      <source>No active Assembly</source>
-      <translation>Kein aktives Assembly</translation>
-    </message>
-    <message>
-      <source>You need a active (blue) Assembly to insert a Constraint. Please create a new one or make one active (double click).</source>
-      <translation>Sie benötigen ein aktives (blau) Assembly um eine Bedingung einzufügen. Bitte erstellen Sie ein ein neues oder machen Sie es aktiv (Doppelklick).</translation>
+      <location filename="../../../InitGui.py" line="74"/>
+      <source>Assembly</source>
+      <translation>Baugruppe</translation>
     </message>
   </context>
   <context>
-    <name>TaskAssemblyConstraints</name>
+    <name>Workbench</name>
     <message>
-      <source>Form</source>
-      <translation>Form</translation>
+      <location filename="../../../InitGui.py" line="98"/>
+      <source>Assembly</source>
+      <translation>Assembly</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The first geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The first geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../InitGui.py" line="99"/>
+      <source>Assembly Joints</source>
+      <translation>Assembly-Verbindungen</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the first geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the first geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../InitGui.py" line="102"/>
+      <source>&amp;Assembly</source>
+      <translation>&amp;Assembly</translation>
+    </message>
+  </context>
+  <context>
+    <name>Assembly</name>
+    <message>
+      <location filename="../../../JointObject.py" line="48"/>
+      <source>Fixed</source>
+      <translation>Starr</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
+      <location filename="../../../JointObject.py" line="49"/>
+      <source>Revolute</source>
+      <translation>Drehverbindung</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The second geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The second geometry to which the constraint relates. Note that first and second geometry can be swapt. If you want to clear it, use the button to the right. If it is empty, just select any geometry in the 3D view and it will be added here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="50"/>
+      <source>Cylindrical</source>
+      <translation>Zylindrische Verbindung</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the second geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the second geometry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="51"/>
+      <source>Slider</source>
+      <translation>Gleitverbindung</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the angle between the geometries normals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the angle between the geometries normals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="52"/>
+      <source>Ball</source>
+      <translation>Kugelverbindung</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Winkel</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Special constraint which is in general used to let the geometries be on each other. Therefore it's often the same as align, with the difference that it is also defined for points, as a point can lie on a plane. Note that this constraint has a special behaviour for cylinders. For example, a cylindrical surface can't be on a plane, only touch it. Therefore this is not valid. Furthermore point and line coincident with cylinders don't work on the cylinder surface, but on its center line. The reason for that it is, that this centerline would not be accessible with other constraints, but the surface coincident can be also achieved with the align constraint and value 0.  At last specialty the cylinder cylinder constraint shall be mentioned: It works also on the cylinder centerlines and therefore makes them concentric. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Special constraint which is in general used to let the geometries be on each other. Therefore it's often the same as align, with the difference that it is also defined for points, as a point can lie on a plane. Note that this constraint has a special behaviour for cylinders. For example, a cylindrical surface can't be on a plane, only touch it. Therefore this is not valid. Furthermore point and line coincident with cylinders don't work on the cylinder surface, but on its center line. The reason for that it is, that this centerline would not be accessible with other constraints, but the surface coincident can be also achieved with the align constraint and value 0.  At last specialty the cylinder cylinder constraint shall be mentioned: It works also on the cylinder centerlines and therefore makes them concentric. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Coincident</source>
-      <translation type="unfinished">Coincident</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fixes the first geometry in its rotation and translation. Note that fix only works its the direct parent assembly. If you stack assemblies, the parent assembly will not be fixed inside the other ones.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fixiert die erste Geometrie in ihrer Rotation und Translation. Zu beachten ist, dass die Korrektur nur für den direkt übergeordneten Zusammenbau funktioniert. Wenn Sie die Zusammenbauten stapeln, wird der übergeordnete Zusammenbau nicht innerhalb der anderen montiert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Fix</source>
-      <translation>Reparieren</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the distance between first and second geometry. Note that in many cases the shortest distance is used (e.g. line - line)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the distance between first and second geometry. Note that in many cases the shortest distance is used (e.g. line - line)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
+      <location filename="../../../JointObject.py" line="53"/>
       <source>Distance</source>
       <translation>Abstand</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to set the orientation of the geometries normals in relation to each other. Possible values are parallel (means equal or opposite normals), equal normals, opposite normals or perpendicular ones. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allows to set the orientation of the geometries normals in relation to each other. Possible values are parallel (means equal or opposite normals), equal normals, opposite normals or perpendicular ones. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../Preferences.py" line="47"/>
+      <source>Ask</source>
+      <translation>Nachfragen</translation>
     </message>
     <message>
-      <source>Orientation</source>
-      <translation>Orientierung</translation>
+      <location filename="../../../Preferences.py" line="48"/>
+      <source>Always</source>
+      <translation>Immer</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adds a orientation and a distance constraint. Therefore this constraint is only valid where both of the individual constraints are, e.g. you can't align a point and a plane as point-plane orientation is invalid. Furthermore it can happen that this constraint is only valid for a certain orientation, e.g. plane - line has only a defined distance, when the orientation is perpendicular. The reason behind this is, that a non-perpendicular line would always cut the plane and therefore the shortest distance would always be 0. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adds a orientation and a distance constraint. Therefore this constraint is only valid where both of the individual constraints are, e.g. you can't align a point and a plane as point-plane orientation is invalid. Furthermore it can happen that this constraint is only valid for a certain orientation, e.g. plane - line has only a defined distance, when the orientation is perpendicular. The reason behind this is, that a non-perpendicular line would always cut the plane and therefore the shortest distance would always be 0. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../Preferences.py" line="49"/>
+      <source>Never</source>
+      <translation>Nie</translation>
+    </message>
+  </context>
+  <context>
+    <name>App::Property</name>
+    <message>
+      <location filename="../../../JointObject.py" line="116"/>
+      <source>The type of the joint</source>
+      <translation>Der Typ der Verbindung</translation>
     </message>
     <message>
-      <source>Align</source>
-      <translation>Ausrichtung</translation>
+      <location filename="../../../JointObject.py" line="126"/>
+      <source>The first object of the joint</source>
+      <translation>Das erste Objekt der Verbindung</translation>
     </message>
     <message>
-      <source>value</source>
-      <translation>Wert</translation>
+      <location filename="../../../JointObject.py" line="133"/>
+      <source>The first part of the joint</source>
+      <translation>Das erste Bauteil der Verbindung</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the full solution space. The nearest solution will be found.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the full solution space. The nearest solution will be found.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="140"/>
+      <source>The selected element of the first object</source>
+      <translation>Das ausgewählte Element des ersten Objekts</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Positive solution space. Reduces the valid solutions to the positive domain, e.g. point over the plane at specified distance, not under. Or point outside a cylinder at specified distance, not inside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Positive solution space. Reduces the valid solutions to the positive domain, e.g. point over the plane at specified distance, not under. Or point outside a cylinder at specified distance, not inside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="147"/>
+      <source>The selected vertex of the first object</source>
+      <translation>Der ausgewählte Punkt des ersten Objekts</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Negative solution space. Reduces the valid solutions to the negative domain, e.g. point under the plane at specified distance, not over. Or point inside a cylinder at specified distance, not outside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Negative solution space. Reduces the valid solutions to the negative domain, e.g. point under the plane at specified distance, not over. Or point inside a cylinder at specified distance, not outside.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="157"/>
+      <source>This is the local coordinate system within object1 that will be used for the joint.</source>
+      <translation>Dies ist das lokale Koordinatensystem des ersten Objekts, welches für die Verbindung verwendet wird.</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals parallel, that means they can point in the same or opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals parallel, that means they can point in the same or opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="167"/>
+      <source>This prevents Placement1 from recomputing, enabling custom positioning of the placement.</source>
+      <translation>Dies verhindert die Neuberechnung der ersten Platzierung, wodurch eine benuzerdefinierte Platzierung ermöglicht wird.</translation>
     </message>
     <message>
-      <source>Parallel</source>
-      <translation>Parallel</translation>
+      <location filename="../../../JointObject.py" line="175"/>
+      <source>The second object of the joint</source>
+      <translation>Das zweite Objekt der Verbindung</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the same direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the same direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="182"/>
+      <source>The second part of the joint</source>
+      <translation>Das zweite Bauteil der Verbindung</translation>
     </message>
     <message>
-      <source>Equal</source>
-      <translation>Gleich</translation>
+      <location filename="../../../JointObject.py" line="189"/>
+      <source>The selected element of the second object</source>
+      <translation>Das ausgewählte Element des zweiten Objekts</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals point in the opposite direction. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="196"/>
+      <source>The selected vertex of the second object</source>
+      <translation>Der ausgewählte Punkt des zweiten Objekts</translation>
     </message>
     <message>
-      <source>Opposite</source>
-      <translation type="unfinished">Opposite</translation>
+      <location filename="../../../JointObject.py" line="206"/>
+      <source>This is the local coordinate system within object2 that will be used for the joint.</source>
+      <translation>Dies ist das lokale Koordinatensystem des zweiten Objekts, welches für die Verbindung verwendet wird.</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals perpendicular. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Makes the geometries normals perpendicular. Note that for cylinders the base circles normal is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../../../JointObject.py" line="216"/>
+      <source>This prevents Placement2 from recomputing, enabling custom positioning of the placement.</source>
+      <translation>Dies verhindert die Neuberechnung der zweiten Platzierung, wodurch eine benuzerdefinierte Platzierung ermöglicht wird.</translation>
     </message>
     <message>
-      <source>Perpend.</source>
-      <translation type="unfinished">Perpend.</translation>
+      <location filename="../../../JointObject.py" line="226"/>
+      <source>This is the distance of the joint. It is used only by the distance joint.</source>
+      <translation>Dies ist der Abstand der Verbindung. Es wird nur durch die Parallelverbindung genutzt.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="236"/>
+      <source>This is the rotation of the joint.</source>
+      <translation>Dies ist die Drehung der Verbindung.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="246"/>
+      <source>This is the offset vector of the joint.</source>
+      <translation>Dies ist der Versatz-Vektor der Verbindung.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="256"/>
+      <source>This indicates if the joint is active.</source>
+      <translation>Dies zeigt an, ob die Verbindung aktiv ist.</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="889"/>
+      <source>The object to ground</source>
+      <translation>Das festzusetzende Objekt</translation>
+    </message>
+    <message>
+      <location filename="../../../JointObject.py" line="901"/>
+      <source>This is where the part is grounded.</source>
+      <translation>Dies ist die Position, an der das Objekt festgesetzt wird.</translation>
+    </message>
+  </context>
+  <context>
+    <name>TaskAssemblyCreateJoint</name>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="14"/>
+      <source>Create Joint</source>
+      <translation>Verbindung erstellen</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="28"/>
+      <source>Distance</source>
+      <translation>Parallelverbindung</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="52"/>
+      <source>Offset</source>
+      <translation>Versetzen</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="76"/>
+      <source>Rotation</source>
+      <translation>Drehverbindung</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="104"/>
+      <source>Reverse the direction of the joint.</source>
+      <translation>Die Richtung der Verbindung umkehren.</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyCreateJoint.ui" line="107"/>
+      <source>Reverse</source>
+      <translation>Umkehren</translation>
+    </message>
+  </context>
+  <context>
+    <name>TaskAssemblyInsertLink</name>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="14"/>
+      <source>Insert Link</source>
+      <translation>Verknüpfung einfügen</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="20"/>
+      <source>Search parts...</source>
+      <translation>Bauteile durchsuchen...</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="32"/>
+      <source>Don't find your part? </source>
+      <translation>Bauteil nicht gefunden? </translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="39"/>
+      <source>Open file</source>
+      <translation>Datei öffnen</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="48"/>
+      <source>If checked, the selected object will be inserted inside a Part container, unless it is already a Part.</source>
+      <translation>Wenn aktiviert, wird das ausgewählte Objekt in einem Bauteil-Objekt (Part) eingefügt, außer es ist bereits ein Bauteil.</translation>
+    </message>
+    <message>
+      <location filename="../panels/TaskAssemblyInsertLink.ui" line="51"/>
+      <source>Insert as part</source>
+      <translation>Als Bauteil einfügen</translation>
+    </message>
+  </context>
+  <context>
+    <name>AssemblyGui::DlgSettingsAssembly</name>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="14"/>
+      <source>General</source>
+      <translation>Allgemein</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="20"/>
+      <source>Allow to leave edit mode when pressing Esc button</source>
+      <translation>Ermöglicht den Bearbeitungsmodus durch Drücken der Esc-Taste zu verlassen</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="23"/>
+      <source>Esc leave edit mode</source>
+      <translation>Mit Esc den Bearbeitungsmodus verlassen</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="39"/>
+      <source>Ground first part:</source>
+      <translation>Erstes Bauteil festsetzen:</translation>
+    </message>
+    <message>
+      <location filename="../preferences/Assembly.ui" line="46"/>
+      <source>When you insert the first part in the assembly, you can choose to ground the part automatically.</source>
+      <translation>Wenn das erste Bauteil in die Baugruppe eingefügt wird, kann es automatisch festgesetzt werden.</translation>
+    </message>
+  </context>
+  <context>
+    <name>AssemblyGui::ViewProviderAssembly</name>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="136"/>
+      <source>Delete associated joints</source>
+      <translation>Zugehörige Verbindungen löschen</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="148"/>
+      <source>The object is associated to one or more joints.</source>
+      <translation>Das Objekt gehört zu einer oder mehreren Verbindungen.</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="150"/>
+      <source>Do you want to move the object and delete associated joints?</source>
+      <translation>Soll das Objekt bewegt und zugehörige Verbindungen gelöscht werden?</translation>
+    </message>
+    <message>
+      <location filename="../../ViewProviderAssembly.cpp" line="651"/>
+      <source>Move part</source>
+      <translation>Bauteil verschieben</translation>
     </message>
   </context>
 </TS>
