@@ -70,6 +70,9 @@ BuildRequires:	qt5-qtxmlpatterns-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qttools-static
 
+BuildRequires: qt5-qtwebchannel-devel
+BuildRequires: qt5-qtwebengine-devtools
+
 BuildRequires:  fmt-devel
 
 
