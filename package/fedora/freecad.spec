@@ -40,7 +40,6 @@ Group:          Applications/Engineering
 License:        LGPLv2+
 URL:            https://www.freecad.org/
 Source0:        https://github.com/%{github_name}/FreeCAD/archive/%{branch}.tar.gz
-# Source1:	https://github.com/Ondsel-Development/OndselSolver/archive/fe99ad259391b8fd9390f919926aa3c8b6cde787.tar.gz
 Source1:	https://github.com/Ondsel-Development/OndselSolver/archive/2d71435110f2232cffa9c33a436ad63dd8036ce1.tar.gz
 
 # Utilities
