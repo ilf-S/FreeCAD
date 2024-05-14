@@ -41,7 +41,7 @@ Group:          Applications/Engineering
 License:        LGPLv2+
 URL:            http://www.freecadweb.org/
 Source0:        https://github.com/%{github_name}/FreeCAD/archive/%{branch}.tar.gz
-Source1:        https://github.com/Ondsel-Development/OndselSolver/archive/fe99ad259391b8fd9390f919926aa3c8b6cde787.tar.gz
+Source1:        https://github.com/Ondsel-Development/OndselSolver/archive/2d71435110f2232cffa9c33a436ad63dd8036ce1.tar.gz
 
 
 # Utilities
@@ -201,7 +201,7 @@ Data files for FreeCAD
 
 %prep
 %autosetup -p1 -n FreeCAD-%{branch}
-gzip -dc /builddir/build/SOURCES/fe99ad259391b8fd9390f919926aa3c8b6cde787.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
+gzip -dc /builddir/build/SOURCES/2d71435110f2232cffa9c33a436ad63dd8036ce1.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
 # Remove bundled pycxx if we're not using it
 %if ! %{bundled_pycxx}
 rm -rf src/CXX
