@@ -70,7 +70,9 @@ BuildRequires:	qt5-qtxmlpatterns-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qttools-static
 
+# added on 20240514 after build started failing for F38
 BuildRequires: qt5-qtwebchannel-devel
+BuildRequires: qt5-qtwebengine-devel
 BuildRequires: qt5-qtwebengine-devtools
 
 BuildRequires:  fmt-devel
