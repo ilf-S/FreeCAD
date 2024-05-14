@@ -92,8 +92,8 @@ BuildRequires:  xerces-c-devel
 BuildRequires:  libspnav-devel
 
 %if 0%{?fedora} > 40
-BuildRequires:  python3-shiboken6-devel
-BuildRequires:  python3-pyside6-devel
+BuildRequires:  python-shiboken6-devel
+BuildRequires:  python-pyside6-devel
 BuildRequires:  pyside6-tools
 %else
 BuildRequires:  python3-shiboken2-devel
@@ -144,7 +144,7 @@ Requires:       fmt
 Requires:	yaml
 
 %if 0%{?fedora} > 40
-Requires:       python3-pyside6
+Requires:       python-pyside6
 %else
 Requires:       python3-pyside2
 %endif
