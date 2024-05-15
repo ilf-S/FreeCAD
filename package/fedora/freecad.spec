@@ -41,6 +41,7 @@ License:        LGPLv2+
 URL:            https://www.freecad.org/
 Source0:        https://github.com/%{github_name}/FreeCAD/archive/%{branch}.tar.gz
 Source1:	https://github.com/Ondsel-Development/OndselSolver/archive/2d71435110f2232cffa9c33a436ad63dd8036ce1.tar.gz
+Source2:	https://github.com/microsoft/GSL/archive/b39e7e4b0987859f5b19ff7686b149c916588658.tar.gz
 
 # Utilities
 BuildRequires:  cmake gcc-c++ gettext dos2unix
@@ -171,6 +172,7 @@ Data files for FreeCAD
 %prep
 %autosetup -p1 -n FreeCAD-%{branch}
 gzip -dc /builddir/build/SOURCES/2d71435110f2232cffa9c33a436ad63dd8036ce1.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
+gzip -dc /builddir/build/SOURCES/b39e7e4b0987859f5b19ff7686b149c916588658.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/GSL/
 # Remove bundled pycxx if we're not using it
 %if ! %{bundled_pycxx}
 rm -rf src/CXX
