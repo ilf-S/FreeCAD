@@ -31,6 +31,7 @@
 #include <Base/Parameter.h>
 #include <Gui/ViewProviderDocumentObject.h>
 #include <Gui/SoTextLabel.h>
+#include <Gui/ViewProviderDocumentObjectGroup.h>
 
 #include <Mod/Measure/App/MeasureBase.h>
 
@@ -48,6 +49,24 @@ class SoTranslate2Dragger;
 
 
 namespace MeasureGui {
+
+
+class MeasureGuiExport ViewProviderMeasureGroup : public Gui::ViewProviderDocumentObjectGroup
+{
+    PROPERTY_HEADER_WITH_OVERRIDE(MeasureGui::ViewProviderMeasureGroup);
+
+public:
+    ViewProviderMeasureGroup();
+    ~ViewProviderMeasureGroup() override;
+
+    bool allowOverride(const App::DocumentObject &) const override {
+        return true;
+    }
+
+    QIcon getIcon() const override;
+};
+
+
 
 //NOLINTBEGIN
 class MeasureGuiExport ViewProviderMeasureBase :public Gui::ViewProviderDocumentObject
@@ -102,6 +121,7 @@ protected:
     void setLabelValue(const Base::Quantity& value);
     void setLabelValue(const QString& value);
     void setLabelTranslation(const SbVec3f& position);
+    void updateIcon();
 
     SoPickStyle* getSoPickStyle();
     SoDrawStyle* getSoLineStylePrimary();
@@ -110,7 +130,7 @@ protected:
 
     static constexpr double defaultTolerance = 10e-6;
     virtual Base::Vector3d getTextDirection(Base::Vector3d elementDirection, double tolerance = defaultTolerance);
-
+    float getViewScale();
 
     // TODO: getters & setters and move variables to private?
     bool _mShowTree = true;
@@ -127,6 +147,7 @@ protected:
 private:
     boost::signals2::connection _mVisibilityChangedConnection;
 };
+
 
 //NOLINTBEGIN
 class MeasureGuiExport ViewProviderMeasure : public MeasureGui::ViewProviderMeasureBase
@@ -152,6 +173,51 @@ private:
     SoCoordinate3    * pCoords;
     SoIndexedLineSet * pLines;
 };
+
+
+class ViewProviderMeasureArea : public ViewProviderMeasure
+{
+    PROPERTY_HEADER(MeasureGui::ViewProviderMeasureArea);
+
+public:
+    ViewProviderMeasureArea() {
+        sPixmap = "Measurement-Area";
+    }
+};
+
+
+class ViewProviderMeasureLength : public ViewProviderMeasure
+{
+    PROPERTY_HEADER(MeasureGui::ViewProviderMeasureLength);
+
+public:
+    ViewProviderMeasureLength() {
+        sPixmap = "Measurement-Distance";
+    }
+};
+
+
+class ViewProviderMeasurePosition : public ViewProviderMeasure
+{
+    PROPERTY_HEADER(MeasureGui::ViewProviderMeasurePosition);
+
+public:
+    ViewProviderMeasurePosition() {
+        sPixmap = "Measurement-Position";
+    }
+};
+
+
+class ViewProviderMeasureRadius : public ViewProviderMeasure
+{
+    PROPERTY_HEADER(MeasureGui::ViewProviderMeasureRadius);
+
+public:
+    ViewProviderMeasureRadius() {
+        sPixmap = "Measurement-Radius";
+    }
+};
+
 
 } // namespace Gui
 

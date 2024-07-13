@@ -87,7 +87,7 @@ public:
     Attacher::AttachEngine& attacher(bool base = false) const;
 
     App::PropertyString AttacherType;
-    App::PropertyLinkSubList Support;  // deprecated, leave here for backward compatibility
+    App::PropertyEnumeration AttacherEngine;
     App::PropertyLinkSubList AttachmentSupport;
     App::PropertyEnumeration MapMode;  // see AttachEngine::eMapMode
     App::PropertyBool MapReversed;     // inverts Z and X internal axes
@@ -138,9 +138,9 @@ public:
 
 protected:
     void extensionOnChanged(const App::Property* /*prop*/) override;
-    virtual void extHandleChangedPropertyName(Base::XMLReader& reader,
-                                              const char* TypeName,
-                                              const char* PropName);
+    virtual bool extensionHandleChangedPropertyName(Base::XMLReader& reader,
+                                                    const char* TypeName,
+                                                    const char* PropName) override;
 
     App::PropertyPlacement& getPlacement() const;
     void initBase(bool force);

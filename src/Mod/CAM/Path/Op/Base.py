@@ -463,6 +463,15 @@ class ObjectOp(object):
                 QT_TRANSLATE_NOOP("App::Property", "Operations Cycle Time Estimation"),
             )
 
+        if FeatureStepDown & features and not hasattr(obj, "StepDown"):
+            obj.addProperty(
+                "App::PropertyDistance",
+                "StepDown",
+                "Depth",
+                QT_TRANSLATE_NOOP("App::Property", "Incremental Step Down of Tool"),
+            )
+            obj.StepDown = 0
+
         self.setEditorModes(obj, features)
         self.opOnDocumentRestored(obj)
 
@@ -903,10 +912,7 @@ class ObjectOp(object):
                 obj.Base = baselist
             else:
                 Path.Log.notice(
-                    (
-                        translate("CAM", "Base object %s.%s rejected by operation")
-                        + "\n"
-                    )
+                    (translate("CAM", "Base object %s.%s rejected by operation") + "\n")
                     % (base.Label, sub)
                 )
 

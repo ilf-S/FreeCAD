@@ -29,17 +29,11 @@
 #include <Gui/ViewProviderDocumentObject.h>
 #include <Gui/ViewProviderPythonFeature.h>
 #include <Mod/Spreadsheet/SpreadsheetGlobal.h>
+#include <Mod/Spreadsheet/Gui/SpreadsheetView.h>
 
-
-namespace Spreadsheet
-{
-class Sheet;
-}
 
 namespace SpreadsheetGui
 {
-
-class SheetView;
 
 class SpreadsheetGuiExport ViewProviderSheet: public Gui::ViewProviderDocumentObject
 {
@@ -83,6 +77,10 @@ public:
     }
 
     PyObject* getPyObject() override;
+
+    void showSheetMdi();
+
+    void exportAsFile();
 
 protected:
     SheetView* showSpreadsheetView();

@@ -365,6 +365,20 @@ void ViewProviderSketch::ParameterObserver::initParameters()
               Client.viewProviderParameters.stdCountSegments = v;
           },
           nullptr}},
+        {"SketchEdgeColor",
+         {[this](const std::string& string, App::Property* property) {
+              if (Client.AutoColor.getValue()) {
+                  updateColorProperty(string, property, 1.0f, 1.0f, 1.0f);
+              }
+          },
+          &Client.LineColor}},
+        {"SketchVertexColor",
+         {[this](const std::string& string, App::Property* property) {
+              if (Client.AutoColor.getValue()) {
+                  updateColorProperty(string, property, 1.0f, 1.0f, 1.0f);
+              }
+          },
+          &Client.PointColor}},
     };
 
     for (auto& val : parameterMap) {
@@ -377,8 +391,6 @@ void ViewProviderSketch::ParameterObserver::initParameters()
 
     // unsubscribed parameters which update a property on just once upon construction (and before
     // restore if properties are being restored from a file)
-    updateColorProperty("SketchEdgeColor", &Client.LineColor, 1.0f, 1.0f, 1.0f);
-    updateColorProperty("SketchVertexColor", &Client.PointColor, 1.0f, 1.0f, 1.0f);
     updateBoolProperty("ShowGrid", &Client.ShowGrid, false);
     updateBoolProperty("GridAuto", &Client.GridAuto, true);
     updateGridSize("GridSize", &Client.GridSize);
@@ -539,6 +551,13 @@ ViewProviderSketch::ViewProviderSketch()
                       (App::PropertyType)(App::Prop_ReadOnly),
                       "Information about the Visual Representation of layers");
 
+    ADD_PROPERTY_TYPE(
+        AutoColor,
+        (true),
+        "Object Style",
+        (App::PropertyType)(App::Prop_None),
+        "If true, this sketch will be colored based on user preferences. Turn it off to set color explicitly.");
+
     // TODO: This is part of a naive minimal implementation to substitute rendering order
     // Three equally visual layers to enable/disable layer.
     std::vector<VisualLayer> layers;
@@ -601,20 +620,19 @@ void ViewProviderSketch::forceUpdateData()
 
 /***************************** handler management ************************************/
 
-void ViewProviderSketch::activateHandler(DrawSketchHandler* newHandler)
+void ViewProviderSketch::activateHandler(std::unique_ptr<DrawSketchHandler> newHandler)
 {
     assert(editCoinManager);
     assert(!sketchHandler);
 
-    sketchHandler = std::unique_ptr<DrawSketchHandler>(newHandler);
+    sketchHandler = std::move(newHandler);
     Mode = STATUS_SKETCH_UseHandler;
     sketchHandler->activate(this);
 
     // make sure receiver has focus so immediately pressing Escape will be handled by
     // ViewProviderSketch::keyPressed() and dismiss the active handler, and not the entire
     // sketcher editor
-    Gui::MDIView* mdi = Gui::Application::Instance->activeDocument()->getActiveView();
-    mdi->setFocus();
+    ensureFocus();
 }
 
 void ViewProviderSketch::deactivateHandler()
@@ -641,6 +659,9 @@ void ViewProviderSketch::purgeHandler()
         viewer = static_cast<Gui::View3DInventor*>(view)->getViewer();
         viewer->setSelectionEnabled(false);
     }
+
+    // Give back the focus to the MDI to make sure VPSketch receive keyboard events.
+    ensureFocus();
 }
 
 void ViewProviderSketch::setAxisPickStyle(bool on)
@@ -681,9 +702,8 @@ void ViewProviderSketch::moveCursorToSketchPoint(Base::Vector2d point)
 
 void ViewProviderSketch::ensureFocus()
 {
-
     Gui::MDIView* mdi = Gui::Application::Instance->activeDocument()->getActiveView();
-           mdi->setFocus();
+    mdi->setFocus();
 }
 
 void ViewProviderSketch::preselectAtPoint(Base::Vector2d point)
@@ -1766,7 +1786,7 @@ void ViewProviderSketch::moveConstraint(Sketcher::Constraint* Constr, int constN
             const Part::Geometry *geo2 = GeoList::getGeometryFromGeoId (geomlist, Constr->Second);
 
             if (isLineSegment(*geo2)) {
-                if (isCircleOrArc(*geo1)){
+                if (isCircleOrArc(*geo1) && Constr->FirstPos == Sketcher::PointPos::none){
                     std::swap(geo1, geo2); // see below
                 }
                 else {
@@ -1818,7 +1838,7 @@ void ViewProviderSketch::moveConstraint(Sketcher::Constraint* Constr, int constN
                 p2 = lineSeg->getEndPoint();
             }
             else if (geo->is<Part::GeomArcOfCircle>()) {
-                const Part::GeomArcOfCircle* arc = static_cast<const Part::GeomArcOfCircle*>(geo);
+                auto* arc = static_cast<const Part::GeomArcOfCircle*>(geo);
                 double radius = arc->getRadius();
                 Base::Vector3d center = arc->getCenter();
                 double startangle, endangle;
@@ -2189,6 +2209,16 @@ void ViewProviderSketch::onSelectionChanged(const Gui::SelectionChanges& msg)
                             sketchHandler->applyCursor();
                         this->updateColor();
                     }
+                    else if (shapetype.size() > 12 && shapetype.substr(0, 12) == "ExternalEdge") {
+                        int GeoId = std::atoi(&shapetype[12]) - 1;
+                        GeoId = -GeoId - 3;
+                        resetPreselectPoint();
+                        preselection.PreselectCurve = GeoId;
+
+                        if (sketchHandler)
+                            sketchHandler->applyCursor();
+                        this->updateColor();
+                    }
                     else if (shapetype.size() > 6 && shapetype.substr(0, 6) == "Vertex") {
                         int PtIndex = std::atoi(&shapetype[6]) - 1;
                         setPreselectPoint(PtIndex);
@@ -2429,7 +2459,12 @@ void ViewProviderSketch::doBoxSelection(const SbVec2s& startPos, const SbVec2s& 
 
     auto selectEdge = [this](int edgeid) {
         std::stringstream ss;
-        ss << "Edge" << edgeid;
+        if (edgeid >= 0) {
+            ss << "Edge" << edgeid;
+        }
+        else {
+            ss << "ExternalEdge" << -edgeid - 1;
+        }
         addSelection2(ss.str());
     };
 
@@ -2586,6 +2621,12 @@ void ViewProviderSketch::updateColor()
     assert(isInEditMode());
 
     editCoinManager->updateColor();
+}
+
+bool ViewProviderSketch::selectAll()
+{
+    // TODO: eventually implement "select all" logic
+    return true;
 }
 
 bool ViewProviderSketch::doubleClicked()
@@ -2889,8 +2930,56 @@ void ViewProviderSketch::onChanged(const App::Property* prop)
         }
         return;
     }
+
+    if (prop == &AutoColor) {
+        auto usesAutomaticColors = AutoColor.getValue();
+
+        // when auto color is enabled don't save color information in the document
+        // so it does not cause unnecessary updates if multiple users use different colors
+        LineColor.setStatus(App::Property::Transient, usesAutomaticColors);
+        PointColor.setStatus(App::Property::Transient, usesAutomaticColors);
+
+        // and mark this property as read-only hidden so it's not possible to change manually
+        LineColor.setStatus(App::Property::ReadOnly, usesAutomaticColors);
+        LineColor.setStatus(App::Property::Hidden, usesAutomaticColors);
+        PointColor.setStatus(App::Property::ReadOnly, usesAutomaticColors);
+        PointColor.setStatus(App::Property::Hidden, usesAutomaticColors);
+
+        return;
+    }
+
     // call father
     ViewProviderPart::onChanged(prop);
+}
+
+void SketcherGui::ViewProviderSketch::startRestoring()
+{
+    // small hack: before restoring mark AutoColor property as non-touched
+    // this allows us to test if this property was restored in the finishRestoring method
+    AutoColor.setStatus(App::Property::Touched, false);
+}
+
+void SketcherGui::ViewProviderSketch::finishRestoring()
+{
+    ViewProvider2DObject::finishRestoring();
+
+    // if AutoColor was not touched it means that the document is from older version of FreeCAD
+    // that meaans that we need to run migration strategy and come up with a proper value
+    if (!AutoColor.isTouched()) {
+        // white is the normally provided default for FreeCAD sketch colors
+        auto white = App::Color(1.f, 1.f, 1.f, 1.f);
+
+        auto colorWasNeverChanged =
+            LineColor.getValue() == white &&
+            PointColor.getValue() == white;
+
+        AutoColor.setValue(colorWasNeverChanged);
+    }
+
+    if (AutoColor.getValue()) {
+        // update colors according to current user preferences
+        pObserver->initParameters();
+    }
 }
 
 void ViewProviderSketch::attach(App::DocumentObject* pcFeat)
@@ -3067,6 +3156,10 @@ bool ViewProviderSketch::setEdit(int ModNum)
 
     Workbench::enterEditMode();
 
+    // Give focus to the MDI so that keyboard events are caught after starting edit.
+    // Else pressing ESC right after starting edit will not be caught to exit edit mode.
+    ensureFocus();
+
     return true;
 }
 
@@ -3190,7 +3283,7 @@ void ViewProviderSketch::UpdateSolverInformation()
     }
     else if (dofs > 0) {
         signalSetUp(QString::fromUtf8("under_constrained"),
-                    tr("Under constrained:") + QLatin1String(" "),
+                    tr("Under-constrained:") + QLatin1String(" "),
                     QString::fromUtf8("#dofs"),
                     tr("%n DoF(s)", "", dofs));
     }
@@ -3218,6 +3311,26 @@ void ViewProviderSketch::unsetEdit(int ModNum)
     if (isInEditMode()) {
         if (sketchHandler)
             deactivateHandler();
+
+        // Resets the override draw style mode when leaving the sketch edit mode.
+        ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath(
+        "User parameter:BaseApp/Preferences/Mod/Sketcher/General");
+        auto disableShadedView = hGrp->GetBool("DisableShadedView", true);
+        if (disableShadedView) {
+            Gui::Document* doc = Gui::Application::Instance->activeDocument();
+            Gui::MDIView* mdi = doc->getActiveView();
+            Gui::View3DInventorViewer* viewer = static_cast<Gui::View3DInventor*>(mdi)->getViewer();
+
+            ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath(
+            "User parameter:BaseApp/Preferences/Mod/Sketcher/General");
+            auto OverrideMode = hGrp->GetASCII("OverrideMode", "As Is");
+
+            if (viewer)
+            {
+                viewer->updateOverrideMode(OverrideMode);
+                viewer->setOverrideMode(OverrideMode);
+            }
+        }
 
         editCoinManager = nullptr;
         snapManager = nullptr;
@@ -3294,6 +3407,24 @@ void ViewProviderSketch::setEditViewer(Gui::View3DInventorViewer* viewer, int Mo
                 e.what());
         }
     }
+
+    // Sets the view mode to no shading to prevent visibility issues against parallel surfaces with shininess when entering the sketch mode.
+    ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath(
+        "User parameter:BaseApp/Preferences/Mod/Sketcher/General");
+    auto disableShadedView = hGrp->GetBool("DisableShadedView", true);
+
+    hGrp = App::GetApplication().GetParameterGroupByPath(
+        "User parameter:BaseApp/Preferences/Mod/Sketcher/General");
+    hGrp->SetASCII("OverrideMode", viewer->getOverrideMode());
+
+    if (disableShadedView) {
+
+
+            viewer->updateOverrideMode("No Shading");
+            viewer->setOverrideMode("No Shading");
+
+    }
+
 
     auto editDoc = Gui::Application::Instance->editDocument();
     editDocName.clear();

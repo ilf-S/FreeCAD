@@ -99,7 +99,7 @@ App::DocumentObjectExecReturn* Revolution::execute()
 
     TopoShape sketchshape;
     try {
-        sketchshape = getVerifiedFace();
+        sketchshape = getTopoShapeVerifiedFace();
     }
     catch (const Base::Exception& e) {
         return new App::DocumentObjectExecReturn(e.what());
@@ -194,17 +194,17 @@ App::DocumentObjectExecReturn* Revolution::execute()
             if (!Ex.More()) {
                 supportface = TopoDS_Face();
             }
-            RevolMode mode = RevolMode::None;
 #ifdef FC_USE_TNP_FIX
             // revolve the face to a solid
             //            TopoShape result(0);
             try {
-                result = base.makeElementRevolution(gp_Ax1(pnt, dir), angle, supportface, upToFace);
+                result = base.makeElementRevolution(gp_Ax1(pnt, dir),  supportface, upToFace);
             }
             catch (Standard_Failure&) {
                 return new App::DocumentObjectExecReturn("Could not revolve the sketch!");
             }
 #else
+            RevolMode mode = RevolMode::None;
             generateRevolution(result,
                                base.getShape(),
                                sketchshape.getShape(),

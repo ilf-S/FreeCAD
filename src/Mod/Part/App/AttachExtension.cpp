@@ -32,6 +32,59 @@
 using namespace Part;
 using namespace Attacher;
 
+namespace
+{
+    std::vector<std::string> EngineEnums = {"Engine 3D",
+                                            "Engine Plane",
+                                            "Engine Line",
+                                            "Engine Point"};
+
+    const char* enumToClass(const char* mode)
+    {
+        if (EngineEnums.at(0) == mode) {
+            return "Attacher::AttachEngine3D";
+        }
+        if (EngineEnums.at(1) == mode) {
+            return "Attacher::AttachEnginePlane";
+        }
+        if (EngineEnums.at(2) == mode) {
+            return "Attacher::AttachEngineLine";
+        }
+        if (EngineEnums.at(3) == mode) {
+            return "Attacher::AttachEnginePoint";
+        }
+
+        return "Attacher::AttachEngine3D";
+    }
+
+    const char* classToEnum(const char* type)
+    {
+        if (strcmp(type, "Attacher::AttachEngine3D") == 0) {
+            return EngineEnums.at(0).c_str();
+        }
+        if (strcmp(type, "Attacher::AttachEnginePlane") == 0) {
+            return EngineEnums.at(1).c_str();
+        }
+        if (strcmp(type, "Attacher::AttachEngineLine") == 0) {
+            return EngineEnums.at(2).c_str();
+        }
+        if (strcmp(type, "Attacher::AttachEnginePoint") == 0) {
+            return EngineEnums.at(3).c_str();
+        }
+
+        return EngineEnums.at(0).c_str();
+    }
+
+    void restoreAttacherEngine(AttachExtension* self)
+    {
+        const char* mode = enumToClass(self->AttacherEngine.getValueAsString());
+        const char* type = self->AttacherType.getValue();
+        if (strcmp(mode, type) != 0) {
+            self->AttacherEngine.setValue(classToEnum(type));
+        }
+    }
+}
+
 EXTENSION_PROPERTY_SOURCE(Part::AttachExtension, App::DocumentObjectExtension)
 
 #ifdef FC_USE_TNP_FIX
@@ -41,17 +94,15 @@ AttachExtension::AttachExtension()
     EXTENSION_ADD_PROPERTY_TYPE(AttacherType,
                                 ("Attacher::AttachEngine3D"),
                                 "Attachment",
-                                (App::PropertyType)(App::Prop_None),
+                                (App::PropertyType)(App::Prop_ReadOnly | App::Prop_Hidden),
                                 "Class name of attach engine object driving the attachment.");
-    this->AttacherType.setStatus(App::Property::Status::Hidden, true);
 
-    EXTENSION_ADD_PROPERTY_TYPE(
-        Support,
-        (nullptr, nullptr),
-        "Attachment",
-        (App::PropertyType)(App::Prop_Hidden),
-        "Support of the 2D geometry (Deprecated! Use AttachmentSupport instead");
-    Support.setScope(App::LinkScope::Global);
+    EXTENSION_ADD_PROPERTY_TYPE(AttacherEngine,
+                                (0L),
+                                "Attachment",
+                                (App::PropertyType)(App::Prop_None),
+                                "Attach engine object driving the attachment.");
+    AttacherEngine.setEnums(EngineEnums);
 
     EXTENSION_ADD_PROPERTY_TYPE(AttachmentSupport,
                                 (nullptr, nullptr),
@@ -346,21 +397,10 @@ App::DocumentObjectExecReturn* AttachExtension::extensionExecute()
 void AttachExtension::extensionOnChanged(const App::Property* prop)
 {
     if (!getExtendedObject()->isRestoring()) {
-        if (prop == &Support) {
-            if (!prop->testStatus(App::Property::User3)) {
-                Base::ObjectStatusLocker<App::Property::Status, App::Property> guard(
-                    App::Property::User3,
-                    &Support);
-                AttachmentSupport.Paste(Support);
-            }
+        if (prop == &AttacherEngine) {
+            AttacherType.setValue(enumToClass(AttacherEngine.getValueAsString()));
         }
         else if (_props.matchProperty(prop)) {
-            if (prop == &AttachmentSupport) {
-                Base::ObjectStatusLocker<App::Property::Status, App::Property> guard(
-                    App::Property::User3,
-                    &Support);
-                Support.Paste(AttachmentSupport);
-            }
             _active = -1;
             updateAttacherVals(/*base*/ false);
             updatePropertyStatus(isAttacherActive());
@@ -381,23 +421,39 @@ void AttachExtension::extensionOnChanged(const App::Property* prop)
     App::DocumentObjectExtension::extensionOnChanged(prop);
 }
 
-void AttachExtension::extHandleChangedPropertyName(Base::XMLReader& reader,
-                                                   const char* TypeName,
-                                                   const char* PropName)
+bool AttachExtension::extensionHandleChangedPropertyName(Base::XMLReader& reader,
+                                                         const char* TypeName,
+                                                         const char* PropName)
 {
-    // Was superPlacement
     Base::Type type = Base::Type::fromName(TypeName);
-    if (AttachmentOffset.getClassTypeId() == type && strcmp(PropName, "superPlacement") == 0) {
+    // superPlacement -> AttachmentOffset
+    if (strcmp(PropName, "superPlacement") == 0 && AttachmentOffset.getClassTypeId() == type) {
         AttachmentOffset.Restore(reader);
+        return true;
     }
+    // Support -> AttachmentSupport
+    if (strcmp(PropName, "Support") == 0) {
+        // At one point, the type of Support changed from PropertyLinkSub to its present type
+        // of PropertyLinkSubList. Later, the property name changed to AttachmentSupport
+        App::PropertyLinkSub tmp;
+        if (strcmp(tmp.getTypeId().getName(), TypeName) == 0) {
+            tmp.setContainer(this->getExtendedContainer());
+            tmp.Restore(reader);
+            AttachmentSupport.setValue(tmp.getValue(), tmp.getSubValues());
+            this->MapMode.setValue(Attacher::mmFlatFace);
+            return true;
+        }
+        if (AttachmentSupport.getClassTypeId() == type) {
+            AttachmentSupport.Restore(reader);
+            return true;
+        }
+    }
+    return App::DocumentObjectExtension::extensionHandleChangedPropertyName(reader, TypeName, PropName);
 }
 
 void AttachExtension::onExtendedDocumentRestored()
 {
     try {
-        if (Support.getValue()) {
-            AttachmentSupport.Paste(Support);
-        }
         initBase(false);
         if (_baseProps.attachment) {
             _baseProps.attachment->setScope(App::LinkScope::Hidden);
@@ -407,6 +463,8 @@ void AttachExtension::onExtendedDocumentRestored()
         }
         _active = -1;
         updatePropertyStatus(isAttacherActive());
+
+        restoreAttacherEngine(this);
     }
     catch (Base::Exception&) {
     }

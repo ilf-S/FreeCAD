@@ -1209,8 +1209,12 @@ bool Document::saveAs()
     getMainWindow()->showMessage(QObject::tr("Save document under new filename..."));
 
     QString exe = qApp->applicationName();
+    QString name = QString::fromUtf8(getDocument()->FileName.getValue());
+    if(name.isEmpty()){
+        name = QString::fromUtf8(getDocument()->Label.getValue());
+    }
     QString fn = FileDialog::getSaveFileName(getMainWindow(), QObject::tr("Save %1 Document").arg(exe),
-        QString::fromUtf8(getDocument()->FileName.getValue()),
+        name,
         QString::fromLatin1("%1 %2 (*.FCStd)").arg(exe, QObject::tr("Document")));
 
     if (!fn.isEmpty()) {
@@ -2526,4 +2530,33 @@ void Document::slotChangePropertyEditor(const App::Document &doc, const App::Pro
         setModified(true);
         getMainWindow()->setUserSchema(doc.UnitSystem.getValue());
     }
+}
+
+std::vector<App::DocumentObject*> Document::getTreeRootObjects() const
+{
+    std::vector<App::DocumentObject*> docObjects = d->_pcDocument->getObjects();
+    std::unordered_map<App::DocumentObject*, bool> rootMap;
+    for (auto it : docObjects) {
+        rootMap[it] = true;
+    }
+
+    for (auto obj : docObjects) {
+        ViewProvider* vp = Application::Instance->getViewProvider(obj);
+        if (!vp) {
+            continue;
+        }
+
+        std::vector<App::DocumentObject*> children = vp->claimChildren();
+        for (auto child : children) {
+            rootMap[child] = false;
+        }
+    }
+
+    std::vector<App::DocumentObject*> rootObjs;
+    for (const auto& it : rootMap) {
+        if (it.second) {
+            rootObjs.push_back(it.first);
+        }
+    }
+    return rootObjs;
 }

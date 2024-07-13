@@ -672,6 +672,12 @@ public:
                              bool& yinv,
                              eReasonList* rsn = nullptr) const;
 
+    DocumentObject* getSubObject(const char* subname,
+                                 PyObject** pyObj = 0,
+                                 Base::Matrix4D* mat = 0,
+                                 bool transform = true,
+                                 int depth = 0) const override;
+
     Part::TopoShape getEdge(const Part::Geometry* geo, const char* name) const;
 
     Data::IndexedName checkSubName(const char* sub) const;
@@ -749,6 +755,11 @@ public:
     void makeMissingPointOnPointCoincident(bool onebyone = false);
     void makeMissingVerticalHorizontal(bool onebyone = false);
     void makeMissingEquality(bool onebyone = true);
+
+    /// Detect degenerated geometries
+    int detectDegeneratedGeometries(double tolerance);
+    /// Remove degenerated geometries
+    int removeDegeneratedGeometries(double tolerance);
 
     // helper
     /// returns the number of redundant constraints detected

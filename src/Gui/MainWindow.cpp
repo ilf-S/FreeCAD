@@ -55,8 +55,12 @@
 # include <QPushButton>
 #endif
 
-#if defined(Q_OS_WIN) && QT_VERSION < QT_VERSION_CHECK(6,0,0)
-# include <QtPlatformHeaders/QWindowsWindowFunctions>
+#if defined(Q_OS_WIN)
+    #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
+        #include <QtPlatformHeaders/QWindowsWindowFunctions>
+    #else
+        #include <qpa/qplatformwindow_p.h>
+    #endif
 #endif
 
 #include <boost/algorithm/string/predicate.hpp>
@@ -599,9 +603,17 @@ bool MainWindow::setupTaskView()
 {
     // Task view
     if (d->hiddenDockWindows.find("Std_TaskView") == std::string::npos) {
+        // clang-format off
+        auto group = App::GetApplication().GetUserParameter()
+                      .GetGroup("BaseApp")
+                     ->GetGroup("Preferences")
+                     ->GetGroup("DockWindows")
+                     ->GetGroup("TaskView");
+        // clang-format on
         auto taskView = new Gui::TaskView::TaskView(this);
-        taskView->setObjectName
-            (QString::fromLatin1(QT_TRANSLATE_NOOP("QDockWidget","Tasks")));
+        bool restore = group->GetBool("RestoreWidth", taskView->shouldRestoreWidth());
+        taskView->setRestoreWidth(restore);
+        taskView->setObjectName(QString::fromLatin1(QT_TRANSLATE_NOOP("QDockWidget","Tasks")));
         taskView->setMinimumWidth(210);
 
         DockWindowManager* pDockMgr = DockWindowManager::instance();
@@ -801,14 +813,6 @@ QMenu* MainWindow::createPopupMenu ()
     populateDockWindowMenu(menu);
     menu->addSeparator();
     populateToolBarMenu(menu);
-    QMenu *undockMenu = new QMenu(menu);
-    ToolBarManager::getInstance()->populateUndockMenu(undockMenu);
-    if (undockMenu->actions().isEmpty()) {
-        delete undockMenu;
-    }
-    else {
-        menu->addMenu(undockMenu);
-    }
     menu->addSeparator();
     Workbench* wb = WorkbenchManager::instance()->active();
     if (wb) {
@@ -1800,10 +1804,17 @@ void MainWindow::loadWindowSettings()
     max ? showMaximized() : show();
 
     // make menus and tooltips usable in fullscreen under Windows, see issue #7563
-#if defined(Q_OS_WIN) && QT_VERSION < QT_VERSION_CHECK(6,0,0)
-    if (QWindow* win = this->windowHandle()) {
-        QWindowsWindowFunctions::setHasBorderInFullScreen(win, true);
-    }
+#if defined(Q_OS_WIN)
+    #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
+        if (QWindow* win = this->windowHandle()) {
+            QWindowsWindowFunctions::setHasBorderInFullScreen(win, true);
+        }
+    #else
+        using namespace QNativeInterface::Private;
+        if (auto *windowsWindow = dynamic_cast<QWindowsWindow*>(this->windowHandle())) {
+            windowsWindow->setHasBorderInFullScreen(true);
+        }
+    #endif
 #endif
 
     statusBar()->setVisible(showStatusBar);
@@ -2555,7 +2566,7 @@ void MainWindow::setWindowTitle(const QString& string)
     }
 
     // allow to disable version number
-    ParameterGrp::handle hGen = +App::GetApplication().GetParameterGroupByPath(
+    ParameterGrp::handle hGen = App::GetApplication().GetParameterGroupByPath(
         "User parameter:BaseApp/Preferences/General");
     bool showVersion = hGen->GetBool("ShowVersionInTitle", true);
 

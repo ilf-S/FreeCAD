@@ -224,6 +224,24 @@ SET(PatternLib_Files
     "Resources/Materials/Patterns/Pattern Files/zinc.FCMat"
 )
 
+SET(MachiningLib_Files
+    Resources/Materials/Machining/Aluminum-6061.FCMat
+    Resources/Materials/Machining/Aluminum-7075.FCMat
+    Resources/Materials/Machining/Aluminum-Cast.FCMat
+    Resources/Materials/Machining/Brass-Hard.FCMat
+    Resources/Materials/Machining/Brass-Medium.FCMat
+    Resources/Materials/Machining/Brass-Soft.FCMat
+    Resources/Materials/Machining/CarbonSteel.FCMat
+    Resources/Materials/Machining/HardPlastics.FCMat
+    Resources/Materials/Machining/Hardwood.FCMat
+    Resources/Materials/Machining/SoftPlastics.FCMat
+    Resources/Materials/Machining/Softwood.FCMat
+    Resources/Materials/Machining/Stainless-303.FCMat
+    Resources/Materials/Machining/Stainless-304.FCMat
+    Resources/Materials/Machining/Stainless-316.FCMat
+    Resources/Materials/Machining/ToolSteel.FCMat
+)
+
 SET(MaterialTestLib_Files
     "Resources/Materials/Test/Test Material.FCMat"
 )
@@ -236,6 +254,7 @@ SET(MaterialModel_Files
     Resources/Models/Fluid/Fluid.yml
     Resources/Models/Legacy/Father.yml
     Resources/Models/Legacy/MaterialStandard.yml
+    Resources/Models/Machining/Machinability.yml
     Resources/Models/Mechanical/ArrudaBoyce.yml
     Resources/Models/Mechanical/Density.yml
     Resources/Models/Mechanical/Hardness.yml
@@ -286,6 +305,7 @@ set(MaterialTest_Files
     materialtests/TestModels.py
     materialtests/TestMaterials.py
     materialtests/TestMaterialCreation.py
+    materialtests/TestMaterialFilter.py
 )
 
 ADD_CUSTOM_TARGET(MaterialTest ALL
@@ -297,7 +317,7 @@ fc_target_copy_resource(MaterialTest
     ${CMAKE_BINARY_DIR}/Mod/Material
     ${MaterialTest_Files})
 
-set(MaterialTestData_Files
+set(MaterialPythonTestData_Files
     materialtests/Materials/TestAcrylicLegacy.FCMat
     materialtests/Materials/TestAluminumAppearance.FCMat
     materialtests/Materials/TestAluminumMixed.FCMat
@@ -305,14 +325,14 @@ set(MaterialTestData_Files
     materialtests/Materials/TestBrassAppearance.FCMat
 )
 
-ADD_CUSTOM_TARGET(MaterialTestData ALL
-    SOURCES ${MaterialTestData_Files}
+ADD_CUSTOM_TARGET(MaterialPythonTestData ALL
+    SOURCES ${MaterialPythonTestData_Files}
 )
 
-fc_target_copy_resource(MaterialTestData
+fc_target_copy_resource(MaterialPythonTestData
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}/Mod/Material
-    ${MaterialTestData_Files})
+    ${MaterialPythonTestData_Files})
 
 ADD_CUSTOM_TARGET(MaterialScripts ALL
     SOURCES ${MaterialScripts_Files} ${Material_Ui_Files} ${Material_QRC_SRCS}
@@ -363,6 +383,9 @@ ADD_CUSTOM_TARGET(PatternLib ALL
 ADD_CUSTOM_TARGET(MaterialTestLib ALL
     SOURCES ${MaterialTestLib_Files}
 )
+ADD_CUSTOM_TARGET(MachiningLib ALL
+    SOURCES ${MachiningLib_Files}
+)
 ADD_CUSTOM_TARGET(MaterialModelLib ALL
     SOURCES ${MaterialModel_Files}
 )
@@ -385,6 +408,10 @@ fc_target_copy_resource(PatternLib
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_DATADIR}/Mod/Material/
     ${PatternLib_Files})
+fc_target_copy_resource(MachiningLib
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_DATADIR}/Mod/Material/
+    ${MachiningLib_Files})
 fc_target_copy_resource(MaterialTestLib
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_DATADIR}/Mod/Material/
@@ -399,7 +426,12 @@ INSTALL(
     DESTINATION Mod/Material/materialtests
 )
 
-foreach(file ${MaterialLib_Files} ${FluidMaterial_Files} ${AppearanceLib_Files} ${PatternLib_Files} ${MaterialTestLib_Files} ${MaterialModel_Files})
+INSTALL(
+    FILES ${MaterialPythonTestData_Files}
+    DESTINATION Mod/Material/materialtests/Materials
+)
+
+foreach(file ${MaterialLib_Files} ${FluidMaterial_Files} ${AppearanceLib_Files} ${PatternLib_Files} ${MachiningLib_Files} ${MaterialTestLib_Files} ${MaterialModel_Files})
     get_filename_component(filepath ${file} DIRECTORY)
     INSTALL(
         FILES ${file}

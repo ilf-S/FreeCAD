@@ -1198,6 +1198,14 @@ public:
     { return "Gui::PropertyEditor::PropertyLinkItem"; }
 };
 
+/** The PropertyXLinkSub that is hidden from dependency checking
+ */
+class AppExport PropertyXLinkSubHidden : public PropertyXLinkSub
+{
+    TYPESYSTEM_HEADER();
+public:
+    PropertyXLinkSubHidden() { _pcScope = LinkScope::Hidden; }
+};
 
 /** Link to one or more (sub)object(s) of one or more object(s) from the same or different document
  */
@@ -1206,10 +1214,10 @@ class AppExport PropertyXLinkSubList: public PropertyLinkBase
 {
     TYPESYSTEM_HEADER_WITH_OVERRIDE();
 
+public:
     using atomic_change = typename AtomicPropertyChangeInterface<PropertyXLinkSubList>::AtomicPropertyChange;
     friend atomic_change;
 
-public:
     PropertyXLinkSubList();
     ~PropertyXLinkSubList() override;
 
