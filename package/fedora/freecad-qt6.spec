@@ -93,7 +93,7 @@ BuildRequires:  libspnav-devel
 
 %if 0%{?fedora} > 39
 BuildRequires:  python3-shiboken6-devel
-BuildRequires:  python-pyside6-devel
+BuildRequires:  python3-pyside6-devel
 BuildRequires:  pyside6-tools
 %else
 BuildRequires:  python3-shiboken2-devel
