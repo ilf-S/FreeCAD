@@ -22,6 +22,7 @@
 from abc import ABC, abstractmethod, abstractclassmethod
 from typing import List, Tuple
 
+
 class MeasureBasePython(ABC):
 
     @abstractclassmethod
@@ -31,7 +32,7 @@ class MeasureBasePython(ABC):
 
     @abstractclassmethod
     def isPrioritySelection(cls, selection):
-        """Returns True if creation of this measurement should be priorized over other measurements for the given selection"""
+        """Returns True if creation of this measurement should be prioritized over other measurements for the given selection"""
         pass
 
     @abstractclassmethod
@@ -48,5 +49,3 @@ class MeasureBasePython(ABC):
     def parseSelection(self, obj, selection):
         """Sets the measurements properties from the given selection"""
         pass
-
-

@@ -545,11 +545,13 @@ void CmdTechDrawBrokenView::activated(int iMsg)
     std::vector<App::DocumentObject*> xShapesFromBase;
     std::vector<App::DocumentObject*> baseViews =
         getSelection().getObjectsOfType(TechDraw::DrawViewPart::getClassTypeId());
+    TechDraw::DrawViewPart* dvp{nullptr};
     if (!baseViews.empty()) {
-        TechDraw::DrawViewPart* dvp = static_cast<TechDraw::DrawViewPart*>(*baseViews.begin());
+        dvp = static_cast<TechDraw::DrawViewPart*>(*baseViews.begin());
         shapesFromBase = dvp->Source.getValues();
         xShapesFromBase = dvp->XSource.getValues();
     }
+
 
     // get the shape objects from the selection
     std::vector<App::DocumentObject*> shapes;
@@ -560,12 +562,13 @@ void CmdTechDrawBrokenView::activated(int iMsg)
     shapes.insert(shapes.end(), shapesFromBase.begin(), shapesFromBase.end());
     shapes.insert(xShapes.end(), xShapesFromBase.begin(), xShapesFromBase.end());
 
-    if (shapes.empty() &&
-        xShapes.empty()) {
+    if (!dvp || (shapes.empty() && xShapes.empty())) {
         QMessageBox::warning(Gui::getMainWindow(), QObject::tr("Empty selection"),
             QObject::tr("Please select objects to break or a base view and break definition objects."));
         return;
     }
+
+    auto doc = dvp->getDocument();
 
     // pick the Break objects out of the selected pile
     std::vector<Gui::SelectionObject> selection = getSelection().getSelectionEx(
@@ -574,8 +577,26 @@ void CmdTechDrawBrokenView::activated(int iMsg)
     std::vector<App::DocumentObject*> breakObjects;
     for (auto& selObj : selection) {
         auto temp = selObj.getObject();
-        if (DrawBrokenView::isBreakObject(*temp)) {
-            breakObjects.push_back(selObj.getObject());
+        // a sketch outside a body is returned as an independent object in the selection
+        if (selObj.getSubNames().empty()) {
+            if (DrawBrokenView::isBreakObject(*temp)) {
+                breakObjects.push_back(selObj.getObject());
+            }
+            continue;
+        }
+        // a sketch inside a body is returned as body + subelement, so we have to search through
+        // subnames to find it.  This may(?) apply to App::Part and Group also?
+        auto subname = selObj.getSubNames().front();
+        if (subname.back() == '.') {
+            subname = subname.substr(0, subname.length() - 1);
+            auto objects = doc->getObjects();
+            for (auto& obj : objects) {
+                std::string objname{obj->getNameInDocument()};
+                if (subname == objname  &&
+                    DrawBrokenView::isBreakObject(*obj)) {
+                    breakObjects.push_back(obj);
+                }
+            }
         }
     }
     if (breakObjects.empty()) {
@@ -627,8 +648,6 @@ void CmdTechDrawBrokenView::activated(int iMsg)
     getDocument()->setStatus(App::Document::Status::SkipRecompute, true);
 
     commitCommand();
-
-//    Gui::Control().showDialog(new TaskDlgBrokenView(dbv));
 
     dbv->recomputeFeature();
 }
@@ -1180,8 +1199,8 @@ bool _checkDirectPlacement(const QGIView* view, const std::vector<std::string>& 
 {
     // Let's see, if we can help speed up the placement of the balloon:
     // As of now we support:
-    //     Single selected vertex: place the ballon tip end here
-    //     Single selected edge:   place the ballon tip at its midpoint (suggested placement for e.g. chamfer dimensions)
+    //     Single selected vertex: place the balloon tip end here
+    //     Single selected edge:   place the balloon tip at its midpoint (suggested placement for e.g. chamfer dimensions)
     //
     // Single selected faces are currently not supported, but maybe we could in this case use the center of mass?
 
