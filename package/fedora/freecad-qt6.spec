@@ -147,10 +147,10 @@ Requires:       hicolor-icon-theme
 
 Requires:       fmt
 
-Requires:	yaml
+Requires:	yaml-cpp
 
 %if 0%{?fedora} > 38
-Requires:       python-pyside6
+Requires:       python3-pyside6
 %else
 Requires:       python3-pyside2
 %endif
