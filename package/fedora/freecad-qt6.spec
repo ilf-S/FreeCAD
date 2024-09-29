@@ -7,7 +7,7 @@
 
 # Maintainers:  keep this list of plugins up to date
 # List plugins in %%{_libdir}/%{name}/lib, less '.so' and 'Gui.so', here
-%global plugins Fem FreeCAD PathApp Import Inspection Mesh MeshPart Part Points ReverseEngineering Robot Sketcher Start Web PartDesignGui _PartDesign Path PathGui Spreadsheet SpreadsheetGui area DraftUtils DraftUtils libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libOndselSolver libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers Measure TechDraw TechDrawGui libarea-native Surface SurfaceGui AssemblyGui flatmesh QtUnitGui PathSimulator MatGui Material Materials AssemblyApp 
+%global plugins Fem FreeCAD PathApp Import Inspection Mesh MeshPart Part Points ReverseEngineering Robot Sketcher Start Web PartDesignGui _PartDesign Path PathGui Spreadsheet SpreadsheetGui area DraftUtils DraftUtils libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libOndselSolver libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers Measure TechDraw TechDrawGui libarea-native Surface SurfaceGui AssemblyGui flatmesh QtUnitGui PathSimulator MatGui Material Materials AssemblyApp CAMSimulator
 
 
 # Some configuration options for other environments
@@ -20,7 +20,7 @@
 
 
 # Prevent RPM from doing its magical 'build' directory for now
-%global __cmake_in_source_build 0
+%global __cmake_in_source_build 1
 
 # See FreeCAD-main/src/3rdParty/salomesmesh/CMakeLists.txt to find this out.
 %global bundled_smesh_version 7.7.1.0
@@ -33,7 +33,7 @@
 
 Name:           %{name}
 Epoch:          1
-Version:        0.22
+Version:        1.1
 Release:        pre_{{{git_commit_no}}}%{?dist}
 Summary:        A general purpose 3D CAD modeler
 Group:          Applications/Engineering
@@ -70,15 +70,18 @@ BuildRequires:  boost-python3-devel
 BuildRequires:  eigen3-devel
 
 # Qt6 dependencies
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 38
+
 BuildRequires: qt6-qtwebengine-devel
 BuildRequires: qt6-qtsvg-devel
 BuildRequires: qt6-qttools-devel
+BuildRequires: qt6-qttools-static
+BuildRequires: qt6-qtbase-private-devel
+BuildRequires: qt6-linguist
 
 %else
 # Qt5 deps
 BuildRequires:  qt5-qtwebengine-devel
-#BuildRequires:  qt5-qtwebkit-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qttools-static
 BuildRequires:  qt5-qtxmlpatterns-devel
@@ -92,7 +95,7 @@ BuildRequires:  xerces-c
 BuildRequires:  xerces-c-devel
 BuildRequires:  libspnav-devel
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 38
 BuildRequires:  python3-shiboken6-devel
 BuildRequires:  python3-pyside6-devel
 BuildRequires:  pyside6-tools
@@ -108,6 +111,8 @@ BuildRequires:  netgen-mesher-devel-private
 %if ! %{bundled_smesh}
 BuildRequires:  smesh-devel
 %endif
+
+BuildRequires:	netgen-mesher-devel
 
 %if ! %{bundled_zipios}
 BuildRequires:  zipios++-devel
@@ -144,7 +149,7 @@ Requires:       fmt
 
 Requires:	yaml
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 38
 Requires:       python-pyside6
 %else
 Requires:       python3-pyside2
@@ -154,7 +159,7 @@ Requires:       python3-pivy
 Requires:       python3-matplotlib
 Requires:       python3-collada
 
-%if 0%{?fedora} > 39
+%if 0%{?fedora} > 38
 Requires:       qt6-assistant
 %else
 Requires:	qt5-assistant
@@ -228,14 +233,10 @@ dos2unix -k src/Mod/Test/unittestgui.py
 rm -rf build && mkdir build && cd build
 
 # Deal with cmake projects that tend to link excessively.
-CXXFLAGS='-Wno-error=cast-function-type'; export CXXFLAGS
+CXXFLAGS='-Wno-error=cast-function-type -Wdeprecated-declarations'; export CXXFLAGS
 LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
 
-%if 0%{?fedora} > 27
 %define MEDFILE_INCLUDE_DIRS %{_includedir}/med/
-%else
-%define MEDFILE_INCLUDE_DIRS %{_includedir}/
-%endif
 
 %cmake \
        -DCMAKE_INSTALL_PREFIX=%{_libdir}/%{name} \
@@ -253,13 +254,12 @@ LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
        -DCOIN3D_DOC_PATH=%{_docdir}/Coin4 \
        -DUSE_OCC=TRUE \
 %if 0%{?fedora} > 38
-       -DBUILD_QT5=ON \
-	   -DFREECAD_QT_VERSION=6 \
-       -DPYSIDE_INCLUDE_DIR=/usr/include/PySide6 \
-       -DPYSIDE_LIBRARY=-lpyside6.%{py_suffix} \
-       -DSHIBOKEN_INCLUDE_DIR=%{_includedir}/shiboken6 \
-       -DSHIBOKEN_LIBRARY=-lshiboken6.%{py_suffix} \
- 	   -DGCC_COLORS= \
+	-DFREECAD_QT_VERSION:STRING=6 \
+	-DPYSIDE_INCLUDE_DIR=/usr/include/PySide6 \
+	-DPYSIDE_LIBRARY=-lpyside6.%{py_suffix} \
+	-DSHIBOKEN_INCLUDE_DIR=%{_includedir}/shiboken6 \
+	-DSHIBOKEN_LIBRARY=-lshiboken6.%{py_suffix} \
+	-DGCC_COLORS= \
 %else
        -DBUILD_QT5=ON \
 	   -DFREECAD_QT_VERSION=5 \
@@ -274,6 +274,7 @@ LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
        -DSMESH_INCLUDE_DIR=%{_includedir}/smesh \
        -DSMESH_DIR=`pwd`/../cMake \
 %endif
+	-DBUILD_FEM_NETGEN=TRUE \
 %if ! %{bundled_zipios}
        -DFREECAD_USE_EXTERNAL_ZIPIOS=TRUE \
 %endif
@@ -409,7 +410,6 @@ fi
 %{_datadir}/mime/packages/*
 %{_datadir}/thumbnailers/*
 
-
 %{_includedir}/OndselSolver/
 %{_libdir}/%{name}/share/pkgconfig/OndselSolver.pc
 
@@ -421,6 +421,9 @@ fi
 
 
 %changelog
+* Sun Sep 29 2024 Iliyan ilf Stoyano <ilf.stoyanov@redacted>
+- A bit of clean up
+
 * Sat Mar 9 2024 Iliyan ilf Stoyanov <ilf.stoyanov@redacted>
 - Plagarized Michele spec file to attemp a qt6 build on f39
 - Modified some paths and sources with edits from my f38 spec file
