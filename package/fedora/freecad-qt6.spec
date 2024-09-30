@@ -339,8 +339,8 @@ rm -f %{buildroot}%{_docdir}/freecad/ThirdPartyLibraries.html
 
 # Remove header from external library that's erroneously installed
 rm -f %{buildroot}%{_libdir}/%{name}/include/E57Format/E57Export.h
-rm -dfr %{buildroot}%{_includedir}/OndselSolver
-rm -f %{buildroot}%{_libdir}/%{name}/share/pkgconfig/OndselSolver.pc
+#rm -dfr %{buildroot}%{_includedir}/OndselSolver
+#rm -f %{buildroot}%{_libdir}/%{name}/share/pkgconfig/OndselSolver.pc
 
 # Bug maintainers to keep %%{plugins} macro up to date.
 #
