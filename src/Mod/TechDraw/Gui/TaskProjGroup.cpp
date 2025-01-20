@@ -69,6 +69,7 @@ TaskProjGroup::TaskProjGroup(TechDraw::DrawView* featView, bool mode) :
     ui(new Ui_TaskProjGroup),
     view(featView),
     multiView(dynamic_cast<TechDraw::DrawProjGroup*>(view)),
+    m_createMode(mode),
     blockCheckboxes(false)
 {
     ui->setupUi(this);
@@ -956,7 +957,7 @@ void DirectionEditDialog::createUI() {
 
     // Create layout and widgets for X
     auto* xLayout = new QHBoxLayout;
-    auto* xLabel = new QLabel(tr("X: "));
+    auto* xLabel = new QLabel(QStringLiteral("X: "));
     xSpinBox = new Gui::QuantitySpinBox;
     xSpinBox->setUnit(Base::Unit::Length);
     xLayout->addWidget(xLabel);
@@ -964,7 +965,7 @@ void DirectionEditDialog::createUI() {
 
     // Create layout and widgets for Y
     auto* yLayout = new QHBoxLayout;
-    auto* yLabel = new QLabel(tr("Y: "));
+    auto* yLabel = new QLabel(QStringLiteral("Y: "));
     ySpinBox = new Gui::QuantitySpinBox;
     ySpinBox->setUnit(Base::Unit::Length);
     yLayout->addWidget(yLabel);
@@ -972,7 +973,7 @@ void DirectionEditDialog::createUI() {
 
     // Create layout and widgets for Z
     auto* zLayout = new QHBoxLayout;
-    auto* zLabel = new QLabel(tr("Z: "));
+    auto* zLabel = new QLabel(QStringLiteral("Z: "));
     zSpinBox = new Gui::QuantitySpinBox;
     zSpinBox->setUnit(Base::Unit::Length);
     zLayout->addWidget(zLabel);
