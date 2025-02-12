@@ -208,7 +208,7 @@ Data files for FreeCAD
 
 %prep
 %autosetup -p1 -n FreeCAD-%{branch}
-gzip -dc /builddir/build/SOURCES/91f70382beeb58b32432b5a82da3802e4c19199c.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
+gzip -dc /builddir/build/SOURCES/09d6175a2ba69e7016fcecc4f384946a2f84f92d.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/OndselSolver/
 gzip -dc /builddir/build/SOURCES/b39e7e4b0987859f5b19ff7686b149c916588658.tar.gz | tar -xvvf - --strip 1  -C src/3rdParty/GSL/
 # Remove bundled pycxx if we're not using it
 %if ! %{bundled_pycxx}
