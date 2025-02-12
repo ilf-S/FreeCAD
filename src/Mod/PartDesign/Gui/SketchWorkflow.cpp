@@ -55,7 +55,7 @@
 #include <Gui/Control.h>
 #include <Gui/Document.h>
 #include <Gui/MainWindow.h>
-#include <Gui/SelectionFilter.h>
+#include <Gui/Selection/SelectionFilter.h>
 
 using namespace PartDesignGui;
 
@@ -105,7 +105,7 @@ public:
         // https://forum.freecad.org/viewtopic.php?f=3&t=37448
         if (object == activeBody) {
             App::DocumentObject* tip = activeBody->Tip.getValue();
-            if (tip && tip->isDerivedFrom(Part::Feature::getClassTypeId()) && elements.size() == 1) {
+            if (tip && tip->isDerivedFrom<Part::Feature>() && elements.size() == 1) {
                 Gui::SelectionChanges msg;
                 msg.pDocName = faceSelection.getDocName();
                 msg.pObjectName = tip->getNameInDocument();
@@ -543,7 +543,7 @@ private:
         auto* vpo = dynamic_cast<Gui::ViewProviderCoordinateSystem*>(
             Gui::Application::Instance->getViewProvider(origin));
         if (vpo) {
-            vpo->setTemporaryVisibility(true, true);
+            vpo->setTemporaryVisibility(Gui::DatumElement::Planes | Gui::DatumElement::Axes);
             vpo->setTemporaryScale(3.0);  // NOLINT
             vpo->setPlaneLabelVisibility(true);
         }
@@ -567,7 +567,7 @@ private:
 
             PartDesignGui::setEdit(sketch, partDesignBody);
         };
-        auto onReject = [partDesignBody, sketch]() {
+        auto onReject = [partDesignBody]() {
             SketchRequestSelection::resetOriginVisibility(partDesignBody);
         };
 
@@ -806,5 +806,3 @@ std::tuple<Gui::SelectionFilter, Gui::SelectionFilter> SketchWorkflow::getFaceAn
     }
     return std::make_tuple(FaceFilter, PlaneFilter);
 }
-
-
