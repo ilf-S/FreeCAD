@@ -332,6 +332,5 @@ Development file for OndselSolver
     %{_includedir}/OndselSolver/*
 
 %changelog
-* Thu Jan 01 2026 FreeCAD Nightly <admin@freecad.org> - 1.1.0~dev-1
-- Sync with official spec
-- Added gmsh and netgen requirements and flags
+* Thu Jan 01 2026 ilf-S <ilf-S@users.noreply.github.com> - 1:1.1.0~dev-1
+- Initial nightly build with gmsh and netgen support
