@@ -138,8 +138,8 @@ Development file for OndselSolver
 %endif
 
 %prep
-    %setup -T -a 0 -q -c -n FreeCAD-1.0.2
-
+#    %setup -T -a 0 -q -c -n FreeCAD-1.0.2
+    %setup -q -n FreeCAD
 %build
      # Deal with cmake projects that tend to link excessively.
     LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
