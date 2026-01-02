@@ -13,7 +13,6 @@ srpm:
 	@test -n "$(SPEC)"   || { echo "ERROR: set spec=<path/to/spec>"; exit 2; }
 	@test -n "$(OUTDIR)" || { echo "ERROR: set outdir=<output/dir>"; exit 2; }
 	mkdir -p "$(OUTDIR)"
-	git -C "$(REPO_ROOT)" submodule update --init --recursive
 	rm -f "$(OUTDIR)/freecad-sources.tar.gz"
 	tar -czf "$(OUTDIR)/freecad-sources.tar.gz" -C "$(REPO_ROOT)" \
 		--exclude=.git --exclude=.copr \
