@@ -14,7 +14,7 @@
 %bcond_without debug_info
 
 # Fallbacks if not passed from rpmbuild (local builds, etc.)
-%{!?gdate:%global gdate 19700101}
+%{!?gcount:%global gcount 0}
 %{!?gshort:%global gshort unknown}
 
 %global prerel pre_%{gdate}.g%{gshort}
