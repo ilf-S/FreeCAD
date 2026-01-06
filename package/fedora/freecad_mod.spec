@@ -17,7 +17,7 @@
 %{!?gcount:%global gcount 0}
 %{!?gshort:%global gshort unknown}
 
-%global prerel pre_%{gdate}.g%{gshort}
+%global prerel pre_%{gcount}.g%{gshort}
 
 Name:           freecad
 Epoch:          1
