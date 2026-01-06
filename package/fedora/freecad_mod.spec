@@ -13,10 +13,11 @@
 # rpmbuild --without=debug_info don't generate package with debug info
 %bcond_without debug_info
 
+%global prerel pre_%{gdate}.g%{gshort}
 
 Name:           freecad
 Epoch:          1
-Version:        1.1.0~dev
+Version:        1.1.0~%{prerel}
 Release:        1%{?dist}
 
 Summary:        A general purpose 3D CAD modeler
