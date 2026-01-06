@@ -13,6 +13,11 @@
 # rpmbuild --without=debug_info don't generate package with debug info
 %bcond_without debug_info
 
+# Fallbacks if not passed from rpmbuild (local builds, etc.)
+%{!?gdate:%global gdate 19700101}
+%{!?gshort:%global gshort unknown}
+
+
 %global prerel pre_%{gdate}.g%{gshort}
 
 Name:           freecad
