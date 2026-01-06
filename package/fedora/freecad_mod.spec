@@ -15,9 +15,8 @@
 
 # Fallbacks if not passed from rpmbuild (local builds, etc.)
 %{!?gcount:%global gcount 0}
-%{!?gshort:%global gshort unknown}
 
-%global prerel pre_%{gcount}.g%{gshort}
+%global prerel pre_%{gcount}
 
 Name:           freecad
 Epoch:          1
