@@ -4,19 +4,22 @@ SPEC   ?= $(spec)
 OUTDIR ?= $(outdir)
 REPO_ROOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))/..)
 
-# prerelease bits without calling git binary during SRPM step
 GDATE  := $(shell date -u +%Y%m%d)
 GSHORT := $(shell sh -c 'set -e; \
   if [ -f "$(REPO_ROOT)/.git/HEAD" ]; then \
     H="$$(cat "$(REPO_ROOT)/.git/HEAD")"; \
-    if printf "%s" "$$H" | grep -q "^ref:"; then \
-      R="$${H#ref: }"; \
-      cut -c1-9 "$(REPO_ROOT)/.git/$$R" 2>/dev/null || echo unknown; \
-    else printf "%s" "$$H" | cut -c1-9; fi; \
+    case "$$H" in \
+      ref:\ *) R="$${H#ref: }"; \
+               if [ -f "$(REPO_ROOT)/.git/$$R" ]; then \
+                 cut -c1-9 "$(REPO_ROOT)/.git/$$R"; \
+               elif [ -f "$(REPO_ROOT)/.git/packed-refs" ]; then \
+                 awk "\$$2==\"$$R\"{print substr(\$$1,1,9)}" "$(REPO_ROOT)/.git/packed-refs" | head -n1; \
+               else echo unknown; fi ;; \
+      *)       printf "%s" "$$H" | cut -c1-9 ;; \
+    esac; \
   else echo unknown; fi')
 
 .PHONY: srpm make_srpm clean
-
 srpm:
 	@test -n "$(SPEC)"   || { echo "ERROR: set spec=<path/to/spec>"; exit 2; }
 	@test -n "$(OUTDIR)" || { echo "ERROR: set outdir=<output/dir>"; exit 2; }
@@ -33,6 +36,5 @@ srpm:
 	@echo "SRPM written to $(OUTDIR)"
 
 make_srpm: srpm
-
 clean:
 	rm -f "$(OUTDIR)"/freecad-*.src.rpm "$(OUTDIR)/freecad-sources.tar.gz"
