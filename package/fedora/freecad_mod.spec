@@ -13,7 +13,7 @@
 # rpmbuild --without=debug_info don't generate package with debug info
 %bcond_without debug_info
 
-# Fallbacks if not passed from rpmbuild (local builds, etc.)
+# Fallbacks if not passed from rpmbuild (local builds, etc.) 
 %{!?gcount:%global gcount 0}
 
 %global prerel pre_%{gcount}
