@@ -14,29 +14,52 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge upstream/main into main (prefer upstream on conflicts)
+      - name: Merge upstream/main into main (auto-resolve; keep ours)
         run: |
+          set -e
           git config user.name  "ilf-S"
           git config user.email "ilf-S@users.noreply.github.com"
           git remote get-url upstream >/dev/null 2>&1 || git remote add upstream https://github.com/FreeCAD/FreeCAD.git
-          git fetch upstream --prune
+          git fetch upstream --prune --tags
           git checkout main
-          git merge --ff-only upstream/main || git merge --no-edit -X theirs upstream/main
+          if git merge --ff-only upstream/main; then
+            echo "Fast-forward merge"
+          else
+            git merge --no-commit upstream/main || true
+            for f in $(git diff --name-only --diff-filter=U || true); do
+              case "$f" in
+                .github/workflows/*)
+                  git rm -f -- "$f" || true
+                  ;;
+                .copr/*|package/fedora/*|package/fedora/**)
+                  git checkout --ours -- "$f" || true
+                  git add -- "$f" || true
+                  ;;
+                *)
+                  git checkout --theirs -- "$f" || true
+                  git add -- "$f" || true
+                  ;;
+              esac
+            done
+            rm -rf .github/workflows || true
+            git add -A
+            git commit -m "merge upstream (auto-resolve CI; keep packaging) [skip ci]" || true
+          fi
 
       - name: Drop upstream CI (keep only this workflow)
-        env: { SELF_FILE: .github/workflows/sync.yml }
+        env:
+          SELF_FILE: .github/workflows/sync.yml
         run: |
           mkdir -p .github/workflows
-          find .github/workflows -type f ! -name "$(basename "$SELF_FILE")" -delete
+          find .github/workflows -type f ! -name "$(basename "$SELF_FILE")" -delete || true
           rm -f .github/dependabot.yml || true
           rm -rf .devcontainer || true
           git add -A
 
-      - name: Commit & push once (skip other Actions; COPR webhook still fires)
+      - name: Commit & push once (skip other Actions)
         run: |
-          if ! git diff --cached --quiet; then
-            d="$(date -u +%F)"
-            git commit -m "sync: upstream ${d} [skip ci]"
+          if ! git diff --cached --quiet || ! git diff --quiet origin/main..HEAD; then
+            git commit -m "sync: upstream $(date -u +%F) [skip ci]" || true
             git push origin main
           else
             echo "No changes."
