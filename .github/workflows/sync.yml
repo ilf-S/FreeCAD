@@ -13,6 +13,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-tags: false
 
       - name: Merge upstream/main into main (auto-resolve; keep ours)
         run: |
@@ -20,7 +21,8 @@ jobs:
           git config user.name  "ilf-S"
           git config user.email "ilf-S@users.noreply.github.com"
           git remote get-url upstream >/dev/null 2>&1 || git remote add upstream https://github.com/FreeCAD/FreeCAD.git
-          git fetch upstream --prune --tags
+          # IMPORTANT: do not fetch tags (avoids "would clobber existing tag")
+          git fetch --no-tags upstream --prune
           git checkout main
           if git merge --ff-only upstream/main; then
             echo "Fast-forward merge"
@@ -56,11 +58,13 @@ jobs:
           rm -rf .devcontainer || true
           git add -A
 
-      - name: Commit & push once (skip other Actions)
+      - name: Commit & push once (branch only; no tags)
         run: |
+          # ensure we never push tags implicitly
+          git config push.followTags false
           if ! git diff --cached --quiet || ! git diff --quiet origin/main..HEAD; then
             git commit -m "sync: upstream $(date -u +%F) [skip ci]" || true
-            git push origin main
+            git push origin HEAD:main  # pushes branch only
           else
             echo "No changes."
           fi
