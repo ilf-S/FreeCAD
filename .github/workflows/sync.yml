@@ -1,0 +1,73 @@
+name: Sync Upstream
+on:
+  schedule: [{ cron: '0 0 * * *' }]
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SELF_FILE: .github/workflows/sync.yml
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge upstream/main into main (auto-resolve; keep ours)
+        run: |
+          set -e
+          git config user.name  "ilf-S"
+          git config user.email "ilf-S@users.noreply.github.com"
+          git remote get-url upstream >/dev/null 2>&1 || git remote add upstream https://github.com/FreeCAD/FreeCAD.git
+          git fetch --no-tags upstream --prune
+          git checkout main
+          if git merge --ff-only upstream/main; then
+            echo "Fast-forward merge"
+          else
+            git merge --no-commit upstream/main || true
+            for f in $(git diff --name-only --diff-filter=U || true); do
+              case "$f" in
+                .github/workflows/*)
+                  if [ "$f" = "$SELF_FILE" ]; then
+                    git checkout --ours -- "$SELF_FILE" || true
+                    git add -- "$SELF_FILE" || true
+                  else
+                    git rm -f -- "$f" || true
+                  fi
+                  ;;
+                .copr/*|package/fedora/*|package/fedora/**)
+                  git checkout --ours -- "$f" || true
+                  git add -- "$f" || true
+                  ;;
+                *)
+                  git checkout --theirs -- "$f" || true
+                  git add -- "$f" || true
+                  ;;
+              esac
+            done
+            git add -A
+            git commit -m "merge upstream (auto-resolve CI; keep packaging & our workflow) [skip ci]" || true
+          fi
+
+      - name: Drop upstream CI (keep only this workflow)
+        run: |
+          mkdir -p "$(dirname "$SELF_FILE")"
+          find .github/workflows -type f ! -path "$SELF_FILE" -delete || true
+          rm -f .github/dependabot.yml || true
+          rm -rf .devcontainer || true
+          git add -A
+
+      - name: Commit & push once (branch only)
+        run: |
+          git config push.followTags false
+          if ! git diff --cached --quiet || ! git diff --quiet origin/main..HEAD; then
+            git commit -m "sync: upstream $(date -u +%F) [skip ci]" || true
+            git push origin HEAD:main
+          else
+            echo "No changes."
+          fi
