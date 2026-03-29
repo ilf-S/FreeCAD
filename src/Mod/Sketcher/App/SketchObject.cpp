@@ -173,7 +173,7 @@ void SketchObject::setupObject()
     ParameterGrp::handle hGrpp = App::GetApplication().GetParameterGroupByPath(
             "User parameter:BaseApp/Preferences/Mod/Sketcher");
     ArcFitTolerance.setValue(hGrpp->GetFloat("ArcFitTolerance", Precision::Confusion()*10.0));
-    MakeInternals.setValue(hGrpp->GetBool("MakeInternals", false));
+    MakeInternals.setValue(hGrpp->GetBool("MakeInternals", true));
     _ExternalGeoVersion.setValue(1);
     inherited::setupObject();
 }
@@ -853,6 +853,22 @@ int SketchObject::getGroupHandleIfInGroup(int geoId)
         }
     }
     return geoId;
+}
+
+std::set<int> SketchObject::getGroupGeometries(int handleGeoId) const
+{
+    std::set<int> geoIds;
+    const std::vector<Sketcher::Constraint*>& vals = Constraints.getValues();
+    for (const auto& constr : vals) {
+        if (constr->Type == Group || constr->Type == Text) {
+            if (constr->getGeoId(0) == handleGeoId) {
+                for (int i = 1; constr->hasElement(i); ++i) {
+                    geoIds.insert(constr->getElement(i).GeoId);
+                }
+            }
+        }
+    }
+    return geoIds;
 }
 
 PyObject* SketchObject::getPyObject()
