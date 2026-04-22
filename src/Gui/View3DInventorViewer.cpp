@@ -191,6 +191,13 @@ public:
 private:
     void triggerClarifySelection()
     {
+        // reset navigation state so button1down doesn't stay stuck ie. gh issue #29090
+        // (the blocking QMenu::exec in ClarifySelection steals the LMB release)
+        if (currentViewer) {
+            if (auto* nav = currentViewer->navigationStyle()) {
+                nav->resetButtonState();
+            }
+        }
         Gui::Command::runCommand(Gui::Command::Gui, "Gui.runCommand('Std_ClarifySelection')");
     }
 
@@ -808,7 +815,6 @@ View3DInventorViewer::~View3DInventorViewer()
 
     if (_viewerPy) {
         static_cast<View3DInventorViewerPy*>(_viewerPy)->_viewer = nullptr;
-        Py_DECREF(_viewerPy);
     }
 
     // In the init() function we have overridden the default SoGLRenderAction with our
