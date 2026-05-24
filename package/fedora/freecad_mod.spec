@@ -27,7 +27,7 @@
 
 Name:           freecad
 Epoch:          1
-Version:        1.2.0~%{prerel}
+Version:        1.1.0~%{prerel}
 Release:        1%{?dist}
 
 Summary:        A general purpose 3D CAD modeler
@@ -40,7 +40,7 @@ Source0:        freecad-sources.tar.gz
 
 # Maintainers:  keep this list of plugins up to date
 # List plugins in %%{_libdir}/%%{name}/lib, less '.so' and 'Gui.so', here
-%global plugins AssemblyApp AssemblyGui CAMSimulator DraftUtils Fem FreeCAD Import Inspection MatGui Materials Measure Mesh MeshPart Part PartDesignGui Path PathApp PathSimulator Points QtUnitGui ReverseEngineering Robot Sketcher Spreadsheet Start Surface TechDraw Web _PartDesign area flatmesh libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers libarea-native tsp_solver libNETGENPlugin
+%global plugins AssemblyApp AssemblyGui CAMSimulator DraftUtils Fem FreeCAD Import Inspection MatGui Materials Measure Mesh MeshPart Part PartDesignGui Path PathApp PathSimulator Points QtUnitGui ReverseEngineering Robot Sketcher Spreadsheet Start Surface TechDraw Web _PartDesign area flatmesh libDriver libDriverDAT libDriverSTL libDriverUNV libE57Format libMEFISTO2 libSMDS libSMESH libSMESHDS libStdMeshers libarea-native tsp_solver libNETGENPlugin libClipper2Z
 
 %global exported_libs libOndselSolver
 
@@ -168,7 +168,6 @@ Development file for OndselSolver
 # matching the actually-installed library. (6<<16)+(2<<8)+2601 = 396329.
 # REMOVE once netgen-mesher reports its real version.
     sed -i '/LIST(APPEND NETGEN_DEFINITIONS -DNETGEN_VERSION=/i MATH(EXPR NETGEN_VERSION_C "(6 << 16) + (2 << 8) + 2601")' cMake/FindNETGEN.cmake
-
 %build
      # Deal with cmake projects that tend to link excessively.
     LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
@@ -246,17 +245,23 @@ Development file for OndselSolver
 
 %if %{with tests}
     mkdir -p %{buildroot}%tests_resultdir
-    # Single ctest invocation under a virtual X display (Xvfb is lighter/faster
-    # to spin up than a Wayland compositor). Running the whole suite once under
-    # a display also covers the GUI tests (e.g. QuantitySpinBox) without a
-    # separate run. To quarantine a known-bad test, add: -E '^Name_run$'
-    if xvfb-run %ctest &> %{buildroot}%tests_resultdir/ctest.result ;
+    # Provide a virtual X display for any GUI tests. %%ctest cannot be wrapped
+    # directly by `xvfb-run %%ctest` — the macro expands onto its own line, so
+    # xvfb-run runs with no command and ctest then runs with no display. Start
+    # Xvfb manually and point DISPLAY at it instead.
+    # To quarantine a known-bad test, add to ctest: -E '^Name_run$'
+    Xvfb :99 -screen 0 1024x768x24 &> /dev/null &
+    _xvfb_pid=$!
+    export DISPLAY=:99
+    sleep 3
+    if %ctest &> %{buildroot}%tests_resultdir/ctest.result ;
     then
         echo "ctest OK"
     else
         echo "**** Failed ctest ****"
         touch %{buildroot}%tests_resultdir/ctest.failed
     fi
+    kill $_xvfb_pid &> /dev/null || :
 %endif
 
     desktop-file-validate %{buildroot}%{_datadir}/applications/org.freecad.FreeCAD.desktop
@@ -356,7 +361,7 @@ Development file for OndselSolver
     %{_includedir}/OndselSolver/*
 
 %changelog
-* Sat May 24 2026 ilf-S <ilf-S@users.noreply.github.com> - 1:1.1.0~pre-1
+* Sun May 24 2026 ilf-S <ilf-S@users.noreply.github.com> - 1:1.2.0~pre-1
 - Sync with upstream FreeCAD spec
 - Fix F43/Python 3.14 build: replace obsolete PYCXX_INCLUDE_DIR/
   PYCXX_SOURCE_DIR (which mixed system PyCXX source with bundled headers and
