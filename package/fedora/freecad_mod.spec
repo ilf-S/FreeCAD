@@ -159,6 +159,16 @@ Development file for OndselSolver
 # "%%setup -T -a 0 -q -c -n FreeCAD-1.0.2" would NOT match this layout.
 #    %%setup -T -a 0 -q -c -n FreeCAD-1.0.2
     %setup -q -n FreeCAD
+
+# STOPGAP (FreeCAD#27444): Fedora's netgen-mesher 6.2.2601 reports its version
+# as 6.2.2402, so FindNETGEN computes NETGEN_VERSION=396130 (< 6.2.2601) and the
+# NETGENPlugin compiles the obsolete `netgen::multithread` path. That symbol was
+# relocated to `ngcore::multithread` in 6.2.2601, so the link fails with
+# "undefined reference to netgen::multithread". Force the >=6.2.2601 code path,
+# matching the actually-installed library. (6<<16)+(2<<8)+2601 = 396329.
+# REMOVE once netgen-mesher reports its real version.
+    sed -i '/LIST(APPEND NETGEN_DEFINITIONS -DNETGEN_VERSION=/i MATH(EXPR NETGEN_VERSION_C "(6 << 16) + (2 << 8) + 2601")' cMake/FindNETGEN.cmake
+
 %build
      # Deal with cmake projects that tend to link excessively.
     LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
