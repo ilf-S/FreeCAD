@@ -27,7 +27,7 @@
 
 Name:           freecad
 Epoch:          1
-Version:        1.2.0~%{prerel}
+Version:        1.1.0~%{prerel}
 Release:        1%{?dist}
 
 Summary:        A general purpose 3D CAD modeler
@@ -151,10 +151,13 @@ Development file for OndselSolver
 %endif
 
 %prep
-# NOTE (nightly): keep this %setup — it matches the nightly tarball which
-# extracts to a top-level FreeCAD/ directory. Upstream's
-# "%setup -T -a 0 -q -c -n FreeCAD-1.0.2" would NOT match this layout.
-#    %setup -T -a 0 -q -c -n FreeCAD-1.0.2
+# NOTE (nightly): macro names in %%prep comments MUST be written with a
+# doubled percent (%%setup), otherwise rpm expands them even inside a
+# comment and the stray expansion runs.
+# Keep the %%setup below as-is: the nightly tarball extracts to a top-level
+# FreeCAD/ directory, so -n FreeCAD is required. Upstream's
+# "%%setup -T -a 0 -q -c -n FreeCAD-1.0.2" would NOT match this layout.
+#    %%setup -T -a 0 -q -c -n FreeCAD-1.0.2
     %setup -q -n FreeCAD
 %build
      # Deal with cmake projects that tend to link excessively.
