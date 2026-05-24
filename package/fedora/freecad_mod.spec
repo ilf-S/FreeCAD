@@ -225,6 +225,10 @@ Development file for OndselSolver
     rm -rf %{buildroot}%{_includedir}/gmock
     rm -rf %{buildroot}%{_includedir}/gtest
 
+    # Bundled Clipper2 (libClipper2Z) installs its dev headers here; they are
+    # build-time only for the in-tree copy and must not ship.
+    rm -rf %{buildroot}%{_includedir}/clipper2
+
     rm -rf %{buildroot}%{_libdir}/%{name}/%{_lib}/cmake
     rm -rf %{buildroot}%{_libdir}/%{name}/%{_lib}/pkgconfig
 
