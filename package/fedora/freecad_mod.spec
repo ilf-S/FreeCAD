@@ -2,6 +2,13 @@
 # rpmbuild --without=bundled_zipios: don't use bundled version of zipios++
 %bcond_without  bundled_zipios
 # rpmbuild --with=bundled_pycxx:  use bundled version of pycxx
+# Default: external (Fedora's python3-pycxx), driven by FREECAD_USE_EXTERNAL_PYCXX.
+# The earlier F43 failure was NOT external itself but a MIX (system .cxx source
+# compiled against bundled headers) from the obsolete PYCXX_INCLUDE_DIR/
+# PYCXX_SOURCE_DIR flags. With FREECAD_USE_EXTERNAL_PYCXX=TRUE, source and
+# headers both come from python3-pycxx-devel and are self-consistent.
+# Fallback: if Fedora's python3-pycxx lags a future Python bump, build
+# --with bundled_pycxx to use FreeCAD's in-tree copy instead.
 %bcond_with bundled_pycxx
 # rpmbuild --without=bundled_smesh:  don't use bundled version of Salome's Mesh
 %bcond_without bundled_smesh
@@ -48,14 +55,14 @@ Source0:        freecad-sources.tar.gz
 # Utilities
 BuildRequires:  cmake gcc-c++ gettext doxygen swig graphviz gcc-gfortran desktop-file-utils tbb-devel ninja-build strace
 %if %{with tests}
-BuildRequires:  xorg-x11-server-Xvfb python3-typing-extensions 
+BuildRequires:  xorg-x11-server-Xvfb python3-typing-extensions
 %if %{without bundled_gtest}
 BuildRequires: gtest-devel gmock-devel
 %endif
 %endif
 
 # Development Libraries
-# ADDED: gmsh-devel and python3-netgen
+# ADDED (nightly): gmsh-devel and netgen for FEM meshers
 BuildRequires:  gmsh-devel netgen-mesher-devel netgen-mesher-devel-private
 BuildRequires:  python3dist(netgen-mesher)
 BuildRequires:  boost-devel Coin4-devel eigen3-devel freeimage-devel fmt-devel libglvnd-devel libicu-devel libspnav-devel libXmu-devel med-devel mesa-libEGL-devel mesa-libGLU-devel netgen-mesher-devel netgen-mesher-devel-private opencascade-devel openmpi-devel python3 python3-devel python3-lark python3-matplotlib python3-pivy python3-pybind11 python3-pyside6-devel python3-shiboken6-devel pyside6-tools qt6-qttools-static qt6-qtsvg-devel vtk-devel xerces-c-devel yaml-cpp-devel
@@ -79,8 +86,9 @@ Requires:       %{name}-data = %{epoch}:%{version}-%{release}
 # Obsolete old doc package since it's required for functionality.
 Obsoletes:      %{name}-doc < 0.22-1
 
-Requires:       hicolor-icon-theme fmt python3-matplotlib python3-pivy python3-collada python3-pyside6 qt6-assistant python3-typing-extensions python3-defusedxml
-# ADDED: Meshing runtime requirements
+# SYNCED with upstream: added python3-ply
+Requires:       hicolor-icon-theme fmt python3-matplotlib python3-pivy python3-collada python3-pyside6 qt6-assistant python3-typing-extensions python3-defusedxml python3-ply
+# ADDED (nightly): Meshing runtime requirements
 Requires:       gmsh netgen-mesher
 
 %if %{with bundled_smesh}
@@ -143,6 +151,9 @@ Development file for OndselSolver
 %endif
 
 %prep
+# NOTE (nightly): keep this %setup — it matches the nightly tarball which
+# extracts to a top-level FreeCAD/ directory. Upstream's
+# "%setup -T -a 0 -q -c -n FreeCAD-1.0.2" would NOT match this layout.
 #    %setup -T -a 0 -q -c -n FreeCAD-1.0.2
     %setup -q -n FreeCAD
 %build
@@ -163,8 +174,7 @@ Development file for OndselSolver
         -DBUILD_FEM_NETGEN=ON \
         -DBUILD_FEM_GMSH=ON \
     %if %{without bundled_pycxx}
-        -DPYCXX_INCLUDE_DIR=$(pkg-config --variable=includedir PyCXX) \
-        -DPYCXX_SOURCE_DIR=$(pkg-config --variable=srcdir PyCXX) \
+        -DFREECAD_USE_EXTERNAL_PYCXX=TRUE \
     %endif
     %if %{without bundled_smesh}
         -DFREECAD_USE_EXTERNAL_SMESH=TRUE \
@@ -223,20 +233,16 @@ Development file for OndselSolver
 
 %if %{with tests}
     mkdir -p %{buildroot}%tests_resultdir
-    if %ctest -E '^QuantitySpinBox_Tests_run$' &> %{buildroot}%tests_resultdir/ctest.result ;
+    # Single ctest invocation under a virtual X display (Xvfb is lighter/faster
+    # to spin up than a Wayland compositor). Running the whole suite once under
+    # a display also covers the GUI tests (e.g. QuantitySpinBox) without a
+    # separate run. To quarantine a known-bad test, add: -E '^Name_run$'
+    if xvfb-run %ctest &> %{buildroot}%tests_resultdir/ctest.result ;
     then
         echo "ctest OK"
     else
         echo "**** Failed ctest ****"
         touch %{buildroot}%tests_resultdir/ctest.failed
-    fi
-
-    if xvfb-run \%ctest -R '^QuantitySpinBox_Tests_run$' &>> %{buildroot}%tests_resultdir/ctest_gui.result ;
-    then
-        echo "ctest gui OK"
-    else
-        echo "**** Failed ctest gui ****"
-        touch %{buildroot}%tests_resultdir/ctest_gui.failed
     fi
 %endif
 
@@ -337,5 +343,15 @@ Development file for OndselSolver
     %{_includedir}/OndselSolver/*
 
 %changelog
+* Sat May 24 2026 ilf-S <ilf-S@users.noreply.github.com> - 1:1.1.0~pre-1
+- Sync with upstream FreeCAD spec
+- Fix F43/Python 3.14 build: replace obsolete PYCXX_INCLUDE_DIR/
+  PYCXX_SOURCE_DIR (which mixed system PyCXX source with bundled headers and
+  conflicted on ucs4_null_string) with FREECAD_USE_EXTERNAL_PYCXX; keep
+  external (Fedora python3-pycxx) as default, bundled available via
+  --with bundled_pycxx
+- Optimize %%check: single ctest run under Xvfb instead of two invocations
+- Add python3-ply runtime requirement (from upstream)
+
 * Thu Jan 01 2026 ilf-S <ilf-S@users.noreply.github.com> - 1:1.1.0~dev-1
 - Initial nightly build with gmsh and netgen support
