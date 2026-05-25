@@ -167,7 +167,7 @@ Development file for OndselSolver
 # "undefined reference to netgen::multithread". Force the >=6.2.2601 code path,
 # matching the actually-installed library. (6<<16)+(2<<8)+2601 = 396329.
 # REMOVE once netgen-mesher reports its real version.
-    sed -i '/LIST(APPEND NETGEN_DEFINITIONS -DNETGEN_VERSION=/i MATH(EXPR NETGEN_VERSION_C "(6 << 16) + (2 << 8) + 2601")' cMake/FindNETGEN.cmake
+  #  sed -i '/LIST(APPEND NETGEN_DEFINITIONS -DNETGEN_VERSION=/i MATH(EXPR NETGEN_VERSION_C "(6 << 16) + (2 << 8) + 2601")' cMake/FindNETGEN.cmake
 %build
      # Deal with cmake projects that tend to link excessively.
     LDFLAGS='-Wl,--as-needed -Wl,--no-undefined'; export LDFLAGS
