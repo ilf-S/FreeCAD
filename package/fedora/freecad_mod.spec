@@ -363,6 +363,7 @@ Development file for OndselSolver
     %{_datadir}/%{name}/
     %{_docdir}/%{name}/LICENSE.html
     %{_docdir}/%{name}/ThirdPartyLibraries.html
+    %{_docdir}/%{name}/URWGothic-LICENSE.OFL
 
 %files libondselsolver-devel
     %{_datadir}/pkgconfig/OndselSolver.pc
