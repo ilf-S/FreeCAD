@@ -93,7 +93,7 @@ Obsoletes:      %{name}-doc < 0.22-1
 Requires:       hicolor-icon-theme fmt python3-matplotlib python3-pivy python3-collada python3-pyside6 qt6-assistant python3-typing-extensions python3-defusedxml python3-ply
 # ADDED (nightly): Meshing runtime requirements
 Requires:       gmsh
-Requires:        netget-mesher = 6.2.2604
+Requires:        netgen-mesher = 6.2.2604
 
 %if %{with bundled_smesh}
 Provides:       bundled(smesh) = %{bundled_smesh_version}
