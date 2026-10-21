@@ -185,6 +185,7 @@ Development file for OndselSolver
         -DFREECAD_USE_EXTERNAL_FMT=TRUE \
         -DFREECAD_USE_PCL:BOOL=OFF \
         -DFREECAD_QT_VERSION:STRING=6 \
+        -DBUILD_DYNAMIC_LINK_PYTHON=ON \
         -DOpenGL_GL_PREFERENCE=GLVND \
         -DUSE_OCC=TRUE \
         -DBUILD_FEM_NETGEN=ON \
